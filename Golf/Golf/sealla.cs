@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class Form1 : Form
+    public partial class sealla : Form
     {
-        public Form1()
+        public sealla()
         {
             InitializeComponent();
+        }
+
+        private void sealla_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

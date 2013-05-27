@@ -44,14 +44,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="golfreception.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="golfreception.Designer.cs">
+      <DependentUpon>golfreception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laggtillspelare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="laggtillspelare.Designer.cs">
+      <DependentUpon>laggtillspelare.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sealla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sealla.Designer.cs">
+      <DependentUpon>sealla.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="golfreception.resx">
+      <DependentUpon>golfreception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laggtillspelare.resx">
+      <DependentUpon>laggtillspelare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,6 +79,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="sealla.resx">
+      <DependentUpon>sealla.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
