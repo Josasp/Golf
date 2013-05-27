@@ -67,6 +67,7 @@
             this.seAllaToolStripMenuItem.Name = "seAllaToolStripMenuItem";
             this.seAllaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.seAllaToolStripMenuItem.Text = "Se alla";
+            this.seAllaToolStripMenuItem.Click += new System.EventHandler(this.seAllaToolStripMenuItem_Click);
             // 
             // läggTillSpelareToolStripMenuItem
             // 
@@ -80,6 +81,7 @@
             this.sökSpelareToolStripMenuItem.Name = "sökSpelareToolStripMenuItem";
             this.sökSpelareToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.sökSpelareToolStripMenuItem.Text = "Sök spelare";
+            this.sökSpelareToolStripMenuItem.Click += new System.EventHandler(this.sökSpelareToolStripMenuItem_Click);
             // 
             // tidsbokningToolStripMenuItem
             // 
@@ -101,12 +103,14 @@
             this.registreraTävlingToolStripMenuItem.Name = "registreraTävlingToolStripMenuItem";
             this.registreraTävlingToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.registreraTävlingToolStripMenuItem.Text = "Registrera tävling";
+            this.registreraTävlingToolStripMenuItem.Click += new System.EventHandler(this.registreraTävlingToolStripMenuItem_Click);
             // 
             // sökTävlingToolStripMenuItem
             // 
             this.sökTävlingToolStripMenuItem.Name = "sökTävlingToolStripMenuItem";
             this.sökTävlingToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.sökTävlingToolStripMenuItem.Text = "Sök tävling";
+            this.sökTävlingToolStripMenuItem.Click += new System.EventHandler(this.sökTävlingToolStripMenuItem_Click);
             // 
             // golfreception
             // 

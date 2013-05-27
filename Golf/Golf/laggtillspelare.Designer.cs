@@ -103,9 +103,9 @@
             this.paid_checkBox.AutoSize = true;
             this.paid_checkBox.Location = new System.Drawing.Point(11, 46);
             this.paid_checkBox.Name = "paid_checkBox";
-            this.paid_checkBox.Size = new System.Drawing.Size(132, 17);
+            this.paid_checkBox.Size = new System.Drawing.Size(126, 17);
             this.paid_checkBox.TabIndex = 45;
-            this.paid_checkBox.Text = "Medlemsavgift betalad";
+            this.paid_checkBox.Text = "Medlemsavgift betald";
             this.paid_checkBox.UseVisualStyleBackColor = true;
             // 
             // handicap_textBox

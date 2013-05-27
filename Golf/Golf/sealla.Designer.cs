@@ -31,6 +31,7 @@
             this.ickemedlem_radioButton = new System.Windows.Forms.RadioButton();
             this.medlem_radioButton = new System.Windows.Forms.RadioButton();
             this.alla_radioButton = new System.Windows.Forms.RadioButton();
+            this.ok_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ickemedlem_radioButton
@@ -66,11 +67,21 @@
             this.alla_radioButton.Text = "Alla";
             this.alla_radioButton.UseVisualStyleBackColor = true;
             // 
+            // ok_button
+            // 
+            this.ok_button.Location = new System.Drawing.Point(197, 227);
+            this.ok_button.Name = "ok_button";
+            this.ok_button.Size = new System.Drawing.Size(75, 23);
+            this.ok_button.TabIndex = 55;
+            this.ok_button.Text = "OK";
+            this.ok_button.UseVisualStyleBackColor = true;
+            // 
             // sealla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.ok_button);
             this.Controls.Add(this.alla_radioButton);
             this.Controls.Add(this.ickemedlem_radioButton);
             this.Controls.Add(this.medlem_radioButton);
@@ -87,5 +98,6 @@
         private System.Windows.Forms.RadioButton ickemedlem_radioButton;
         private System.Windows.Forms.RadioButton medlem_radioButton;
         private System.Windows.Forms.RadioButton alla_radioButton;
+        private System.Windows.Forms.Button ok_button;
     }
 }
