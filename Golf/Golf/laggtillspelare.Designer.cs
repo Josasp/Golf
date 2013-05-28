@@ -32,26 +32,26 @@
             this.gender_comboBox = new System.Windows.Forms.ComboBox();
             this.action_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
-            this.paid_checkBox = new System.Windows.Forms.CheckBox();
+            this.betalat_checkBox = new System.Windows.Forms.CheckBox();
             this.handicap_textBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.membership_comboBox = new System.Windows.Forms.ComboBox();
-            this.city_textBox = new System.Windows.Forms.TextBox();
+            this.medlemsstatus_comboBox = new System.Windows.Forms.ComboBox();
+            this.postort_textBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.zipcode_textBox = new System.Windows.Forms.TextBox();
+            this.postnummer_textBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.adress_textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.email_textBox = new System.Windows.Forms.TextBox();
+            this.epost_textBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.phone_textBox = new System.Windows.Forms.TextBox();
+            this.telefonnummer_textBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.firstName_textBox = new System.Windows.Forms.TextBox();
+            this.fornamn_textBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.lastName_textBox = new System.Windows.Forms.TextBox();
+            this.efternamn_textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.golfId_textBox = new System.Windows.Forms.TextBox();
+            this.golfid_textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.medlem_radioButton = new System.Windows.Forms.RadioButton();
             this.ickemedlem_radioButton = new System.Windows.Forms.RadioButton();
@@ -82,31 +82,32 @@
             // 
             // action_button
             // 
-            this.action_button.Location = new System.Drawing.Point(308, 408);
+            this.action_button.Location = new System.Drawing.Point(259, 408);
             this.action_button.Name = "action_button";
-            this.action_button.Size = new System.Drawing.Size(107, 23);
+            this.action_button.Size = new System.Drawing.Size(75, 23);
             this.action_button.TabIndex = 47;
             this.action_button.Text = "OK";
             this.action_button.UseVisualStyleBackColor = true;
+            this.action_button.Click += new System.EventHandler(this.action_button_Click);
             // 
             // cancel_button
             // 
-            this.cancel_button.Location = new System.Drawing.Point(24, 408);
+            this.cancel_button.Location = new System.Drawing.Point(340, 408);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(75, 23);
             this.cancel_button.TabIndex = 46;
             this.cancel_button.Text = "Avbryt";
             this.cancel_button.UseVisualStyleBackColor = true;
             // 
-            // paid_checkBox
+            // betalat_checkBox
             // 
-            this.paid_checkBox.AutoSize = true;
-            this.paid_checkBox.Location = new System.Drawing.Point(11, 46);
-            this.paid_checkBox.Name = "paid_checkBox";
-            this.paid_checkBox.Size = new System.Drawing.Size(126, 17);
-            this.paid_checkBox.TabIndex = 45;
-            this.paid_checkBox.Text = "Medlemsavgift betald";
-            this.paid_checkBox.UseVisualStyleBackColor = true;
+            this.betalat_checkBox.AutoSize = true;
+            this.betalat_checkBox.Location = new System.Drawing.Point(11, 46);
+            this.betalat_checkBox.Name = "betalat_checkBox";
+            this.betalat_checkBox.Size = new System.Drawing.Size(126, 17);
+            this.betalat_checkBox.TabIndex = 45;
+            this.betalat_checkBox.Text = "Medlemsavgift betald";
+            this.betalat_checkBox.UseVisualStyleBackColor = true;
             // 
             // handicap_textBox
             // 
@@ -132,26 +133,26 @@
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 42;
             // 
-            // membership_comboBox
+            // medlemsstatus_comboBox
             // 
-            this.membership_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.membership_comboBox.FormattingEnabled = true;
-            this.membership_comboBox.Items.AddRange(new object[] {
+            this.medlemsstatus_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.medlemsstatus_comboBox.FormattingEnabled = true;
+            this.medlemsstatus_comboBox.Items.AddRange(new object[] {
             "Aktiv",
             "Vilande",
             "Greenfee",
             "Junior"});
-            this.membership_comboBox.Location = new System.Drawing.Point(11, 19);
-            this.membership_comboBox.Name = "membership_comboBox";
-            this.membership_comboBox.Size = new System.Drawing.Size(147, 21);
-            this.membership_comboBox.TabIndex = 41;
+            this.medlemsstatus_comboBox.Location = new System.Drawing.Point(11, 19);
+            this.medlemsstatus_comboBox.Name = "medlemsstatus_comboBox";
+            this.medlemsstatus_comboBox.Size = new System.Drawing.Size(147, 21);
+            this.medlemsstatus_comboBox.TabIndex = 41;
             // 
-            // city_textBox
+            // postort_textBox
             // 
-            this.city_textBox.Location = new System.Drawing.Point(308, 78);
-            this.city_textBox.Name = "city_textBox";
-            this.city_textBox.Size = new System.Drawing.Size(108, 20);
-            this.city_textBox.TabIndex = 40;
+            this.postort_textBox.Location = new System.Drawing.Point(308, 78);
+            this.postort_textBox.Name = "postort_textBox";
+            this.postort_textBox.Size = new System.Drawing.Size(108, 20);
+            this.postort_textBox.TabIndex = 40;
             // 
             // label8
             // 
@@ -162,12 +163,12 @@
             this.label8.TabIndex = 39;
             this.label8.Text = "Stad";
             // 
-            // zipcode_textBox
+            // postnummer_textBox
             // 
-            this.zipcode_textBox.Location = new System.Drawing.Point(209, 78);
-            this.zipcode_textBox.Name = "zipcode_textBox";
-            this.zipcode_textBox.Size = new System.Drawing.Size(93, 20);
-            this.zipcode_textBox.TabIndex = 38;
+            this.postnummer_textBox.Location = new System.Drawing.Point(209, 78);
+            this.postnummer_textBox.Name = "postnummer_textBox";
+            this.postnummer_textBox.Size = new System.Drawing.Size(93, 20);
+            this.postnummer_textBox.TabIndex = 38;
             // 
             // label7
             // 
@@ -194,12 +195,12 @@
             this.label6.TabIndex = 35;
             this.label6.Text = "Address";
             // 
-            // email_textBox
+            // epost_textBox
             // 
-            this.email_textBox.Location = new System.Drawing.Point(209, 183);
-            this.email_textBox.Name = "email_textBox";
-            this.email_textBox.Size = new System.Drawing.Size(207, 20);
-            this.email_textBox.TabIndex = 34;
+            this.epost_textBox.Location = new System.Drawing.Point(209, 183);
+            this.epost_textBox.Name = "epost_textBox";
+            this.epost_textBox.Size = new System.Drawing.Size(207, 20);
+            this.epost_textBox.TabIndex = 34;
             // 
             // label5
             // 
@@ -210,12 +211,12 @@
             this.label5.TabIndex = 33;
             this.label5.Text = "E-post";
             // 
-            // phone_textBox
+            // telefonnummer_textBox
             // 
-            this.phone_textBox.Location = new System.Drawing.Point(209, 142);
-            this.phone_textBox.Name = "phone_textBox";
-            this.phone_textBox.Size = new System.Drawing.Size(207, 20);
-            this.phone_textBox.TabIndex = 32;
+            this.telefonnummer_textBox.Location = new System.Drawing.Point(209, 142);
+            this.telefonnummer_textBox.Name = "telefonnummer_textBox";
+            this.telefonnummer_textBox.Size = new System.Drawing.Size(207, 20);
+            this.telefonnummer_textBox.TabIndex = 32;
             // 
             // label4
             // 
@@ -226,12 +227,12 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Telefonnummer";
             // 
-            // firstName_textBox
+            // fornamn_textBox
             // 
-            this.firstName_textBox.Location = new System.Drawing.Point(24, 142);
-            this.firstName_textBox.Name = "firstName_textBox";
-            this.firstName_textBox.Size = new System.Drawing.Size(147, 20);
-            this.firstName_textBox.TabIndex = 30;
+            this.fornamn_textBox.Location = new System.Drawing.Point(24, 142);
+            this.fornamn_textBox.Name = "fornamn_textBox";
+            this.fornamn_textBox.Size = new System.Drawing.Size(147, 20);
+            this.fornamn_textBox.TabIndex = 30;
             // 
             // label3
             // 
@@ -242,12 +243,12 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "Efternamn";
             // 
-            // lastName_textBox
+            // efternamn_textBox
             // 
-            this.lastName_textBox.Location = new System.Drawing.Point(24, 183);
-            this.lastName_textBox.Name = "lastName_textBox";
-            this.lastName_textBox.Size = new System.Drawing.Size(147, 20);
-            this.lastName_textBox.TabIndex = 28;
+            this.efternamn_textBox.Location = new System.Drawing.Point(24, 183);
+            this.efternamn_textBox.Name = "efternamn_textBox";
+            this.efternamn_textBox.Size = new System.Drawing.Size(147, 20);
+            this.efternamn_textBox.TabIndex = 28;
             // 
             // label2
             // 
@@ -258,12 +259,12 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Förnamn";
             // 
-            // golfId_textBox
+            // golfid_textBox
             // 
-            this.golfId_textBox.Location = new System.Drawing.Point(24, 37);
-            this.golfId_textBox.Name = "golfId_textBox";
-            this.golfId_textBox.Size = new System.Drawing.Size(147, 20);
-            this.golfId_textBox.TabIndex = 26;
+            this.golfid_textBox.Location = new System.Drawing.Point(24, 37);
+            this.golfid_textBox.Name = "golfid_textBox";
+            this.golfid_textBox.Size = new System.Drawing.Size(147, 20);
+            this.golfid_textBox.TabIndex = 26;
             // 
             // label1
             // 
@@ -301,8 +302,8 @@
             // medlem_groupBox
             // 
             this.medlem_groupBox.Controls.Add(this.label9);
-            this.medlem_groupBox.Controls.Add(this.membership_comboBox);
-            this.medlem_groupBox.Controls.Add(this.paid_checkBox);
+            this.medlem_groupBox.Controls.Add(this.medlemsstatus_comboBox);
+            this.medlem_groupBox.Controls.Add(this.betalat_checkBox);
             this.medlem_groupBox.Location = new System.Drawing.Point(20, 306);
             this.medlem_groupBox.Name = "medlem_groupBox";
             this.medlem_groupBox.Size = new System.Drawing.Size(174, 93);
@@ -315,7 +316,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 443);
+            this.ClientSize = new System.Drawing.Size(437, 443);
             this.Controls.Add(this.medlem_groupBox);
             this.Controls.Add(this.ickemedlem_radioButton);
             this.Controls.Add(this.medlem_radioButton);
@@ -325,25 +326,24 @@
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.handicap_textBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.city_textBox);
+            this.Controls.Add(this.postort_textBox);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.zipcode_textBox);
+            this.Controls.Add(this.postnummer_textBox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.adress_textBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.email_textBox);
+            this.Controls.Add(this.epost_textBox);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.phone_textBox);
+            this.Controls.Add(this.telefonnummer_textBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.firstName_textBox);
+            this.Controls.Add(this.fornamn_textBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.lastName_textBox);
+            this.Controls.Add(this.efternamn_textBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.golfId_textBox);
+            this.Controls.Add(this.golfid_textBox);
             this.Controls.Add(this.label1);
             this.Name = "laggtillspelare";
             this.Text = "laggtillspelare";
-            this.Load += new System.EventHandler(this.laggtillspelare_Load);
             this.medlem_groupBox.ResumeLayout(false);
             this.medlem_groupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -357,26 +357,26 @@
         private System.Windows.Forms.ComboBox gender_comboBox;
         private System.Windows.Forms.Button action_button;
         private System.Windows.Forms.Button cancel_button;
-        private System.Windows.Forms.CheckBox paid_checkBox;
+        private System.Windows.Forms.CheckBox betalat_checkBox;
         private System.Windows.Forms.TextBox handicap_textBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox membership_comboBox;
-        private System.Windows.Forms.TextBox city_textBox;
+        private System.Windows.Forms.ComboBox medlemsstatus_comboBox;
+        private System.Windows.Forms.TextBox postort_textBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox zipcode_textBox;
+        private System.Windows.Forms.TextBox postnummer_textBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox adress_textBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox email_textBox;
+        private System.Windows.Forms.TextBox epost_textBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox phone_textBox;
+        private System.Windows.Forms.TextBox telefonnummer_textBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox firstName_textBox;
+        private System.Windows.Forms.TextBox fornamn_textBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox lastName_textBox;
+        private System.Windows.Forms.TextBox efternamn_textBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox golfId_textBox;
+        private System.Windows.Forms.TextBox golfid_textBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton medlem_radioButton;
         private System.Windows.Forms.RadioButton ickemedlem_radioButton;

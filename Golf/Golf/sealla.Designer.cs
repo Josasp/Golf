@@ -32,6 +32,7 @@
             this.medlem_radioButton = new System.Windows.Forms.RadioButton();
             this.alla_radioButton = new System.Windows.Forms.RadioButton();
             this.ok_button = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // ickemedlem_radioButton
@@ -63,24 +64,33 @@
             this.alla_radioButton.Name = "alla_radioButton";
             this.alla_radioButton.Size = new System.Drawing.Size(42, 17);
             this.alla_radioButton.TabIndex = 54;
-            this.alla_radioButton.TabStop = true;
             this.alla_radioButton.Text = "Alla";
             this.alla_radioButton.UseVisualStyleBackColor = true;
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(197, 227);
+            this.ok_button.Location = new System.Drawing.Point(302, 293);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(75, 23);
             this.ok_button.TabIndex = 55;
-            this.ok_button.Text = "OK";
+            this.ok_button.Text = "Stäng";
             this.ok_button.UseVisualStyleBackColor = true;
+            this.ok_button.Click += new System.EventHandler(this.ok_button_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(23, 63);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(354, 212);
+            this.listBox1.TabIndex = 56;
             // 
             // sealla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.ClientSize = new System.Drawing.Size(389, 328);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.ok_button);
             this.Controls.Add(this.alla_radioButton);
             this.Controls.Add(this.ickemedlem_radioButton);
@@ -99,5 +109,6 @@
         private System.Windows.Forms.RadioButton medlem_radioButton;
         private System.Windows.Forms.RadioButton alla_radioButton;
         private System.Windows.Forms.Button ok_button;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
