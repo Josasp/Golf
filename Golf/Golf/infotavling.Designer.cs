@@ -393,7 +393,7 @@
             // 
             // anmal_spelare_button
             // 
-            this.anmal_spelare_button.Location = new System.Drawing.Point(384, 341);
+            this.anmal_spelare_button.Location = new System.Drawing.Point(342, 341);
             this.anmal_spelare_button.Name = "anmal_spelare_button";
             this.anmal_spelare_button.Size = new System.Drawing.Size(102, 23);
             this.anmal_spelare_button.TabIndex = 131;
@@ -402,7 +402,7 @@
             // 
             // se_anmalda_button
             // 
-            this.se_anmalda_button.Location = new System.Drawing.Point(384, 370);
+            this.se_anmalda_button.Location = new System.Drawing.Point(342, 370);
             this.se_anmalda_button.Name = "se_anmalda_button";
             this.se_anmalda_button.Size = new System.Drawing.Size(102, 23);
             this.se_anmalda_button.TabIndex = 132;
@@ -429,7 +429,7 @@
             // 
             // avbryt_button
             // 
-            this.avbryt_button.Location = new System.Drawing.Point(411, 485);
+            this.avbryt_button.Location = new System.Drawing.Point(369, 485);
             this.avbryt_button.Name = "avbryt_button";
             this.avbryt_button.Size = new System.Drawing.Size(75, 23);
             this.avbryt_button.TabIndex = 135;
@@ -439,7 +439,7 @@
             // 
             // lotta_starttider_button
             // 
-            this.lotta_starttider_button.Location = new System.Drawing.Point(220, 431);
+            this.lotta_starttider_button.Location = new System.Drawing.Point(180, 428);
             this.lotta_starttider_button.Name = "lotta_starttider_button";
             this.lotta_starttider_button.Size = new System.Drawing.Size(102, 23);
             this.lotta_starttider_button.TabIndex = 136;
@@ -448,7 +448,7 @@
             // 
             // lotta_par_button
             // 
-            this.lotta_par_button.Location = new System.Drawing.Point(220, 460);
+            this.lotta_par_button.Location = new System.Drawing.Point(180, 457);
             this.lotta_par_button.Name = "lotta_par_button";
             this.lotta_par_button.Size = new System.Drawing.Size(102, 23);
             this.lotta_par_button.TabIndex = 137;
@@ -457,7 +457,7 @@
             // 
             // lotta_lag_button
             // 
-            this.lotta_lag_button.Location = new System.Drawing.Point(220, 489);
+            this.lotta_lag_button.Location = new System.Drawing.Point(180, 486);
             this.lotta_lag_button.Name = "lotta_lag_button";
             this.lotta_lag_button.Size = new System.Drawing.Size(102, 23);
             this.lotta_lag_button.TabIndex = 138;
@@ -468,7 +468,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 520);
+            this.ClientSize = new System.Drawing.Size(457, 520);
             this.Controls.Add(this.lotta_lag_button);
             this.Controls.Add(this.lotta_par_button);
             this.Controls.Add(this.lotta_starttider_button);
