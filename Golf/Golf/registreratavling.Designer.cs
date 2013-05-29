@@ -173,7 +173,7 @@
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(261, 502);
+            this.ok_button.Location = new System.Drawing.Point(291, 502);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(75, 23);
             this.ok_button.TabIndex = 55;

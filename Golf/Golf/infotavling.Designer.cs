@@ -73,6 +73,11 @@
             this.lotta_starttider_button = new System.Windows.Forms.Button();
             this.lotta_par_button = new System.Windows.Forms.Button();
             this.lotta_lag_button = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.se_resultat_button = new System.Windows.Forms.Button();
+            this.registrera_resultat_button = new System.Windows.Forms.Button();
+            this.se_starttider_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label17
@@ -393,7 +398,7 @@
             // 
             // anmal_spelare_button
             // 
-            this.anmal_spelare_button.Location = new System.Drawing.Point(342, 341);
+            this.anmal_spelare_button.Location = new System.Drawing.Point(342, 305);
             this.anmal_spelare_button.Name = "anmal_spelare_button";
             this.anmal_spelare_button.Size = new System.Drawing.Size(102, 23);
             this.anmal_spelare_button.TabIndex = 131;
@@ -402,7 +407,7 @@
             // 
             // se_anmalda_button
             // 
-            this.se_anmalda_button.Location = new System.Drawing.Point(342, 370);
+            this.se_anmalda_button.Location = new System.Drawing.Point(342, 334);
             this.se_anmalda_button.Name = "se_anmalda_button";
             this.se_anmalda_button.Size = new System.Drawing.Size(102, 23);
             this.se_anmalda_button.TabIndex = 132;
@@ -439,7 +444,7 @@
             // 
             // lotta_starttider_button
             // 
-            this.lotta_starttider_button.Location = new System.Drawing.Point(180, 428);
+            this.lotta_starttider_button.Location = new System.Drawing.Point(180, 400);
             this.lotta_starttider_button.Name = "lotta_starttider_button";
             this.lotta_starttider_button.Size = new System.Drawing.Size(102, 23);
             this.lotta_starttider_button.TabIndex = 136;
@@ -448,7 +453,7 @@
             // 
             // lotta_par_button
             // 
-            this.lotta_par_button.Location = new System.Drawing.Point(180, 457);
+            this.lotta_par_button.Location = new System.Drawing.Point(180, 429);
             this.lotta_par_button.Name = "lotta_par_button";
             this.lotta_par_button.Size = new System.Drawing.Size(102, 23);
             this.lotta_par_button.TabIndex = 137;
@@ -457,18 +462,66 @@
             // 
             // lotta_lag_button
             // 
-            this.lotta_lag_button.Location = new System.Drawing.Point(180, 486);
+            this.lotta_lag_button.Location = new System.Drawing.Point(180, 458);
             this.lotta_lag_button.Name = "lotta_lag_button";
             this.lotta_lag_button.Size = new System.Drawing.Size(102, 23);
             this.lotta_lag_button.TabIndex = 138;
             this.lotta_lag_button.Text = "Lotta lag";
             this.lotta_lag_button.UseVisualStyleBackColor = true;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(141, 280);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(51, 20);
+            this.textBox3.TabIndex = 140;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(138, 263);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(74, 13);
+            this.label18.TabIndex = 139;
+            this.label18.Text = "Antal anmälda";
+            // 
+            // se_resultat_button
+            // 
+            this.se_resultat_button.Location = new System.Drawing.Point(342, 429);
+            this.se_resultat_button.Name = "se_resultat_button";
+            this.se_resultat_button.Size = new System.Drawing.Size(102, 23);
+            this.se_resultat_button.TabIndex = 142;
+            this.se_resultat_button.Text = "Se resultat";
+            this.se_resultat_button.UseVisualStyleBackColor = true;
+            // 
+            // registrera_resultat_button
+            // 
+            this.registrera_resultat_button.Location = new System.Drawing.Point(342, 400);
+            this.registrera_resultat_button.Name = "registrera_resultat_button";
+            this.registrera_resultat_button.Size = new System.Drawing.Size(102, 23);
+            this.registrera_resultat_button.TabIndex = 141;
+            this.registrera_resultat_button.Text = "Registrera resultat";
+            this.registrera_resultat_button.UseVisualStyleBackColor = true;
+            // 
+            // se_starttider_button
+            // 
+            this.se_starttider_button.Location = new System.Drawing.Point(180, 487);
+            this.se_starttider_button.Name = "se_starttider_button";
+            this.se_starttider_button.Size = new System.Drawing.Size(102, 23);
+            this.se_starttider_button.TabIndex = 143;
+            this.se_starttider_button.Text = "Se starttider";
+            this.se_starttider_button.UseVisualStyleBackColor = true;
+            // 
             // infotavling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(457, 520);
+            this.Controls.Add(this.se_starttider_button);
+            this.Controls.Add(this.se_resultat_button);
+            this.Controls.Add(this.registrera_resultat_button);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.lotta_lag_button);
             this.Controls.Add(this.lotta_par_button);
             this.Controls.Add(this.lotta_starttider_button);
@@ -569,5 +622,10 @@
         private System.Windows.Forms.Button lotta_starttider_button;
         private System.Windows.Forms.Button lotta_par_button;
         private System.Windows.Forms.Button lotta_lag_button;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button se_resultat_button;
+        private System.Windows.Forms.Button registrera_resultat_button;
+        private System.Windows.Forms.Button se_starttider_button;
     }
 }
