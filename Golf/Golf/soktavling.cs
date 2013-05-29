@@ -21,5 +21,11 @@ namespace Golf
         {
             this.Close(); 
         }
+
+        private void ok_button_Click(object sender, EventArgs e)
+        {
+            infotavling infotavling = new infotavling();
+            infotavling.Show(); 
+        }
     }
 }

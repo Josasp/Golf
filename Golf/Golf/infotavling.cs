@@ -26,5 +26,10 @@ namespace Golf
         {
             this.Close();
         }
+
+        private void ok_button_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

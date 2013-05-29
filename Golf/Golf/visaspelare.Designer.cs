@@ -58,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.val_comboBox = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
             this.medlem_groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -338,11 +339,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(28, 414);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(63, 13);
+            this.label19.TabIndex = 149;
+            this.label19.Text = "Välj åtgärd: ";
+            // 
             // visaspelare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(449, 495);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.val_comboBox);
             this.Controls.Add(this.medlem_groupBox);
@@ -412,5 +423,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox val_comboBox;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label19;
     }
 }

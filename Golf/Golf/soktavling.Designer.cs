@@ -94,6 +94,7 @@
             this.ok_button.TabIndex = 68;
             this.ok_button.Text = "OK";
             this.ok_button.UseVisualStyleBackColor = true;
+            this.ok_button.Click += new System.EventHandler(this.ok_button_Click);
             // 
             // avbryt_button
             // 

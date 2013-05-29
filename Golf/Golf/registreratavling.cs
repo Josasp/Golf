@@ -31,5 +31,10 @@ namespace Golf
         {
 
         }
+
+        private void tavlingsnamn_textBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

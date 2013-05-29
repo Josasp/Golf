@@ -84,13 +84,14 @@
             // 
             this.tavlingsnamn_textBox.Location = new System.Drawing.Point(86, 34);
             this.tavlingsnamn_textBox.Name = "tavlingsnamn_textBox";
-            this.tavlingsnamn_textBox.Size = new System.Drawing.Size(199, 20);
+            this.tavlingsnamn_textBox.Size = new System.Drawing.Size(130, 20);
             this.tavlingsnamn_textBox.TabIndex = 1;
+            this.tavlingsnamn_textBox.TextChanged += new System.EventHandler(this.tavlingsnamn_textBox_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(303, 18);
+            this.label2.Location = new System.Drawing.Point(232, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 2;
@@ -138,7 +139,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 380);
+            this.label4.Location = new System.Drawing.Point(14, 370);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 53;
@@ -147,7 +148,7 @@
             // man_checkBox
             // 
             this.man_checkBox.AutoSize = true;
-            this.man_checkBox.Location = new System.Drawing.Point(84, 406);
+            this.man_checkBox.Location = new System.Drawing.Point(84, 387);
             this.man_checkBox.Name = "man_checkBox";
             this.man_checkBox.Size = new System.Drawing.Size(47, 17);
             this.man_checkBox.TabIndex = 51;
@@ -157,7 +158,7 @@
             // kvinnor_checkBox
             // 
             this.kvinnor_checkBox.AutoSize = true;
-            this.kvinnor_checkBox.Location = new System.Drawing.Point(16, 406);
+            this.kvinnor_checkBox.Location = new System.Drawing.Point(16, 387);
             this.kvinnor_checkBox.Name = "kvinnor_checkBox";
             this.kvinnor_checkBox.Size = new System.Drawing.Size(62, 17);
             this.kvinnor_checkBox.TabIndex = 50;
@@ -166,14 +167,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(306, 34);
+            this.dateTimePicker1.Location = new System.Drawing.Point(235, 34);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(141, 20);
             this.dateTimePicker1.TabIndex = 54;
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(291, 502);
+            this.ok_button.Location = new System.Drawing.Point(291, 455);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(75, 23);
             this.ok_button.TabIndex = 55;
@@ -183,7 +184,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 454);
+            this.label5.Location = new System.Drawing.Point(12, 428);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 13);
             this.label5.TabIndex = 58;
@@ -192,7 +193,7 @@
             // manuellt_checkBox
             // 
             this.manuellt_checkBox.AutoSize = true;
-            this.manuellt_checkBox.Location = new System.Drawing.Point(101, 480);
+            this.manuellt_checkBox.Location = new System.Drawing.Point(101, 454);
             this.manuellt_checkBox.Name = "manuellt_checkBox";
             this.manuellt_checkBox.Size = new System.Drawing.Size(66, 17);
             this.manuellt_checkBox.TabIndex = 57;
@@ -202,7 +203,7 @@
             // automatiskt_checkBox
             // 
             this.automatiskt_checkBox.AutoSize = true;
-            this.automatiskt_checkBox.Location = new System.Drawing.Point(14, 480);
+            this.automatiskt_checkBox.Location = new System.Drawing.Point(14, 454);
             this.automatiskt_checkBox.Name = "automatiskt_checkBox";
             this.automatiskt_checkBox.Size = new System.Drawing.Size(81, 17);
             this.automatiskt_checkBox.TabIndex = 56;
@@ -227,7 +228,7 @@
             // 
             // avbryt_button
             // 
-            this.avbryt_button.Location = new System.Drawing.Point(372, 502);
+            this.avbryt_button.Location = new System.Drawing.Point(372, 455);
             this.avbryt_button.Name = "avbryt_button";
             this.avbryt_button.Size = new System.Drawing.Size(75, 23);
             this.avbryt_button.TabIndex = 70;
@@ -392,7 +393,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 315);
+            this.label17.Location = new System.Drawing.Point(12, 317);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(61, 13);
             this.label17.TabIndex = 93;
@@ -401,7 +402,7 @@
             // lag_checkBox
             // 
             this.lag_checkBox.AutoSize = true;
-            this.lag_checkBox.Location = new System.Drawing.Point(135, 341);
+            this.lag_checkBox.Location = new System.Drawing.Point(135, 335);
             this.lag_checkBox.Name = "lag_checkBox";
             this.lag_checkBox.Size = new System.Drawing.Size(44, 17);
             this.lag_checkBox.TabIndex = 92;
@@ -411,7 +412,7 @@
             // par_checkBox
             // 
             this.par_checkBox.AutoSize = true;
-            this.par_checkBox.Location = new System.Drawing.Point(84, 341);
+            this.par_checkBox.Location = new System.Drawing.Point(84, 335);
             this.par_checkBox.Name = "par_checkBox";
             this.par_checkBox.Size = new System.Drawing.Size(42, 17);
             this.par_checkBox.TabIndex = 91;
@@ -421,7 +422,7 @@
             // singel_checkBox
             // 
             this.singel_checkBox.AutoSize = true;
-            this.singel_checkBox.Location = new System.Drawing.Point(17, 341);
+            this.singel_checkBox.Location = new System.Drawing.Point(17, 335);
             this.singel_checkBox.Name = "singel_checkBox";
             this.singel_checkBox.Size = new System.Drawing.Size(55, 17);
             this.singel_checkBox.TabIndex = 90;
@@ -432,7 +433,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 537);
+            this.ClientSize = new System.Drawing.Size(463, 489);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.lag_checkBox);
             this.Controls.Add(this.par_checkBox);
