@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class soktavling : Form
+    public partial class infotavling : Form
     {
-        public soktavling()
+        public infotavling()
         {
             InitializeComponent();
-        }
-
-        private void avbryt_button_Click(object sender, EventArgs e)
-        {
-            this.Close(); 
         }
     }
 }

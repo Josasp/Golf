@@ -35,7 +35,7 @@ namespace Golf
             conn.Open();
 
             // Lägg in information i databasen. 
-            int kontaktid = 1; // Hur kolla vilket som är det största i tabellen och sätta till nästa? 
+            int kontaktid = 2; // Hur kolla vilket som är det största i tabellen och sätta till nästa? 
             string inikontakt = "insert into kontakt (kontaktid, postadress, postnummer, postort, telefonnummer, epost) values (" + kontaktid + ", '" + adress_textBox.Text + "', " + postnummer_textBox.Text + ", '" + postort_textBox.Text + "', '" + telefonnummer_textBox.Text + "', '" + epost_textBox.Text + "')";
             NpgsqlCommand command = new NpgsqlCommand(inikontakt, conn);
             command.ExecuteNonQuery();

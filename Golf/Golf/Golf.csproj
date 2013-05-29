@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="infotavling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="infotavling.Designer.cs">
+      <DependentUpon>infotavling.cs</DependentUpon>
+    </Compile>
     <Compile Include="visaspelare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     </Compile>
     <EmbeddedResource Include="golfreception.resx">
       <DependentUpon>golfreception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="infotavling.resx">
+      <DependentUpon>infotavling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="laggtillspelare.resx">
       <DependentUpon>laggtillspelare.cs</DependentUpon>

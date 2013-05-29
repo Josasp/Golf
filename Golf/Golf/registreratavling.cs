@@ -16,5 +16,20 @@ namespace Golf
         {
             InitializeComponent();
         }
+
+        private void avbryt_button_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
+
+        private void registreratavling_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
