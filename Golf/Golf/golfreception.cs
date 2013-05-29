@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql; 
 
 namespace Golf
 {
@@ -45,6 +46,20 @@ namespace Golf
         {
             soktavling soktavling = new soktavling();
             soktavling.Show();
+        }
+
+        private void golfreception_Load(object sender, EventArgs e)
+        {
+            // Bara lite test.... 
+            int tid = 0; 
+
+
+            while (tid < 30)
+            {
+                listView1.Items.Add(Convert.ToString(tid));
+                tid = tid + 1; 
+            }
+
         }
     }
 }

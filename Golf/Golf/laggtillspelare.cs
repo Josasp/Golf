@@ -44,6 +44,7 @@ namespace Golf
             NpgsqlCommand command2 = new NpgsqlCommand(iniperson, conn);
             command2.ExecuteNonQuery();
 
+            // Lägger in information i medlem om medlem är ikryssad. 
             if (medlem_radioButton.Checked == true)
             {
                 string inimedlem = "insert into medlem (golfid, medlemsstatus, betalt) values(" + golfid_textBox.Text + ", '" + medlemsstatus_comboBox.Text + "', " + betalat_checkBox.Checked + ")";
@@ -56,6 +57,11 @@ namespace Golf
             // Stäng anslutning till databasen. 
             conn.Close();
 
+        }
+
+        private void cancel_button_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
         }
     }
 }

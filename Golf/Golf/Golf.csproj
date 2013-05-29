@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="visaspelare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visaspelare.Designer.cs">
+      <DependentUpon>visaspelare.cs</DependentUpon>
+    </Compile>
     <Compile Include="golfreception.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     <Compile Include="soktavling.Designer.cs">
       <DependentUpon>soktavling.cs</DependentUpon>
     </Compile>
+    <Compile Include="visatavlingmedlem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visatavlingmedlem.Designer.cs">
+      <DependentUpon>visatavlingmedlem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="golfreception.resx">
       <DependentUpon>golfreception.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="soktavling.resx">
       <DependentUpon>soktavling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visaspelare.resx">
+      <DependentUpon>visaspelare.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
