@@ -50,16 +50,35 @@ namespace Golf
 
         private void golfreception_Load(object sender, EventArgs e)
         {
-            // Bara lite test.... 
-            int tid = 0; 
+            // Bara lite test... 
 
+            listView1.View = View.SmallIcon; // SmallIcon / LargeIcon
+            //listView1.CheckBoxes = true;
 
-            while (tid < 30)
+            string[] tid = { "08:00", "08:10", "08:20", "08:30", "08:40", "08.50", "09:00", "09:10", "09:20" }; //osv. 
+
+            int raknare = 0; 
+
+            while (raknare < 9) 
             {
-                listView1.Items.Add(Convert.ToString(tid));
-                tid = tid + 1; 
+                // if tid finns i databasen, lägg i item antal spelare bokade = prickar.
+                listView1.Items.Add(tid[raknare]);
+
+                raknare = raknare + 1; 
             }
 
+
+
+            //Add the items to the ListView.
+            /*ListViewItem item1 = new ListViewItem("item1", 0);
+            ListViewItem item2 = new ListViewItem("item2", 0);
+            ListViewItem item3 = new ListViewItem("item3", 0);
+            listView1.Items.AddRange(new ListViewItem[] { item1, item2, item3 });*/
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -115,11 +115,15 @@
             // 
             // listView1
             // 
+            this.listView1.LabelWrap = false;
             this.listView1.Location = new System.Drawing.Point(55, 76);
+            this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
+            this.listView1.ShowItemToolTips = true;
             this.listView1.Size = new System.Drawing.Size(505, 249);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // golfreception
             // 
