@@ -16,5 +16,11 @@ namespace Golf
         {
             InitializeComponent();
         }
+
+        private void cancel_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

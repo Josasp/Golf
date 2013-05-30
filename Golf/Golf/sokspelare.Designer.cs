@@ -132,7 +132,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "sokspelare";
-            this.Text = "Sök Spelare";
+            this.Text = "Sök spelare";
             this.ResumeLayout(false);
             this.PerformLayout();
 
