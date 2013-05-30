@@ -47,11 +47,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anmalspelare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anmalspelare.Designer.cs">
+      <DependentUpon>anmalspelare.cs</DependentUpon>
+    </Compile>
     <Compile Include="infotavling.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="infotavling.Designer.cs">
       <DependentUpon>infotavling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lottastarttider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lottastarttider.Designer.cs">
+      <DependentUpon>lottastarttider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registreraresultat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registreraresultat.Designer.cs">
+      <DependentUpon>registreraresultat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seanmaldaspelare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seanmaldaspelare.Designer.cs">
+      <DependentUpon>seanmaldaspelare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="seresultat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="seresultat.Designer.cs">
+      <DependentUpon>seresultat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sestarttider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sestarttider.Designer.cs">
+      <DependentUpon>sestarttider.cs</DependentUpon>
     </Compile>
     <Compile Include="visaspelare.cs">
       <SubType>Form</SubType>
@@ -103,6 +139,9 @@
     <Compile Include="visatavlingmedlem.Designer.cs">
       <DependentUpon>visatavlingmedlem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="anmalspelare.resx">
+      <DependentUpon>anmalspelare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="golfreception.resx">
       <DependentUpon>golfreception.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="laggtillspelare.resx">
       <DependentUpon>laggtillspelare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lottastarttider.resx">
+      <DependentUpon>lottastarttider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,11 +163,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="registreraresultat.resx">
+      <DependentUpon>registreraresultat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="registreratavling.resx">
       <DependentUpon>registreratavling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sealla.resx">
       <DependentUpon>sealla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seanmaldaspelare.resx">
+      <DependentUpon>seanmaldaspelare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="seresultat.resx">
+      <DependentUpon>seresultat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sestarttider.resx">
+      <DependentUpon>sestarttider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sokspelare.resx">
       <DependentUpon>sokspelare.cs</DependentUpon>

@@ -344,7 +344,7 @@
             this.Controls.Add(this.golfid_textBox);
             this.Controls.Add(this.label1);
             this.Name = "laggtillspelare";
-            this.Text = "laggtillspelare";
+            this.Text = "Lägg till spelare";
             this.medlem_groupBox.ResumeLayout(false);
             this.medlem_groupBox.PerformLayout();
             this.ResumeLayout(false);

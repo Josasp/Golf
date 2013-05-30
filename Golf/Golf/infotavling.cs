@@ -31,5 +31,41 @@ namespace Golf
         {
 
         }
+
+        private void anmälSpelareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            anmalspelare anmalspelare = new anmalspelare();
+            anmalspelare.Show();
+        }
+
+        private void seAnmäldaSpelareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            seanmaldaspelare seanmaldaspelare = new seanmaldaspelare();
+            seanmaldaspelare.Show();
+        }
+
+        private void registreraResultatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            registreraresultat registreraresultat = new registreraresultat();
+            registreraresultat.Show();
+        }
+
+        private void seResultatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            seresultat seresultat = new seresultat();
+            seresultat.Show();
+        }
+
+        private void lottaStarttiderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lottastarttider lottastarttider = new lottastarttider();
+            lottastarttider.Show();
+        }
+
+        private void seStarttiderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            sestarttider sestarttider = new sestarttider();
+            sestarttider.Show();
+        }
     }
 }

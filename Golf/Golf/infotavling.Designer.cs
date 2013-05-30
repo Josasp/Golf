@@ -493,12 +493,14 @@
             this.anmälSpelareToolStripMenuItem.Name = "anmälSpelareToolStripMenuItem";
             this.anmälSpelareToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.anmälSpelareToolStripMenuItem.Text = "Anmäl spelare";
+            this.anmälSpelareToolStripMenuItem.Click += new System.EventHandler(this.anmälSpelareToolStripMenuItem_Click);
             // 
             // seAnmäldaSpelareToolStripMenuItem
             // 
             this.seAnmäldaSpelareToolStripMenuItem.Name = "seAnmäldaSpelareToolStripMenuItem";
             this.seAnmäldaSpelareToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.seAnmäldaSpelareToolStripMenuItem.Text = "Se anmälda spelare";
+            this.seAnmäldaSpelareToolStripMenuItem.Click += new System.EventHandler(this.seAnmäldaSpelareToolStripMenuItem_Click);
             // 
             // resultatToolStripMenuItem
             // 
@@ -514,12 +516,14 @@
             this.registreraResultatToolStripMenuItem.Name = "registreraResultatToolStripMenuItem";
             this.registreraResultatToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.registreraResultatToolStripMenuItem.Text = "Registrera resultat";
+            this.registreraResultatToolStripMenuItem.Click += new System.EventHandler(this.registreraResultatToolStripMenuItem_Click);
             // 
             // seResultatToolStripMenuItem
             // 
             this.seResultatToolStripMenuItem.Name = "seResultatToolStripMenuItem";
             this.seResultatToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.seResultatToolStripMenuItem.Text = "Se resultat";
+            this.seResultatToolStripMenuItem.Click += new System.EventHandler(this.seResultatToolStripMenuItem_Click);
             // 
             // starttiderToolStripMenuItem
             // 
@@ -535,12 +539,14 @@
             this.lottaStarttiderToolStripMenuItem.Name = "lottaStarttiderToolStripMenuItem";
             this.lottaStarttiderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.lottaStarttiderToolStripMenuItem.Text = "Lotta starttider";
+            this.lottaStarttiderToolStripMenuItem.Click += new System.EventHandler(this.lottaStarttiderToolStripMenuItem_Click);
             // 
             // seStarttiderToolStripMenuItem
             // 
             this.seStarttiderToolStripMenuItem.Name = "seStarttiderToolStripMenuItem";
             this.seStarttiderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.seStarttiderToolStripMenuItem.Text = "Se starttider";
+            this.seStarttiderToolStripMenuItem.Click += new System.EventHandler(this.seStarttiderToolStripMenuItem_Click);
             // 
             // infotavling
             // 
