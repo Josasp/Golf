@@ -21,31 +21,31 @@ namespace Golf
         private void läggTillSpelareToolStripMenuItem_Click(object sender, EventArgs e)
         {
             laggtillspelare laggtillspelare = new laggtillspelare();
-            laggtillspelare.Show();
+            laggtillspelare.ShowDialog();
         }
 
         private void seAllaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sealla sealla = new sealla();
-            sealla.Show();
+            sealla.ShowDialog();
         }
 
         private void sökSpelareToolStripMenuItem_Click(object sender, EventArgs e)
         {
             sokspelare sokspelare = new sokspelare();
-            sokspelare.Show();
+            sokspelare.ShowDialog();
         }
 
         private void registreraTävlingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             registreratavling registreratavling = new registreratavling();
-            registreratavling.Show();
+            registreratavling.ShowDialog();
         }
 
         private void sökTävlingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             soktavling soktavling = new soktavling();
-            soktavling.Show();
+            soktavling.ShowDialog();
         }
 
         private void golfreception_Load(object sender, EventArgs e)
