@@ -43,7 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.manuellt_checkBox = new System.Windows.Forms.CheckBox();
             this.automatiskt_checkBox = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tavlingid_textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.avbryt_button = new System.Windows.Forms.Button();
             this.a_fran_textBox = new System.Windows.Forms.TextBox();
@@ -63,7 +63,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.maxantaldeltagare_textBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.lag_checkBox = new System.Windows.Forms.CheckBox();
@@ -86,7 +86,6 @@
             this.tavlingsnamn_textBox.Name = "tavlingsnamn_textBox";
             this.tavlingsnamn_textBox.Size = new System.Drawing.Size(130, 20);
             this.tavlingsnamn_textBox.TabIndex = 1;
-            this.tavlingsnamn_textBox.TextChanged += new System.EventHandler(this.tavlingsnamn_textBox_TextChanged);
             // 
             // label2
             // 
@@ -180,6 +179,7 @@
             this.ok_button.TabIndex = 55;
             this.ok_button.Text = "OK";
             this.ok_button.UseVisualStyleBackColor = true;
+            this.ok_button.Click += new System.EventHandler(this.ok_button_Click);
             // 
             // label5
             // 
@@ -210,12 +210,12 @@
             this.automatiskt_checkBox.Text = "Automatiskt";
             this.automatiskt_checkBox.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tavlingid_textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(15, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(51, 20);
-            this.textBox1.TabIndex = 69;
+            this.tavlingid_textBox.Location = new System.Drawing.Point(15, 35);
+            this.tavlingid_textBox.Name = "tavlingid_textBox";
+            this.tavlingid_textBox.Size = new System.Drawing.Size(51, 20);
+            this.tavlingid_textBox.TabIndex = 69;
             // 
             // label6
             // 
@@ -242,7 +242,6 @@
             this.a_fran_textBox.Name = "a_fran_textBox";
             this.a_fran_textBox.Size = new System.Drawing.Size(30, 20);
             this.a_fran_textBox.TabIndex = 71;
-            this.a_fran_textBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label7
             // 
@@ -374,12 +373,12 @@
             this.label15.TabIndex = 86;
             this.label15.Text = "Sista avanmälningsdatum";
             // 
-            // textBox2
+            // maxantaldeltagare_textBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(15, 280);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(51, 20);
-            this.textBox2.TabIndex = 89;
+            this.maxantaldeltagare_textBox.Location = new System.Drawing.Point(15, 280);
+            this.maxantaldeltagare_textBox.Name = "maxantaldeltagare_textBox";
+            this.maxantaldeltagare_textBox.Size = new System.Drawing.Size(51, 20);
+            this.maxantaldeltagare_textBox.TabIndex = 89;
             // 
             // label16
             // 
@@ -438,7 +437,7 @@
             this.Controls.Add(this.lag_checkBox);
             this.Controls.Add(this.par_checkBox);
             this.Controls.Add(this.singel_checkBox);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.maxantaldeltagare_textBox);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.label15);
@@ -458,7 +457,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.a_fran_textBox);
             this.Controls.Add(this.avbryt_button);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tavlingid_textBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.manuellt_checkBox);
@@ -477,7 +476,6 @@
             this.Controls.Add(this.label1);
             this.Name = "registreratavling";
             this.Text = "Registrera tävling";
-            this.Load += new System.EventHandler(this.registreratavling_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,7 +498,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox manuellt_checkBox;
         private System.Windows.Forms.CheckBox automatiskt_checkBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tavlingid_textBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button avbryt_button;
         private System.Windows.Forms.TextBox a_fran_textBox;
@@ -520,7 +518,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox maxantaldeltagare_textBox;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.CheckBox lag_checkBox;

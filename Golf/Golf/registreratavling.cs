@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,21 +20,31 @@ namespace Golf
 
         private void avbryt_button_Click(object sender, EventArgs e)
         {
-            this.Close(); 
+            this.Close();
         }
 
-        private void registreratavling_Load(object sender, EventArgs e)
+        private void ok_button_Click(object sender, EventArgs e)
         {
+            // Lägg in information om tävling i databasen.  
+            DateTime tävlingsdatum = this.dateTimePicker1.Value.Date;
+            DateTime sistaAnmälningsdatum = this.dateTimePicker2.Value.Date;
+            DateTime sistaAvanmälningsdatum = this.dateTimePicker3.Value.Date;
+            string initavling = "insert into tavling (tavlingid, tavlingnamn, datum, sistaanmalningsdatum, sistaavanmalningsdatum, maxdeltagare) values (" + tavlingid_textBox.Text + ", " + tavlingsnamn_textBox.Text + ", " + tävlingsdatum + ", " + sistaAnmälningsdatum + ", " + sistaAvanmälningsdatum + ", " + maxantaldeltagare_textBox.Text + ")";
+            NpgsqlCommand command = new NpgsqlCommand(initavling, golfreception.conn);
+            command.ExecuteNonQuery();
 
-        }
+            
+            // Hur göra med kön?
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
+            // Hur göra med handicapgränser?
 
-        }
+            // Hur göra med klass?
 
-        private void tavlingsnamn_textBox_TextChanged(object sender, EventArgs e)
-        {
+            // Hur göra med tävlingstyp?
+
+            // Hur göra med boka upp starttider? 
+
+            // Stäng anslutning till databasen. 
 
         }
     }
