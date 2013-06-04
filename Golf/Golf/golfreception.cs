@@ -13,9 +13,18 @@ namespace Golf
 {
     public partial class golfreception : Form
     {
+        public static NpgsqlConnection conn;
+
         public golfreception()
         {
             InitializeComponent();
+            Connect();
+        }
+
+        private static void Connect()
+        {
+            conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=grp6vt13;User Id=grp6vt13;Password=gOMMObmEP;SSL=true");
+            conn.Open();
         }
 
         private void läggTillSpelareToolStripMenuItem_Click(object sender, EventArgs e)
