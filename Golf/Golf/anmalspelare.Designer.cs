@@ -1,6 +1,6 @@
 ﻿namespace Golf
 {
-    partial class anmalspelare
+    partial class AnmalSpelare
     {
         /// <summary>
         /// Required designer variable.

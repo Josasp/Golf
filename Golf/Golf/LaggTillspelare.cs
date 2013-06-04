@@ -11,9 +11,9 @@ using Npgsql;
 
 namespace Golf
 {
-    public partial class laggtillspelare : Form
+    public partial class LaggTillspelare : Form
     {
-        public laggtillspelare()
+        public LaggTillspelare()
         {
             InitializeComponent();
         }

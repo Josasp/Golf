@@ -1,6 +1,6 @@
 ﻿namespace Golf
 {
-    partial class lottastarttider
+    partial class LottaStarttider
     {
         /// <summary>
         /// Required designer variable.

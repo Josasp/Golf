@@ -1,6 +1,6 @@
 ﻿namespace Golf
 {
-    partial class sealla
+    partial class SeAlla
     {
         /// <summary>
         /// Required designer variable.

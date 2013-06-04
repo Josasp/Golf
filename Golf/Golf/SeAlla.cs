@@ -11,9 +11,9 @@ using Npgsql;
 
 namespace Golf
 {
-    public partial class sealla : Form
+    public partial class SeAlla : Form
     {
-        public sealla()
+        public SeAlla()
         {
             InitializeComponent();
         }

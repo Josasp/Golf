@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class sestarttider : Form
+    public partial class SeAnmaldaSpelare : Form
     {
-        public sestarttider()
+        public SeAnmaldaSpelare()
         {
             InitializeComponent();
+        }
+
+        private void cancel_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void action_button_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class lottastarttider : Form
+    public partial class SeStarttider : Form
     {
-        public lottastarttider()
+        public SeStarttider()
         {
             InitializeComponent();
         }

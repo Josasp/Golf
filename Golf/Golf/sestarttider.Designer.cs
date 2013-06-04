@@ -1,6 +1,6 @@
 ﻿namespace Golf
 {
-    partial class sestarttider
+    partial class SeStarttider
     {
         /// <summary>
         /// Required designer variable.

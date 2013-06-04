@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class anmalspelare : Form
+    public partial class RegistreraResultat : Form
     {
-        public anmalspelare()
+        public RegistreraResultat()
         {
             InitializeComponent();
         }
@@ -21,5 +21,6 @@ namespace Golf
         {
             this.Close();
         }
+
     }
 }

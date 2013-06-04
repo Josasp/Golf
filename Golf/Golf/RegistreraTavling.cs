@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class registreratavling : Form
+    public partial class RegistreraTavling : Form
     {
-        public registreratavling()
+        public RegistreraTavling()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace Golf
             DateTime sistaAnmälningsdatum = this.dateTimePicker2.Value.Date;
             DateTime sistaAvanmälningsdatum = this.dateTimePicker3.Value.Date;
             string initavling = "insert into tavling (tavlingid, tavlingnamn, datum, sistaanmalningsdatum, sistaavanmalningsdatum, maxdeltagare) values (" + tavlingid_textBox.Text + ", " + tavlingsnamn_textBox.Text + ", " + tävlingsdatum + ", " + sistaAnmälningsdatum + ", " + sistaAvanmälningsdatum + ", " + maxantaldeltagare_textBox.Text + ")";
-            NpgsqlCommand command = new NpgsqlCommand(initavling, golfreception.conn);
+            NpgsqlCommand command = new NpgsqlCommand(initavling, GolfReception.conn);
             command.ExecuteNonQuery();
 
             

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class infotavling : Form
+    public partial class InfoTavling : Form
     {
-        public infotavling()
+        public InfoTavling()
         {
             InitializeComponent();
         }
@@ -34,37 +34,37 @@ namespace Golf
 
         private void anmälSpelareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            anmalspelare anmalspelare = new anmalspelare();
+            AnmalSpelare anmalspelare = new AnmalSpelare();
             anmalspelare.Show();
         }
 
         private void seAnmäldaSpelareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            seanmaldaspelare seanmaldaspelare = new seanmaldaspelare();
+            SeAnmaldaSpelare seanmaldaspelare = new SeAnmaldaSpelare();
             seanmaldaspelare.Show();
         }
 
         private void registreraResultatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            registreraresultat registreraresultat = new registreraresultat();
+            RegistreraResultat registreraresultat = new RegistreraResultat();
             registreraresultat.Show();
         }
 
         private void seResultatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            seresultat seresultat = new seresultat();
+            SeResultat seresultat = new SeResultat();
             seresultat.Show();
         }
 
         private void lottaStarttiderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            lottastarttider lottastarttider = new lottastarttider();
+            LottaStarttider lottastarttider = new LottaStarttider();
             lottastarttider.Show();
         }
 
         private void seStarttiderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sestarttider sestarttider = new sestarttider();
+            SeStarttider sestarttider = new SeStarttider();
             sestarttider.Show();
         }
     }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class visatavlingmedlem : Form
+    public partial class VisaTavlingMedlem : Form
     {
-        public visatavlingmedlem()
+        public VisaTavlingMedlem()
         {
             InitializeComponent();
         }

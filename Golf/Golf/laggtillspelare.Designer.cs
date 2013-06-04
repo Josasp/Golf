@@ -1,6 +1,6 @@
 ﻿namespace Golf
 {
-    partial class laggtillspelare
+    partial class LaggTillspelare
     {
         /// <summary>
         /// Required designer variable.

@@ -1,6 +1,6 @@
 ﻿namespace Golf
 {
-    partial class registreratavling
+    partial class RegistreraTavling
     {
         /// <summary>
         /// Required designer variable.

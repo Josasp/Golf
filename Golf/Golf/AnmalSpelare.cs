@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class seresultat : Form
+    public partial class AnmalSpelare : Form
     {
-        public seresultat()
+        public AnmalSpelare()
         {
             InitializeComponent();
         }

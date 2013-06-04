@@ -1,6 +1,6 @@
 ﻿namespace Golf
 {
-    partial class golfreception
+    partial class GolfReception
     {
         /// <summary>
         /// Required designer variable.

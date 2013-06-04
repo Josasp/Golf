@@ -1,6 +1,6 @@
 ﻿namespace Golf
 {
-    partial class visaspelare
+    partial class VisaSpelare
     {
         /// <summary>
         /// Required designer variable.

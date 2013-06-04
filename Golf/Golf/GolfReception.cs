@@ -11,11 +11,11 @@ using Npgsql;
 
 namespace Golf
 {
-    public partial class golfreception : Form
+    public partial class GolfReception : Form
     {
         public static NpgsqlConnection conn;
 
-        public golfreception()
+        public GolfReception()
         {
             InitializeComponent();
             Connect();
@@ -29,31 +29,31 @@ namespace Golf
 
         private void läggTillSpelareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            laggtillspelare laggtillspelare = new laggtillspelare();
+            LaggTillspelare laggtillspelare = new LaggTillspelare();
             laggtillspelare.ShowDialog();
         }
 
         private void seAllaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sealla sealla = new sealla();
+            SeAlla sealla = new SeAlla();
             sealla.ShowDialog();
         }
 
         private void sökSpelareToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sokspelare sokspelare = new sokspelare();
+            SokSpelare sokspelare = new SokSpelare();
             sokspelare.ShowDialog();
         }
 
         private void registreraTävlingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            registreratavling registreratavling = new registreratavling();
+            RegistreraTavling registreratavling = new RegistreraTavling();
             registreratavling.ShowDialog();
         }
 
         private void sökTävlingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            soktavling soktavling = new soktavling();
+            SokTavling soktavling = new SokTavling();
             soktavling.ShowDialog();
         }
 

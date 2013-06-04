@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class visaspelare : Form
+    public partial class VisaSpelare : Form
     {
-        public visaspelare()
+        public VisaSpelare()
         {
             InitializeComponent();
         }
@@ -45,7 +45,7 @@ namespace Golf
         private void button1_Click(object sender, EventArgs e)
         {
                 // en av flera val.
-                visatavlingmedlem visatavlingmedlem = new visatavlingmedlem();
+                VisaTavlingMedlem visatavlingmedlem = new VisaTavlingMedlem();
                 visatavlingmedlem.Show(); 
             
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class soktavling : Form
+    public partial class SokTavling : Form
     {
-        public soktavling()
+        public SokTavling()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace Golf
 
         private void ok_button_Click(object sender, EventArgs e)
         {
-            infotavling infotavling = new infotavling();
+            InfoTavling infotavling = new InfoTavling();
             infotavling.Show(); 
         }
     }

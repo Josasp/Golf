@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Golf
 {
-    public partial class sokspelare : Form
+    public partial class SokSpelare : Form
     {
-        public sokspelare()
+        public SokSpelare()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            visaspelare visaspelare = new visaspelare();
+            VisaSpelare visaspelare = new VisaSpelare();
             visaspelare.Show();  
         }
 
@@ -30,7 +30,7 @@ namespace Golf
 
         private void button3_Click(object sender, EventArgs e)
         {
-            visaspelare visaspelare = new visaspelare();
+            VisaSpelare visaspelare = new VisaSpelare();
             visaspelare.Show();  
         }
     }
