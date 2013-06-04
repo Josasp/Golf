@@ -89,5 +89,11 @@ namespace Golf
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+        private void tidsbokningToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var bw = new BookingWindow();
+            bw.ShowDialog();
+        }
     }
 }

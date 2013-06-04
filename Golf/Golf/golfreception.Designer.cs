@@ -89,6 +89,7 @@
             this.tidsbokningToolStripMenuItem.Name = "tidsbokningToolStripMenuItem";
             this.tidsbokningToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.tidsbokningToolStripMenuItem.Text = "Tidsbokning";
+            this.tidsbokningToolStripMenuItem.Click += new System.EventHandler(this.tidsbokningToolStripMenuItem_Click);
             // 
             // tävlingsverksamhetToolStripMenuItem
             // 
@@ -125,7 +126,7 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // golfreception
+            // GolfReception
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -133,7 +134,7 @@
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "golfreception";
+            this.Name = "GolfReception";
             this.Text = "Golfreception";
             this.Load += new System.EventHandler(this.golfreception_Load);
             this.menuStrip1.ResumeLayout(false);

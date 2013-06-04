@@ -47,112 +47,146 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="anmalspelare.cs">
+    <Compile Include="AnmalSpelare.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="anmalspelare.Designer.cs">
-      <DependentUpon>anmalspelare.cs</DependentUpon>
+    <Compile Include="AnmalSpelare.Designer.cs">
+      <DependentUpon>AnmalSpelare.cs</DependentUpon>
     </Compile>
-    <Compile Include="infotavling.cs">
+    <Compile Include="BookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="infotavling.Designer.cs">
-      <DependentUpon>infotavling.cs</DependentUpon>
+    <Compile Include="BookingForm.Designer.cs">
+      <DependentUpon>BookingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="lottastarttider.cs">
+    <Compile Include="BookingWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="lottastarttider.Designer.cs">
-      <DependentUpon>lottastarttider.cs</DependentUpon>
+    <Compile Include="BookingWindow.Designer.cs">
+      <DependentUpon>BookingWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="registreraresultat.cs">
+    <Compile Include="FindGolfIdDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registreraresultat.Designer.cs">
-      <DependentUpon>registreraresultat.cs</DependentUpon>
+    <Compile Include="FindGolfIdDialog.Designer.cs">
+      <DependentUpon>FindGolfIdDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="seanmaldaspelare.cs">
+    <Compile Include="FindPlayerComponent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FindPlayerComponent.Designer.cs">
+      <DependentUpon>FindPlayerComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTavling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="seanmaldaspelare.Designer.cs">
-      <DependentUpon>seanmaldaspelare.cs</DependentUpon>
+    <Compile Include="InfoTavling.Designer.cs">
+      <DependentUpon>InfoTavling.cs</DependentUpon>
     </Compile>
-    <Compile Include="seresultat.cs">
+    <Compile Include="LottaStarttider.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="seresultat.Designer.cs">
-      <DependentUpon>seresultat.cs</DependentUpon>
+    <Compile Include="LottaStarttider.Designer.cs">
+      <DependentUpon>LottaStarttider.cs</DependentUpon>
     </Compile>
-    <Compile Include="sestarttider.cs">
+    <Compile Include="Member.cs" />
+    <Compile Include="RegistreraResultat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sestarttider.Designer.cs">
-      <DependentUpon>sestarttider.cs</DependentUpon>
+    <Compile Include="RegistreraResultat.Designer.cs">
+      <DependentUpon>RegistreraResultat.cs</DependentUpon>
     </Compile>
-    <Compile Include="visaspelare.cs">
+    <Compile Include="SeAnmaldaSpelare.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="visaspelare.Designer.cs">
-      <DependentUpon>visaspelare.cs</DependentUpon>
+    <Compile Include="SeAnmaldaSpelare.Designer.cs">
+      <DependentUpon>SeAnmaldaSpelare.cs</DependentUpon>
     </Compile>
-    <Compile Include="golfreception.cs">
+    <Compile Include="SeResultat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="golfreception.Designer.cs">
-      <DependentUpon>golfreception.cs</DependentUpon>
+    <Compile Include="SeResultat.Designer.cs">
+      <DependentUpon>SeResultat.cs</DependentUpon>
     </Compile>
-    <Compile Include="laggtillspelare.cs">
+    <Compile Include="SeStarttider.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="laggtillspelare.Designer.cs">
-      <DependentUpon>laggtillspelare.cs</DependentUpon>
+    <Compile Include="SeStarttider.Designer.cs">
+      <DependentUpon>SeStarttider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisaSpelare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisaSpelare.Designer.cs">
+      <DependentUpon>VisaSpelare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GolfReception.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GolfReception.Designer.cs">
+      <DependentUpon>GolfReception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaggTillspelare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaggTillspelare.Designer.cs">
+      <DependentUpon>LaggTillspelare.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="registreratavling.cs">
+    <Compile Include="RegistreraTavling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registreratavling.Designer.cs">
-      <DependentUpon>registreratavling.cs</DependentUpon>
+    <Compile Include="RegistreraTavling.Designer.cs">
+      <DependentUpon>RegistreraTavling.cs</DependentUpon>
     </Compile>
-    <Compile Include="sealla.cs">
+    <Compile Include="SeAlla.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sealla.Designer.cs">
-      <DependentUpon>sealla.cs</DependentUpon>
+    <Compile Include="SeAlla.Designer.cs">
+      <DependentUpon>SeAlla.cs</DependentUpon>
     </Compile>
-    <Compile Include="sokspelare.cs">
+    <Compile Include="SokSpelare.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="sokspelare.Designer.cs">
-      <DependentUpon>sokspelare.cs</DependentUpon>
+    <Compile Include="SokSpelare.Designer.cs">
+      <DependentUpon>SokSpelare.cs</DependentUpon>
     </Compile>
-    <Compile Include="soktavling.cs">
+    <Compile Include="SokTavling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="soktavling.Designer.cs">
-      <DependentUpon>soktavling.cs</DependentUpon>
+    <Compile Include="SokTavling.Designer.cs">
+      <DependentUpon>SokTavling.cs</DependentUpon>
     </Compile>
-    <Compile Include="visatavlingmedlem.cs">
+    <Compile Include="VisaTavlingMedlem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="visatavlingmedlem.Designer.cs">
-      <DependentUpon>visatavlingmedlem.cs</DependentUpon>
+    <Compile Include="VisaTavlingMedlem.Designer.cs">
+      <DependentUpon>VisaTavlingMedlem.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="anmalspelare.resx">
-      <DependentUpon>anmalspelare.cs</DependentUpon>
+    <EmbeddedResource Include="AnmalSpelare.resx">
+      <DependentUpon>AnmalSpelare.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="golfreception.resx">
-      <DependentUpon>golfreception.cs</DependentUpon>
+    <EmbeddedResource Include="BookingForm.resx">
+      <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="infotavling.resx">
-      <DependentUpon>infotavling.cs</DependentUpon>
+    <EmbeddedResource Include="FindGolfIdDialog.resx">
+      <DependentUpon>FindGolfIdDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="laggtillspelare.resx">
-      <DependentUpon>laggtillspelare.cs</DependentUpon>
+    <EmbeddedResource Include="FindPlayerComponent.resx">
+      <DependentUpon>FindPlayerComponent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="lottastarttider.resx">
-      <DependentUpon>lottastarttider.cs</DependentUpon>
+    <EmbeddedResource Include="GolfReception.resx">
+      <DependentUpon>GolfReception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTavling.resx">
+      <DependentUpon>InfoTavling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaggTillspelare.resx">
+      <DependentUpon>LaggTillspelare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LottaStarttider.resx">
+      <DependentUpon>LottaStarttider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,32 +197,32 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="registreraresultat.resx">
-      <DependentUpon>registreraresultat.cs</DependentUpon>
+    <EmbeddedResource Include="RegistreraResultat.resx">
+      <DependentUpon>RegistreraResultat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="registreratavling.resx">
-      <DependentUpon>registreratavling.cs</DependentUpon>
+    <EmbeddedResource Include="RegistreraTavling.resx">
+      <DependentUpon>RegistreraTavling.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sealla.resx">
-      <DependentUpon>sealla.cs</DependentUpon>
+    <EmbeddedResource Include="SeAlla.resx">
+      <DependentUpon>SeAlla.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="seanmaldaspelare.resx">
-      <DependentUpon>seanmaldaspelare.cs</DependentUpon>
+    <EmbeddedResource Include="SeAnmaldaSpelare.resx">
+      <DependentUpon>SeAnmaldaSpelare.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="seresultat.resx">
-      <DependentUpon>seresultat.cs</DependentUpon>
+    <EmbeddedResource Include="SeResultat.resx">
+      <DependentUpon>SeResultat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sestarttider.resx">
-      <DependentUpon>sestarttider.cs</DependentUpon>
+    <EmbeddedResource Include="SeStarttider.resx">
+      <DependentUpon>SeStarttider.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="sokspelare.resx">
-      <DependentUpon>sokspelare.cs</DependentUpon>
+    <EmbeddedResource Include="SokSpelare.resx">
+      <DependentUpon>SokSpelare.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="soktavling.resx">
-      <DependentUpon>soktavling.cs</DependentUpon>
+    <EmbeddedResource Include="SokTavling.resx">
+      <DependentUpon>SokTavling.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="visaspelare.resx">
-      <DependentUpon>visaspelare.cs</DependentUpon>
+    <EmbeddedResource Include="VisaSpelare.resx">
+      <DependentUpon>VisaSpelare.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
