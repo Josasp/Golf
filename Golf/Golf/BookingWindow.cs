@@ -31,39 +31,67 @@ namespace Golf
             dt.Columns.Add("tävling", typeof(bool));
             dt.Columns.Add("övrigtUpptagen", typeof(bool));
 
+            //Öppettider
             int openTime = 8;
-            int closeTime = 16;
+            int closeTime = 18;
 
+            //Nollställ time_comboBox
+            time_comboBox.Items.Clear();
+
+            //Fyll alla tider i tabellen
             for (int h = openTime; h < closeTime; h++)
             {
                 for (int m = 0; m < 6; m++)
                 {
+                    //Ny rad
                     DataRow dr = dt.NewRow();
-                    dr["tid"] = h.ToString().PadLeft(2, '0') + ':' + m.ToString().PadRight(2, '0');
+                    
+                    //Skapa tider
+                    String hour = h.ToString().PadLeft(2, '0');
+                    String minute = m.ToString().PadRight(2, '0');
+                    String tid = hour + ':' + minute;
+
+                    time_comboBox.Items.Add(tid);
+                    dr["tid"] = tid;
+
                     dt.Rows.Add(dr);
                 }
             }
 
-            //NpgsqlCommand command = new NpgsqlCommand("SELECT    \"Medlem\".\"Golf-ID\",    \"Medlem\".\"Förnamn\",    \"Medlem\".\"Efternamn\",    \"Status\".\"Namn\" AS Status,    \"Medlem\".\"BetalatÅr\",    \"Medlem\".\"Handicap\" FROM    public.\"Medlem\",    public.\"Status\" WHERE    \"Medlem\".\"Status_id\" = \"Status\".\"Status_id\";", dbConnection);
-            //NpgsqlDataReader ndr = command.ExecuteReader();
+            //Hämta datum
+            DateTime datum = new DateTime(
+                monthCalendar.SelectionStart.Year,
+                monthCalendar.SelectionStart.Month,
+                monthCalendar.SelectionStart.Day,
+                0,
+                0,
+                0);
 
-            //while (ndr.Read())
-            //{
-            //    DataRow dr = dt.NewRow();
-            //    dr["golfId"] = ndr["Golf-ID"];
-            //    dr["firstName"] = ndr["Förnamn"];
-            //    dr["lastName"] = ndr["Efternamn"];
-            //    dr["membership"] = ndr["Status"];
-            //    dr["handicap"] = ndr["Handicap"];
-            //    dr["paid"] = (2013 == (int)ndr["BetalatÅr"]);
-            //    dt.Rows.Add(dr);
-            //}
-            //ndr.Close();
+            String sql = "SELECT * FROM \"bokning\" WHERE datumtid::text LIKE '" + datum.Year.ToString() + "-" + datum.Month.ToString().PadLeft(2, '0') + "-" + datum.Day.ToString().PadLeft(2, '0') + "%';";
+            NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+            NpgsqlDataReader ndr = command.ExecuteReader();
 
+            while (ndr.Read())
+            {
+                //dr["golfId"] = ndr["Golf-ID"];
+
+                String filter = "tid = '" + ndr["datumtid"].ToString().Substring(10, 2) + ":" + ndr["datumtid"].ToString().Substring(13, 2) + "'";
+                DataRow[] row = dt.Select(filter);
+                if (row.Length > 0)
+                {
+                    row[0]["spelare_1"] = ndr["spelare_1"];
+                    row[0]["spelare_2"] = ndr["spelare_2"];
+                    row[0]["spelare_3"] = ndr["spelare_3"];
+                    row[0]["spelare_4"] = ndr["spelare_4"];
+                    row[0]["tävling"] = ndr["tävling_id"].ToString().Length > 0;
+                    row[0]["övrigtUpptagen"] = ndr["notering"].ToString().Length > 0;
+                }
+            }
+            ndr.Close();
+        
             //dt.Columns.RemoveAt(3);
 
             DataView dv = new DataView(dt);
-            //TODO Fix this filter, only golfId working
             //dv.RowFilter = "golfId LIKE '" + golfId_textBox.Text + "*' AND firstName LIKE '" + firstName_textBox.Text + "*' AND lastName LIKE '" + lastName_textBox.Text + "*'";
 
             //Set the component data
@@ -84,6 +112,11 @@ namespace Golf
             var bf = new BookingForm();
             bf.Date = monthCalendar.SelectionStart;
             bf.ShowDialog();
+        }
+
+        private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            UpdateTable();
         }
     }
 }

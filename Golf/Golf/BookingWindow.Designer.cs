@@ -53,6 +53,7 @@
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.ShowWeekNumbers = true;
             this.monthCalendar.TabIndex = 0;
+            this.monthCalendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar_DateChanged);
             // 
             // dataGridView
             // 
