@@ -31,9 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tavlingsnamn_textBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.klass_a_checkBox = new System.Windows.Forms.CheckBox();
-            this.klass_b_checkBox = new System.Windows.Forms.CheckBox();
-            this.klass_c_checkBox = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.man_checkBox = new System.Windows.Forms.CheckBox();
@@ -43,8 +40,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.manuellt_checkBox = new System.Windows.Forms.CheckBox();
             this.automatiskt_checkBox = new System.Windows.Forms.CheckBox();
-            this.tavlingid_textBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.avbryt_button = new System.Windows.Forms.Button();
             this.a_fran_textBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,7 +56,6 @@
             this.c_till_textBox = new System.Windows.Forms.TextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.maxantaldeltagare_textBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -74,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 18);
+            this.label1.Location = new System.Drawing.Point(14, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 0;
@@ -82,7 +76,7 @@
             // 
             // tavlingsnamn_textBox
             // 
-            this.tavlingsnamn_textBox.Location = new System.Drawing.Point(86, 34);
+            this.tavlingsnamn_textBox.Location = new System.Drawing.Point(16, 34);
             this.tavlingsnamn_textBox.Name = "tavlingsnamn_textBox";
             this.tavlingsnamn_textBox.Size = new System.Drawing.Size(130, 20);
             this.tavlingsnamn_textBox.TabIndex = 1;
@@ -90,50 +84,19 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 18);
+            this.label2.Location = new System.Drawing.Point(185, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Tävlingsdatum";
-            // 
-            // klass_a_checkBox
-            // 
-            this.klass_a_checkBox.AutoSize = true;
-            this.klass_a_checkBox.Location = new System.Drawing.Point(183, 222);
-            this.klass_a_checkBox.Name = "klass_a_checkBox";
-            this.klass_a_checkBox.Size = new System.Drawing.Size(33, 17);
-            this.klass_a_checkBox.TabIndex = 46;
-            this.klass_a_checkBox.Text = "A";
-            this.klass_a_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // klass_b_checkBox
-            // 
-            this.klass_b_checkBox.AutoSize = true;
-            this.klass_b_checkBox.Location = new System.Drawing.Point(222, 222);
-            this.klass_b_checkBox.Name = "klass_b_checkBox";
-            this.klass_b_checkBox.Size = new System.Drawing.Size(33, 17);
-            this.klass_b_checkBox.TabIndex = 47;
-            this.klass_b_checkBox.Text = "B";
-            this.klass_b_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // klass_c_checkBox
-            // 
-            this.klass_c_checkBox.AutoSize = true;
-            this.klass_c_checkBox.Location = new System.Drawing.Point(261, 222);
-            this.klass_c_checkBox.Name = "klass_c_checkBox";
-            this.klass_c_checkBox.Size = new System.Drawing.Size(33, 17);
-            this.klass_c_checkBox.TabIndex = 48;
-            this.klass_c_checkBox.Text = "C";
-            this.klass_c_checkBox.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(181, 196);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.Size = new System.Drawing.Size(0, 13);
             this.label3.TabIndex = 49;
-            this.label3.Text = "Tävlingsklasser";
             // 
             // label4
             // 
@@ -166,7 +129,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(235, 34);
+            this.dateTimePicker1.Location = new System.Drawing.Point(184, 34);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(141, 20);
             this.dateTimePicker1.TabIndex = 54;
@@ -209,22 +172,6 @@
             this.automatiskt_checkBox.TabIndex = 56;
             this.automatiskt_checkBox.Text = "Automatiskt";
             this.automatiskt_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // tavlingid_textBox
-            // 
-            this.tavlingid_textBox.Location = new System.Drawing.Point(15, 35);
-            this.tavlingid_textBox.Name = "tavlingid_textBox";
-            this.tavlingid_textBox.Size = new System.Drawing.Size(51, 20);
-            this.tavlingid_textBox.TabIndex = 69;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
-            this.label6.TabIndex = 68;
-            this.label6.Text = "Tävling-ID";
             // 
             // avbryt_button
             // 
@@ -357,21 +304,13 @@
             this.label14.TabIndex = 84;
             this.label14.Text = "Sista anmälningsdatum";
             // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(184, 91);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(141, 20);
-            this.dateTimePicker3.TabIndex = 87;
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(181, 75);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(127, 13);
+            this.label15.Size = new System.Drawing.Size(0, 13);
             this.label15.TabIndex = 86;
-            this.label15.Text = "Sista avanmälningsdatum";
             // 
             // maxantaldeltagare_textBox
             // 
@@ -439,7 +378,6 @@
             this.Controls.Add(this.singel_checkBox);
             this.Controls.Add(this.maxantaldeltagare_textBox);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label14);
@@ -457,8 +395,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.a_fran_textBox);
             this.Controls.Add(this.avbryt_button);
-            this.Controls.Add(this.tavlingid_textBox);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.manuellt_checkBox);
             this.Controls.Add(this.automatiskt_checkBox);
@@ -468,9 +404,6 @@
             this.Controls.Add(this.man_checkBox);
             this.Controls.Add(this.kvinnor_checkBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.klass_c_checkBox);
-            this.Controls.Add(this.klass_b_checkBox);
-            this.Controls.Add(this.klass_a_checkBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tavlingsnamn_textBox);
             this.Controls.Add(this.label1);
@@ -486,9 +419,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tavlingsnamn_textBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox klass_a_checkBox;
-        private System.Windows.Forms.CheckBox klass_b_checkBox;
-        private System.Windows.Forms.CheckBox klass_c_checkBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckBox man_checkBox;
@@ -498,8 +428,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox manuellt_checkBox;
         private System.Windows.Forms.CheckBox automatiskt_checkBox;
-        private System.Windows.Forms.TextBox tavlingid_textBox;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button avbryt_button;
         private System.Windows.Forms.TextBox a_fran_textBox;
         private System.Windows.Forms.Label label7;
@@ -516,7 +444,6 @@
         private System.Windows.Forms.TextBox c_till_textBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox maxantaldeltagare_textBox;
         private System.Windows.Forms.Label label16;
