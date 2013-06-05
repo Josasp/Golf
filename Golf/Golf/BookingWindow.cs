@@ -74,8 +74,8 @@ namespace Golf
             while (ndr.Read())
             {
                 //dr["golfId"] = ndr["Golf-ID"];
-
-                String filter = "tid = '" + ndr["datumtid"].ToString().Substring(10, 2) + ":" + ndr["datumtid"].ToString().Substring(13, 2) + "'";
+                DateTime dateTime = (DateTime) ndr["datumtid"];
+                String filter = "tid = '" + dateTime.Hour.ToString().PadLeft(2, '0') + ":" + dateTime.Minute.ToString().PadLeft(2, '0') + "'";
                 DataRow[] row = dt.Select(filter);
                 if (row.Length > 0)
                 {
