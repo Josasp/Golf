@@ -170,6 +170,9 @@
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BookingWindow.resx">
+      <DependentUpon>BookingWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindGolfIdDialog.resx">
       <DependentUpon>FindGolfIdDialog.cs</DependentUpon>
     </EmbeddedResource>
