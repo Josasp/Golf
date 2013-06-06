@@ -28,28 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.weekDay_comboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.gender_comboBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.time_comboBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.players_comboBox = new System.Windows.Forms.ComboBox();
             this.book_button = new System.Windows.Forms.Button();
             this.edit_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // monthCalendar
             // 
             this.monthCalendar.BackColor = System.Drawing.SystemColors.Window;
             this.monthCalendar.CalendarDimensions = new System.Drawing.Size(1, 3);
-            this.monthCalendar.Location = new System.Drawing.Point(629, 84);
+            this.monthCalendar.Location = new System.Drawing.Point(629, 18);
             this.monthCalendar.Name = "monthCalendar";
             this.monthCalendar.ShowWeekNumbers = true;
             this.monthCalendar.TabIndex = 0;
@@ -64,269 +55,23 @@
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 84);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView.Location = new System.Drawing.Point(12, 12);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(605, 460);
+            this.dataGridView.Size = new System.Drawing.Size(605, 532);
             this.dataGridView.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.weekDay_comboBox);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.gender_comboBox);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.time_comboBox);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.players_comboBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(605, 66);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filter";
-            // 
-            // weekDay_comboBox
-            // 
-            this.weekDay_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.weekDay_comboBox.FormattingEnabled = true;
-            this.weekDay_comboBox.Items.AddRange(new object[] {
-            "-",
-            "Måndag",
-            "Tisdag",
-            "Onsdag",
-            "Torsdag",
-            "Fredag",
-            "Lördag",
-            "Söndag"});
-            this.weekDay_comboBox.Location = new System.Drawing.Point(6, 37);
-            this.weekDay_comboBox.Name = "weekDay_comboBox";
-            this.weekDay_comboBox.Size = new System.Drawing.Size(92, 21);
-            this.weekDay_comboBox.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Veckodag";
-            // 
-            // gender_comboBox
-            // 
-            this.gender_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gender_comboBox.FormattingEnabled = true;
-            this.gender_comboBox.Items.AddRange(new object[] {
-            "-",
-            "Man",
-            "Kvinna"});
-            this.gender_comboBox.Location = new System.Drawing.Point(215, 37);
-            this.gender_comboBox.Name = "gender_comboBox";
-            this.gender_comboBox.Size = new System.Drawing.Size(88, 21);
-            this.gender_comboBox.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(215, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Kön";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(164, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Spelare";
-            // 
-            // time_comboBox
-            // 
-            this.time_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.time_comboBox.FormattingEnabled = true;
-            this.time_comboBox.Items.AddRange(new object[] {
-            "-",
-            "0:00",
-            "0:10",
-            "0:20",
-            "0:30",
-            "0:40",
-            "0:50",
-            "1:00",
-            "1:10",
-            "1:20",
-            "1:30",
-            "1:40",
-            "1:50",
-            "2:00",
-            "2:10",
-            "2:20",
-            "2:30",
-            "2:40",
-            "2:50",
-            "3:00",
-            "3:10",
-            "3:20",
-            "3:30",
-            "3:40",
-            "3:50",
-            "4:00",
-            "4:10",
-            "4:20",
-            "4:30",
-            "4:40",
-            "4:50",
-            "5:00",
-            "5:10",
-            "5:20",
-            "5:30",
-            "5:40",
-            "5:50",
-            "6:00",
-            "6:10",
-            "6:20",
-            "6:30",
-            "6:40",
-            "6:50",
-            "7:00",
-            "7:10",
-            "7:20",
-            "7:30",
-            "7:40",
-            "7:50",
-            "8:00",
-            "8:10",
-            "8:20",
-            "8:30",
-            "8:40",
-            "8:50",
-            "9:00",
-            "9:10",
-            "9:20",
-            "9:30",
-            "9:40",
-            "9:50",
-            "10:00",
-            "10:10",
-            "10:20",
-            "10:30",
-            "10:40",
-            "10:50",
-            "11:00",
-            "11:10",
-            "11:20",
-            "11:30",
-            "11:40",
-            "11:50",
-            "12:00",
-            "12:10",
-            "12:20",
-            "12:30",
-            "12:40",
-            "12:50",
-            "13:00",
-            "13:10",
-            "13:20",
-            "13:30",
-            "13:40",
-            "13:50",
-            "14:00",
-            "14:10",
-            "14:20",
-            "14:30",
-            "14:40",
-            "14:50",
-            "15:00",
-            "15:10",
-            "15:20",
-            "15:30",
-            "15:40",
-            "15:50",
-            "16:00",
-            "16:10",
-            "16:20",
-            "16:30",
-            "16:40",
-            "16:50",
-            "17:00",
-            "17:10",
-            "17:20",
-            "17:30",
-            "17:40",
-            "17:50",
-            "18:00",
-            "18:10",
-            "18:20",
-            "18:30",
-            "18:40",
-            "18:50",
-            "19:00",
-            "19:10",
-            "19:20",
-            "19:30",
-            "19:40",
-            "19:50",
-            "20:00",
-            "20:10",
-            "20:20",
-            "20:30",
-            "20:40",
-            "20:50",
-            "21:00",
-            "21:10",
-            "21:20",
-            "21:30",
-            "21:40",
-            "21:50",
-            "22:00",
-            "22:10",
-            "22:20",
-            "22:30",
-            "22:40",
-            "22:50",
-            "23:00",
-            "23:10",
-            "23:20",
-            "23:30",
-            "23:40",
-            "23:50"});
-            this.time_comboBox.Location = new System.Drawing.Point(104, 37);
-            this.time_comboBox.Name = "time_comboBox";
-            this.time_comboBox.Size = new System.Drawing.Size(54, 21);
-            this.time_comboBox.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tid";
-            // 
-            // players_comboBox
-            // 
-            this.players_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.players_comboBox.FormattingEnabled = true;
-            this.players_comboBox.Items.AddRange(new object[] {
-            "-",
-            "1",
-            "2",
-            "3",
-            "4"});
-            this.players_comboBox.Location = new System.Drawing.Point(164, 37);
-            this.players_comboBox.Name = "players_comboBox";
-            this.players_comboBox.Size = new System.Drawing.Size(45, 21);
-            this.players_comboBox.TabIndex = 2;
             // 
             // book_button
             // 
@@ -354,15 +99,12 @@
             this.ClientSize = new System.Drawing.Size(896, 584);
             this.Controls.Add(this.edit_button);
             this.Controls.Add(this.book_button);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.monthCalendar);
             this.Name = "BookingWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Bokningslista";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -371,15 +113,6 @@
 
         private System.Windows.Forms.MonthCalendar monthCalendar;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox players_comboBox;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox time_comboBox;
-        private System.Windows.Forms.ComboBox weekDay_comboBox;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox gender_comboBox;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button book_button;
         private System.Windows.Forms.Button edit_button;
     }

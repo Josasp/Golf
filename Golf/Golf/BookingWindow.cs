@@ -13,6 +13,8 @@ namespace Golf
 {
     public partial class BookingWindow : Form
     {
+        private String filter = "";
+
         public BookingWindow()
         {
             InitializeComponent();
@@ -35,8 +37,8 @@ namespace Golf
             int openTime = 8;
             int closeTime = 18;
 
-            //Nollställ time_comboBox
-            time_comboBox.Items.Clear();
+            //Spara vald index från time_comboBox
+            //int time_index = time_comboBox.SelectedIndex;
 
             //Fyll alla tider i tabellen
             for (int h = openTime; h < closeTime; h++)
@@ -50,8 +52,6 @@ namespace Golf
                     String hour = h.ToString().PadLeft(2, '0');
                     String minute = m.ToString().PadRight(2, '0');
                     String tid = hour + ':' + minute;
-
-                    time_comboBox.Items.Add(tid);
                     dr["tid"] = tid;
 
                     dt.Rows.Add(dr);
@@ -89,10 +89,13 @@ namespace Golf
             }
             ndr.Close();
         
+            //Återställ time_comboBox selectedIndex
+            //time_comboBox.SelectedIndex = time_index;
+
             //dt.Columns.RemoveAt(3);
 
             DataView dv = new DataView(dt);
-            //dv.RowFilter = "golfId LIKE '" + golfId_textBox.Text + "*' AND firstName LIKE '" + firstName_textBox.Text + "*' AND lastName LIKE '" + lastName_textBox.Text + "*'";
+            dv.RowFilter = this.filter;
 
             //Set the component data
             dataGridView.DataSource = dv;
@@ -105,6 +108,37 @@ namespace Golf
             dataGridView.Columns[4].HeaderText = "Spelare 4";
             dataGridView.Columns[5].HeaderText = "Tävling";
             dataGridView.Columns[6].HeaderText = "Upptagen";
+
+            //Färglägg rader
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                String[] playerLines = new String[4];
+                playerLines[0] = "spelare_1";
+                playerLines[1] = "spelare_2";
+                playerLines[2] = "spelare_3";
+                playerLines[3] = "spelare_4";
+                foreach (String s in playerLines)
+                {
+                    if (row.Cells[s].Value.ToString().Length > 1)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.PowderBlue;
+                    }
+                }
+
+                String[] redlines = new String[2];
+                redlines[0] = "tävling";
+                redlines[1] = "övrigtUpptagen";
+                foreach (String s in redlines)
+                {
+                    if (row.Cells[s].Value.ToString().Length > 1)
+                    {
+                        if ((bool)row.Cells[s].Value)
+                        {
+                            row.DefaultCellStyle.BackColor = Color.Pink;
+                        }
+                    } 
+                }
+            }
         }
 
         private void book_button_Click(object sender, EventArgs e)
@@ -115,6 +149,11 @@ namespace Golf
         }
 
         private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            UpdateTable();
+        }
+
+        private void players_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateTable();
         }
