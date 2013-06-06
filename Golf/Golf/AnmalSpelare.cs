@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +18,24 @@ namespace Golf
             InitializeComponent();
         }
 
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void cancel_button_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void action_button_Click(object sender, EventArgs e)
+        {
+
+            string in_i_tävling_medlem_reg = "insert into \"tävling_medlem\" (\"tävling_id\", \"golf_id\") values (" + tävling_id_textBox.Text + ", '" + golfid_textBox.Text + "')";
+            NpgsqlCommand command_tävling_medlem_reg = new NpgsqlCommand(in_i_tävling_medlem_reg, GolfReception.conn);
+            command_tävling_medlem_reg.ExecuteNonQuery();
+
+            MessageBox.Show("Tävlande är registrerad!");
             this.Close();
         }
     }
