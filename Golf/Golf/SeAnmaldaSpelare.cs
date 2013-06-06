@@ -17,6 +17,11 @@ namespace Golf
             InitializeComponent();
         }
 
+        private void SeAnmaldaSpelare_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void cancel_button_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -26,5 +31,7 @@ namespace Golf
         {
 
         }
+
+
     }
 }

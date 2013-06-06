@@ -29,91 +29,29 @@
         private void InitializeComponent()
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.alla_radioButton = new System.Windows.Forms.RadioButton();
-            this.man_radioButton = new System.Windows.Forms.RadioButton();
-            this.kvinnor_radioButton = new System.Windows.Forms.RadioButton();
-            this.singel_radioButton = new System.Windows.Forms.RadioButton();
-            this.lag_radioButton = new System.Windows.Forms.RadioButton();
-            this.par_radioButton = new System.Windows.Forms.RadioButton();
             this.action_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
+            this.alla_checkBox = new System.Windows.Forms.CheckBox();
+            this.kvinnor_checkBox = new System.Windows.Forms.CheckBox();
+            this.man_checkBox = new System.Windows.Forms.CheckBox();
+            this.singel_checkBox = new System.Windows.Forms.CheckBox();
+            this.par_checkBox = new System.Windows.Forms.CheckBox();
+            this.lag_checkBox = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tävling_id_textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 74);
+            this.listBox1.Location = new System.Drawing.Point(130, 35);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(385, 212);
+            this.listBox1.Size = new System.Drawing.Size(157, 251);
             this.listBox1.TabIndex = 57;
-            // 
-            // alla_radioButton
-            // 
-            this.alla_radioButton.AutoSize = true;
-            this.alla_radioButton.Location = new System.Drawing.Point(12, 23);
-            this.alla_radioButton.Name = "alla_radioButton";
-            this.alla_radioButton.Size = new System.Drawing.Size(42, 17);
-            this.alla_radioButton.TabIndex = 60;
-            this.alla_radioButton.Text = "Alla";
-            this.alla_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // man_radioButton
-            // 
-            this.man_radioButton.AutoSize = true;
-            this.man_radioButton.Location = new System.Drawing.Point(155, 23);
-            this.man_radioButton.Name = "man_radioButton";
-            this.man_radioButton.Size = new System.Drawing.Size(46, 17);
-            this.man_radioButton.TabIndex = 59;
-            this.man_radioButton.TabStop = true;
-            this.man_radioButton.Text = "Män";
-            this.man_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // kvinnor_radioButton
-            // 
-            this.kvinnor_radioButton.AutoSize = true;
-            this.kvinnor_radioButton.Location = new System.Drawing.Point(88, 23);
-            this.kvinnor_radioButton.Name = "kvinnor_radioButton";
-            this.kvinnor_radioButton.Size = new System.Drawing.Size(61, 17);
-            this.kvinnor_radioButton.TabIndex = 58;
-            this.kvinnor_radioButton.TabStop = true;
-            this.kvinnor_radioButton.Text = "Kvinnor";
-            this.kvinnor_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // singel_radioButton
-            // 
-            this.singel_radioButton.AutoSize = true;
-            this.singel_radioButton.Location = new System.Drawing.Point(247, 23);
-            this.singel_radioButton.Name = "singel_radioButton";
-            this.singel_radioButton.Size = new System.Drawing.Size(54, 17);
-            this.singel_radioButton.TabIndex = 63;
-            this.singel_radioButton.Text = "Singel";
-            this.singel_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // lag_radioButton
-            // 
-            this.lag_radioButton.AutoSize = true;
-            this.lag_radioButton.Location = new System.Drawing.Point(354, 23);
-            this.lag_radioButton.Name = "lag_radioButton";
-            this.lag_radioButton.Size = new System.Drawing.Size(43, 17);
-            this.lag_radioButton.TabIndex = 62;
-            this.lag_radioButton.TabStop = true;
-            this.lag_radioButton.Text = "Lag";
-            this.lag_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // par_radioButton
-            // 
-            this.par_radioButton.AutoSize = true;
-            this.par_radioButton.Location = new System.Drawing.Point(307, 23);
-            this.par_radioButton.Name = "par_radioButton";
-            this.par_radioButton.Size = new System.Drawing.Size(41, 17);
-            this.par_radioButton.TabIndex = 61;
-            this.par_radioButton.TabStop = true;
-            this.par_radioButton.Text = "Par";
-            this.par_radioButton.UseVisualStyleBackColor = true;
             // 
             // action_button
             // 
-            this.action_button.Location = new System.Drawing.Point(242, 329);
+            this.action_button.Location = new System.Drawing.Point(212, 308);
             this.action_button.Name = "action_button";
             this.action_button.Size = new System.Drawing.Size(75, 23);
             this.action_button.TabIndex = 65;
@@ -123,7 +61,7 @@
             // 
             // cancel_button
             // 
-            this.cancel_button.Location = new System.Drawing.Point(323, 329);
+            this.cancel_button.Location = new System.Drawing.Point(7, 308);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(75, 23);
             this.cancel_button.TabIndex = 64;
@@ -131,22 +69,101 @@
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
-            // seanmaldaspelare
+            // alla_checkBox
+            // 
+            this.alla_checkBox.AutoSize = true;
+            this.alla_checkBox.Location = new System.Drawing.Point(6, 75);
+            this.alla_checkBox.Name = "alla_checkBox";
+            this.alla_checkBox.Size = new System.Drawing.Size(43, 17);
+            this.alla_checkBox.TabIndex = 66;
+            this.alla_checkBox.Text = "Alla";
+            this.alla_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // kvinnor_checkBox
+            // 
+            this.kvinnor_checkBox.AutoSize = true;
+            this.kvinnor_checkBox.Location = new System.Drawing.Point(7, 125);
+            this.kvinnor_checkBox.Name = "kvinnor_checkBox";
+            this.kvinnor_checkBox.Size = new System.Drawing.Size(62, 17);
+            this.kvinnor_checkBox.TabIndex = 67;
+            this.kvinnor_checkBox.Text = "Kvinnor";
+            this.kvinnor_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // man_checkBox
+            // 
+            this.man_checkBox.AutoSize = true;
+            this.man_checkBox.Location = new System.Drawing.Point(7, 148);
+            this.man_checkBox.Name = "man_checkBox";
+            this.man_checkBox.Size = new System.Drawing.Size(47, 17);
+            this.man_checkBox.TabIndex = 68;
+            this.man_checkBox.Text = "Män";
+            this.man_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // singel_checkBox
+            // 
+            this.singel_checkBox.AutoSize = true;
+            this.singel_checkBox.Location = new System.Drawing.Point(7, 195);
+            this.singel_checkBox.Name = "singel_checkBox";
+            this.singel_checkBox.Size = new System.Drawing.Size(55, 17);
+            this.singel_checkBox.TabIndex = 69;
+            this.singel_checkBox.Text = "Singel";
+            this.singel_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // par_checkBox
+            // 
+            this.par_checkBox.AutoSize = true;
+            this.par_checkBox.Location = new System.Drawing.Point(7, 218);
+            this.par_checkBox.Name = "par_checkBox";
+            this.par_checkBox.Size = new System.Drawing.Size(42, 17);
+            this.par_checkBox.TabIndex = 70;
+            this.par_checkBox.Text = "Par";
+            this.par_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // lag_checkBox
+            // 
+            this.lag_checkBox.AutoSize = true;
+            this.lag_checkBox.Location = new System.Drawing.Point(7, 241);
+            this.lag_checkBox.Name = "lag_checkBox";
+            this.lag_checkBox.Size = new System.Drawing.Size(44, 17);
+            this.lag_checkBox.TabIndex = 71;
+            this.lag_checkBox.Text = "Lag";
+            this.lag_checkBox.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "Tävling-ID";
+            // 
+            // tävling_id_textBox
+            // 
+            this.tävling_id_textBox.Location = new System.Drawing.Point(6, 25);
+            this.tävling_id_textBox.Name = "tävling_id_textBox";
+            this.tävling_id_textBox.Size = new System.Drawing.Size(48, 20);
+            this.tävling_id_textBox.TabIndex = 92;
+            // 
+            // SeAnmaldaSpelare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 364);
+            this.ClientSize = new System.Drawing.Size(308, 339);
+            this.Controls.Add(this.tävling_id_textBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lag_checkBox);
+            this.Controls.Add(this.par_checkBox);
+            this.Controls.Add(this.singel_checkBox);
+            this.Controls.Add(this.man_checkBox);
+            this.Controls.Add(this.kvinnor_checkBox);
+            this.Controls.Add(this.alla_checkBox);
             this.Controls.Add(this.action_button);
             this.Controls.Add(this.cancel_button);
-            this.Controls.Add(this.singel_radioButton);
-            this.Controls.Add(this.lag_radioButton);
-            this.Controls.Add(this.par_radioButton);
-            this.Controls.Add(this.alla_radioButton);
-            this.Controls.Add(this.man_radioButton);
-            this.Controls.Add(this.kvinnor_radioButton);
             this.Controls.Add(this.listBox1);
-            this.Name = "seanmaldaspelare";
+            this.Name = "SeAnmaldaSpelare";
             this.Text = "Se anmälda spelare";
+            this.Load += new System.EventHandler(this.SeAnmaldaSpelare_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,13 +172,15 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.RadioButton alla_radioButton;
-        private System.Windows.Forms.RadioButton man_radioButton;
-        private System.Windows.Forms.RadioButton kvinnor_radioButton;
-        private System.Windows.Forms.RadioButton singel_radioButton;
-        private System.Windows.Forms.RadioButton lag_radioButton;
-        private System.Windows.Forms.RadioButton par_radioButton;
         private System.Windows.Forms.Button action_button;
         private System.Windows.Forms.Button cancel_button;
+        private System.Windows.Forms.CheckBox alla_checkBox;
+        private System.Windows.Forms.CheckBox kvinnor_checkBox;
+        private System.Windows.Forms.CheckBox man_checkBox;
+        private System.Windows.Forms.CheckBox singel_checkBox;
+        private System.Windows.Forms.CheckBox par_checkBox;
+        private System.Windows.Forms.CheckBox lag_checkBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tävling_id_textBox;
     }
 }
