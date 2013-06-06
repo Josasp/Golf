@@ -122,6 +122,7 @@
             this.kvinnor_checkBox.TabIndex = 50;
             this.kvinnor_checkBox.Text = "Kvinnor";
             this.kvinnor_checkBox.UseVisualStyleBackColor = true;
+            this.kvinnor_checkBox.CheckedChanged += new System.EventHandler(this.kvinnor_checkBox_CheckedChanged);
             // 
             // dateTimePicker1
             // 
