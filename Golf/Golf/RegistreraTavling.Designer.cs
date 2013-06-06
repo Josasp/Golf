@@ -109,7 +109,7 @@
             this.man_checkBox.Location = new System.Drawing.Point(84, 329);
             this.man_checkBox.Name = "man_checkBox";
             this.man_checkBox.Size = new System.Drawing.Size(47, 17);
-            this.man_checkBox.TabIndex = 51;
+            this.man_checkBox.TabIndex = 12;
             this.man_checkBox.Text = "Män";
             this.man_checkBox.UseVisualStyleBackColor = true;
             // 
@@ -119,7 +119,7 @@
             this.kvinnor_checkBox.Location = new System.Drawing.Point(16, 329);
             this.kvinnor_checkBox.Name = "kvinnor_checkBox";
             this.kvinnor_checkBox.Size = new System.Drawing.Size(62, 17);
-            this.kvinnor_checkBox.TabIndex = 50;
+            this.kvinnor_checkBox.TabIndex = 11;
             this.kvinnor_checkBox.Text = "Kvinnor";
             this.kvinnor_checkBox.UseVisualStyleBackColor = true;
             this.kvinnor_checkBox.CheckedChanged += new System.EventHandler(this.kvinnor_checkBox_CheckedChanged);
@@ -129,14 +129,14 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(184, 34);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(141, 20);
-            this.dateTimePicker1.TabIndex = 54;
+            this.dateTimePicker1.TabIndex = 2;
             // 
             // ok_button
             // 
             this.ok_button.Location = new System.Drawing.Point(291, 397);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(75, 23);
-            this.ok_button.TabIndex = 55;
+            this.ok_button.TabIndex = 15;
             this.ok_button.Text = "OK";
             this.ok_button.UseVisualStyleBackColor = true;
             this.ok_button.Click += new System.EventHandler(this.ok_button_Click);
@@ -156,7 +156,7 @@
             this.manuellt_checkBox.Location = new System.Drawing.Point(101, 396);
             this.manuellt_checkBox.Name = "manuellt_checkBox";
             this.manuellt_checkBox.Size = new System.Drawing.Size(66, 17);
-            this.manuellt_checkBox.TabIndex = 57;
+            this.manuellt_checkBox.TabIndex = 14;
             this.manuellt_checkBox.Text = "Manuellt";
             this.manuellt_checkBox.UseVisualStyleBackColor = true;
             // 
@@ -166,7 +166,7 @@
             this.automatiskt_checkBox.Location = new System.Drawing.Point(14, 396);
             this.automatiskt_checkBox.Name = "automatiskt_checkBox";
             this.automatiskt_checkBox.Size = new System.Drawing.Size(81, 17);
-            this.automatiskt_checkBox.TabIndex = 56;
+            this.automatiskt_checkBox.TabIndex = 13;
             this.automatiskt_checkBox.Text = "Automatiskt";
             this.automatiskt_checkBox.UseVisualStyleBackColor = true;
             // 
@@ -175,7 +175,7 @@
             this.avbryt_button.Location = new System.Drawing.Point(372, 397);
             this.avbryt_button.Name = "avbryt_button";
             this.avbryt_button.Size = new System.Drawing.Size(75, 23);
-            this.avbryt_button.TabIndex = 70;
+            this.avbryt_button.TabIndex = 16;
             this.avbryt_button.Text = "Avbryt";
             this.avbryt_button.UseVisualStyleBackColor = true;
             this.avbryt_button.Click += new System.EventHandler(this.avbryt_button_Click);
@@ -185,7 +185,7 @@
             this.a_fran_textBox.Location = new System.Drawing.Point(32, 162);
             this.a_fran_textBox.Name = "a_fran_textBox";
             this.a_fran_textBox.Size = new System.Drawing.Size(30, 20);
-            this.a_fran_textBox.TabIndex = 71;
+            this.a_fran_textBox.TabIndex = 4;
             // 
             // label7
             // 
@@ -228,14 +228,14 @@
             this.c_fran_textBox.Location = new System.Drawing.Point(32, 222);
             this.c_fran_textBox.Name = "c_fran_textBox";
             this.c_fran_textBox.Size = new System.Drawing.Size(30, 20);
-            this.c_fran_textBox.TabIndex = 76;
+            this.c_fran_textBox.TabIndex = 8;
             // 
             // b_fran_textBox
             // 
             this.b_fran_textBox.Location = new System.Drawing.Point(32, 192);
             this.b_fran_textBox.Name = "b_fran_textBox";
             this.b_fran_textBox.Size = new System.Drawing.Size(30, 20);
-            this.b_fran_textBox.TabIndex = 77;
+            this.b_fran_textBox.TabIndex = 6;
             // 
             // label11
             // 
@@ -269,28 +269,28 @@
             this.a_till_textBox.Location = new System.Drawing.Point(84, 162);
             this.a_till_textBox.Name = "a_till_textBox";
             this.a_till_textBox.Size = new System.Drawing.Size(30, 20);
-            this.a_till_textBox.TabIndex = 81;
+            this.a_till_textBox.TabIndex = 5;
             // 
             // b_till_textBox
             // 
             this.b_till_textBox.Location = new System.Drawing.Point(84, 192);
             this.b_till_textBox.Name = "b_till_textBox";
             this.b_till_textBox.Size = new System.Drawing.Size(30, 20);
-            this.b_till_textBox.TabIndex = 82;
+            this.b_till_textBox.TabIndex = 7;
             // 
             // c_till_textBox
             // 
             this.c_till_textBox.Location = new System.Drawing.Point(84, 222);
             this.c_till_textBox.Name = "c_till_textBox";
             this.c_till_textBox.Size = new System.Drawing.Size(30, 20);
-            this.c_till_textBox.TabIndex = 83;
+            this.c_till_textBox.TabIndex = 9;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(15, 91);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(141, 20);
-            this.dateTimePicker2.TabIndex = 85;
+            this.dateTimePicker2.TabIndex = 3;
             // 
             // label14
             // 
@@ -314,7 +314,7 @@
             this.maxantaldeltagare_textBox.Location = new System.Drawing.Point(15, 280);
             this.maxantaldeltagare_textBox.Name = "maxantaldeltagare_textBox";
             this.maxantaldeltagare_textBox.Size = new System.Drawing.Size(51, 20);
-            this.maxantaldeltagare_textBox.TabIndex = 89;
+            this.maxantaldeltagare_textBox.TabIndex = 10;
             // 
             // label16
             // 

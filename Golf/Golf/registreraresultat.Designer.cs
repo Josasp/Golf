@@ -56,8 +56,8 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.resultat_textBox = new System.Windows.Forms.TextBox();
+            this.beräkna_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fornamn_textBox
@@ -119,16 +119,17 @@
             // 
             // action_button
             // 
-            this.action_button.Location = new System.Drawing.Point(348, 515);
+            this.action_button.Location = new System.Drawing.Point(435, 531);
             this.action_button.Name = "action_button";
             this.action_button.Size = new System.Drawing.Size(75, 23);
             this.action_button.TabIndex = 67;
-            this.action_button.Text = "OK";
+            this.action_button.Text = "Registrera";
             this.action_button.UseVisualStyleBackColor = true;
+            this.action_button.Click += new System.EventHandler(this.action_button_Click);
             // 
             // cancel_button
             // 
-            this.cancel_button.Location = new System.Drawing.Point(429, 515);
+            this.cancel_button.Location = new System.Drawing.Point(15, 531);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(75, 23);
             this.cancel_button.TabIndex = 66;
@@ -271,29 +272,30 @@
             this.textBox18.Size = new System.Drawing.Size(18, 20);
             this.textBox18.TabIndex = 86;
             // 
-            // label6
+            // resultat_textBox
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(225, 502);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 13);
-            this.label6.TabIndex = 87;
-            this.label6.Text = "Resultat totalt";
+            this.resultat_textBox.Location = new System.Drawing.Point(301, 474);
+            this.resultat_textBox.Name = "resultat_textBox";
+            this.resultat_textBox.Size = new System.Drawing.Size(93, 20);
+            this.resultat_textBox.TabIndex = 88;
             // 
-            // textBox19
+            // beräkna_button
             // 
-            this.textBox19.Location = new System.Drawing.Point(246, 518);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(42, 20);
-            this.textBox19.TabIndex = 88;
+            this.beräkna_button.Location = new System.Drawing.Point(301, 445);
+            this.beräkna_button.Name = "beräkna_button";
+            this.beräkna_button.Size = new System.Drawing.Size(93, 23);
+            this.beräkna_button.TabIndex = 89;
+            this.beräkna_button.Text = "Beräkna resultat";
+            this.beräkna_button.UseVisualStyleBackColor = true;
+            this.beräkna_button.Click += new System.EventHandler(this.beräkna_button_Click);
             // 
-            // registreraresultat
+            // RegistreraResultat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(522, 546);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(522, 566);
+            this.Controls.Add(this.beräkna_button);
+            this.Controls.Add(this.resultat_textBox);
             this.Controls.Add(this.textBox18);
             this.Controls.Add(this.textBox17);
             this.Controls.Add(this.textBox16);
@@ -322,7 +324,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.golfid_textBox);
             this.Controls.Add(this.label1);
-            this.Name = "registreraresultat";
+            this.Name = "RegistreraResultat";
             this.Text = "Registrera resultat";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -359,7 +361,7 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox resultat_textBox;
+        private System.Windows.Forms.Button beräkna_button;
     }
 }
