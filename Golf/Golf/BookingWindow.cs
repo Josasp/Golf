@@ -23,6 +23,13 @@ namespace Golf
 
         private void UpdateTable()
         {
+            //Remeber index
+            int selIndex = -1;
+            if (dataGridView.SelectedRows.Count > 0)
+            {
+                selIndex = dataGridView.SelectedRows[0].Index; 
+            }
+
             //Create the empty table data
             DataTable dt = new DataTable("Table");
             dt.Columns.Add("tid", typeof(string));
@@ -139,13 +146,22 @@ namespace Golf
                     } 
                 }
             }
+
+            //Restore index
+            if (selIndex > 0)
+            {
+                dataGridView.Rows[0].Selected = false; 
+                dataGridView.Rows[selIndex].Selected = true; 
+            }
         }
 
         private void book_button_Click(object sender, EventArgs e)
         {
             var bf = new BookingForm();
             bf.Date = monthCalendar.SelectionStart;
+            bf.Time = (String)dataGridView["tid", dataGridView.CurrentRow.Index].Value;
             bf.ShowDialog();
+            UpdateTable();
         }
 
         private void monthCalendar_DateChanged(object sender, DateRangeEventArgs e)
