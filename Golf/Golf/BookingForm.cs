@@ -83,5 +83,10 @@ namespace Golf
             date_textBox.Text = monthCalendar.SelectionStart.ToLongDateString();
             monthCalendar.Visible = false;
         }
+
+        private void time_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,14 +25,28 @@ namespace Golf
 
         private void UpdateTable()
         {
-            /*DataTable dt = MainWindow.GetMemberTable();
-            dt.Columns.RemoveAt(3);
-            dt.Columns.RemoveAt(3);
-            dt.Columns.RemoveAt(3);
+            DataTable dt = new DataTable();
+            dt.Columns.Add("GolfID", typeof(string));
+            dt.Columns.Add("Förnamn", typeof(string));
+            dt.Columns.Add("Efternamn", typeof(string));
+
+            String sql = "SELECT golf_id, förnamn, efternamn FROM medlem;";
+            NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+            NpgsqlDataReader ndr = command.ExecuteReader();
+
+            while (ndr.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["GolfID"] = ndr["golf_id"];
+                row["Förnamn"] = ndr["förnamn"];
+                row["Efternamn"] = ndr["efternamn"];
+                dt.Rows.Add(row);
+            }
+            ndr.Close();
 
             DataView dv = new DataView(dt);
             //TODO Fix this filter, only golfId working
-            dv.RowFilter = "golfId LIKE '" + golfId_textBox.Text + "*' AND firstName LIKE '" + firstName_textBox.Text + "*' AND lastName LIKE '" + lastName_textBox.Text + "*'";
+            dv.RowFilter = "GolfID LIKE '" + golfId_textBox.Text + "*' AND Förnamn LIKE '" + firstName_textBox.Text + "*' AND Efternamn LIKE '" + lastName_textBox.Text + "*'";
 
             //Set the component data
             dataGridView.DataSource = dv;
@@ -39,7 +54,7 @@ namespace Golf
             //Set column header text
             dataGridView.Columns[0].HeaderText = "Golf-ID";
             dataGridView.Columns[1].HeaderText = "Förnamn";
-            dataGridView.Columns[2].HeaderText = "Efternamn";*/
+            dataGridView.Columns[2].HeaderText = "Efternamn";
         }
 
         private void cancel_button_Click(object sender, EventArgs e)

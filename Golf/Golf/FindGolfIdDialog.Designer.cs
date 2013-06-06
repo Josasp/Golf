@@ -81,6 +81,7 @@
             this.firstName_textBox.Name = "firstName_textBox";
             this.firstName_textBox.Size = new System.Drawing.Size(100, 22);
             this.firstName_textBox.TabIndex = 4;
+            this.firstName_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfId_textBox_KeyUp);
             // 
             // lastName_textBox
             // 
@@ -88,6 +89,7 @@
             this.lastName_textBox.Name = "lastName_textBox";
             this.lastName_textBox.Size = new System.Drawing.Size(100, 22);
             this.lastName_textBox.TabIndex = 5;
+            this.lastName_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfId_textBox_KeyUp);
             // 
             // dataGridView
             // 
