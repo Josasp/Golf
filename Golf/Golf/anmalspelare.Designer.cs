@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.golfid_textBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -40,33 +37,9 @@
             this.singel_checkBox = new System.Windows.Forms.CheckBox();
             this.action_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tävling_id_textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(12, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(147, 20);
-            this.textBox2.TabIndex = 79;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 152);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
-            this.label9.TabIndex = 78;
-            this.label9.Text = "Efternamn";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(12, 168);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(147, 20);
-            this.textBox3.TabIndex = 77;
             // 
             // label12
             // 
@@ -96,7 +69,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 220);
+            this.label17.Location = new System.Drawing.Point(14, 143);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(61, 13);
             this.label17.TabIndex = 97;
@@ -105,7 +78,7 @@
             // lag_checkBox
             // 
             this.lag_checkBox.AutoSize = true;
-            this.lag_checkBox.Location = new System.Drawing.Point(135, 238);
+            this.lag_checkBox.Location = new System.Drawing.Point(155, 173);
             this.lag_checkBox.Name = "lag_checkBox";
             this.lag_checkBox.Size = new System.Drawing.Size(44, 17);
             this.lag_checkBox.TabIndex = 96;
@@ -115,7 +88,7 @@
             // par_checkBox
             // 
             this.par_checkBox.AutoSize = true;
-            this.par_checkBox.Location = new System.Drawing.Point(84, 238);
+            this.par_checkBox.Location = new System.Drawing.Point(92, 173);
             this.par_checkBox.Name = "par_checkBox";
             this.par_checkBox.Size = new System.Drawing.Size(42, 17);
             this.par_checkBox.TabIndex = 95;
@@ -125,7 +98,7 @@
             // singel_checkBox
             // 
             this.singel_checkBox.AutoSize = true;
-            this.singel_checkBox.Location = new System.Drawing.Point(17, 238);
+            this.singel_checkBox.Location = new System.Drawing.Point(15, 173);
             this.singel_checkBox.Name = "singel_checkBox";
             this.singel_checkBox.Size = new System.Drawing.Size(55, 17);
             this.singel_checkBox.TabIndex = 94;
@@ -134,7 +107,7 @@
             // 
             // action_button
             // 
-            this.action_button.Location = new System.Drawing.Point(200, 321);
+            this.action_button.Location = new System.Drawing.Point(205, 244);
             this.action_button.Name = "action_button";
             this.action_button.Size = new System.Drawing.Size(75, 23);
             this.action_button.TabIndex = 99;
@@ -144,22 +117,13 @@
             // 
             // cancel_button
             // 
-            this.cancel_button.Location = new System.Drawing.Point(281, 321);
+            this.cancel_button.Location = new System.Drawing.Point(12, 244);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(75, 23);
             this.cancel_button.TabIndex = 98;
             this.cancel_button.Text = "Avbryt";
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 102);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
-            this.label1.TabIndex = 100;
-            this.label1.Text = "Förnamn";
             // 
             // label2
             // 
@@ -181,19 +145,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(370, 356);
+            this.ClientSize = new System.Drawing.Size(293, 276);
             this.Controls.Add(this.tävling_id_textBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.action_button);
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.lag_checkBox);
             this.Controls.Add(this.par_checkBox);
             this.Controls.Add(this.singel_checkBox);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.golfid_textBox);
             this.Controls.Add(this.label13);
@@ -206,9 +166,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox golfid_textBox;
         private System.Windows.Forms.Label label13;
@@ -218,7 +175,6 @@
         private System.Windows.Forms.CheckBox singel_checkBox;
         private System.Windows.Forms.Button action_button;
         private System.Windows.Forms.Button cancel_button;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tävling_id_textBox;
 

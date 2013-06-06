@@ -25,6 +25,7 @@ namespace Golf
 
         private void beräkna_button_Click(object sender, EventArgs e)
         {
+            // Gör en beräknar tävlingsresultatet
             int hål1 = Convert.ToInt32(textBox1.Text);
             int hål2 = Convert.ToInt32(textBox2.Text);
             int hål3 = Convert.ToInt32(textBox3.Text);
