@@ -59,10 +59,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.maxantaldeltagare_textBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lag_checkBox = new System.Windows.Forms.CheckBox();
-            this.par_checkBox = new System.Windows.Forms.CheckBox();
-            this.singel_checkBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -101,7 +97,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 370);
+            this.label4.Location = new System.Drawing.Point(14, 312);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 53;
@@ -110,7 +106,7 @@
             // man_checkBox
             // 
             this.man_checkBox.AutoSize = true;
-            this.man_checkBox.Location = new System.Drawing.Point(84, 387);
+            this.man_checkBox.Location = new System.Drawing.Point(84, 329);
             this.man_checkBox.Name = "man_checkBox";
             this.man_checkBox.Size = new System.Drawing.Size(47, 17);
             this.man_checkBox.TabIndex = 51;
@@ -120,7 +116,7 @@
             // kvinnor_checkBox
             // 
             this.kvinnor_checkBox.AutoSize = true;
-            this.kvinnor_checkBox.Location = new System.Drawing.Point(16, 387);
+            this.kvinnor_checkBox.Location = new System.Drawing.Point(16, 329);
             this.kvinnor_checkBox.Name = "kvinnor_checkBox";
             this.kvinnor_checkBox.Size = new System.Drawing.Size(62, 17);
             this.kvinnor_checkBox.TabIndex = 50;
@@ -136,7 +132,7 @@
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(291, 455);
+            this.ok_button.Location = new System.Drawing.Point(291, 397);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(75, 23);
             this.ok_button.TabIndex = 55;
@@ -147,7 +143,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 428);
+            this.label5.Location = new System.Drawing.Point(12, 370);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 13);
             this.label5.TabIndex = 58;
@@ -156,7 +152,7 @@
             // manuellt_checkBox
             // 
             this.manuellt_checkBox.AutoSize = true;
-            this.manuellt_checkBox.Location = new System.Drawing.Point(101, 454);
+            this.manuellt_checkBox.Location = new System.Drawing.Point(101, 396);
             this.manuellt_checkBox.Name = "manuellt_checkBox";
             this.manuellt_checkBox.Size = new System.Drawing.Size(66, 17);
             this.manuellt_checkBox.TabIndex = 57;
@@ -166,7 +162,7 @@
             // automatiskt_checkBox
             // 
             this.automatiskt_checkBox.AutoSize = true;
-            this.automatiskt_checkBox.Location = new System.Drawing.Point(14, 454);
+            this.automatiskt_checkBox.Location = new System.Drawing.Point(14, 396);
             this.automatiskt_checkBox.Name = "automatiskt_checkBox";
             this.automatiskt_checkBox.Size = new System.Drawing.Size(81, 17);
             this.automatiskt_checkBox.TabIndex = 56;
@@ -175,7 +171,7 @@
             // 
             // avbryt_button
             // 
-            this.avbryt_button.Location = new System.Drawing.Point(372, 455);
+            this.avbryt_button.Location = new System.Drawing.Point(372, 397);
             this.avbryt_button.Name = "avbryt_button";
             this.avbryt_button.Size = new System.Drawing.Size(75, 23);
             this.avbryt_button.TabIndex = 70;
@@ -328,54 +324,11 @@
             this.label16.TabIndex = 88;
             this.label16.Text = "Max antal deltagare";
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(12, 317);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 13);
-            this.label17.TabIndex = 93;
-            this.label17.Text = "Tävlingstyp";
-            // 
-            // lag_checkBox
-            // 
-            this.lag_checkBox.AutoSize = true;
-            this.lag_checkBox.Location = new System.Drawing.Point(135, 335);
-            this.lag_checkBox.Name = "lag_checkBox";
-            this.lag_checkBox.Size = new System.Drawing.Size(44, 17);
-            this.lag_checkBox.TabIndex = 92;
-            this.lag_checkBox.Text = "Lag";
-            this.lag_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // par_checkBox
-            // 
-            this.par_checkBox.AutoSize = true;
-            this.par_checkBox.Location = new System.Drawing.Point(84, 335);
-            this.par_checkBox.Name = "par_checkBox";
-            this.par_checkBox.Size = new System.Drawing.Size(42, 17);
-            this.par_checkBox.TabIndex = 91;
-            this.par_checkBox.Text = "Par";
-            this.par_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // singel_checkBox
-            // 
-            this.singel_checkBox.AutoSize = true;
-            this.singel_checkBox.Location = new System.Drawing.Point(17, 335);
-            this.singel_checkBox.Name = "singel_checkBox";
-            this.singel_checkBox.Size = new System.Drawing.Size(55, 17);
-            this.singel_checkBox.TabIndex = 90;
-            this.singel_checkBox.Text = "Singel";
-            this.singel_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // registreratavling
+            // RegistreraTavling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 489);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.lag_checkBox);
-            this.Controls.Add(this.par_checkBox);
-            this.Controls.Add(this.singel_checkBox);
+            this.ClientSize = new System.Drawing.Size(463, 425);
             this.Controls.Add(this.maxantaldeltagare_textBox);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -407,7 +360,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tavlingsnamn_textBox);
             this.Controls.Add(this.label1);
-            this.Name = "registreratavling";
+            this.Name = "RegistreraTavling";
             this.Text = "Registrera tävling";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -447,9 +400,5 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox maxantaldeltagare_textBox;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.CheckBox lag_checkBox;
-        private System.Windows.Forms.CheckBox par_checkBox;
-        private System.Windows.Forms.CheckBox singel_checkBox;
     }
 }
