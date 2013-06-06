@@ -51,30 +51,29 @@ namespace Golf
             command_klass_c.ExecuteNonQuery();
 
             // Lägger in information om kön i databasen, tabell tävling_kön.
-            string in_i_tävling_kön_0 = "insert into \"tävling_kön\" (\"tävling_id\", \"kön_id\") values (" + tävling_id.ToString() + ", '" + 0 + "')";
-            NpgsqlCommand command_kon_0 = new NpgsqlCommand(in_i_tävling_kön_0, GolfReception.conn);
-
-            if (man_checkBox.Checked)
-                command_kon_0.ExecuteNonQuery();
-
-
-            string in_i_tävling_kön_1 = "insert into \"tävling_kön\" (\"tävling_id\", \"kön_id\") values (" + tävling_id.ToString() + ", '" +  1 + "')";
-            NpgsqlCommand command_kon_1 = new NpgsqlCommand(in_i_tävling_kön_1, GolfReception.conn);
-
-            if (kvinnor_checkBox.Checked)
-                command_kon_1.ExecuteNonQuery();
-
-
-            string in_i_tävling_kön_2 = "insert into \"tävling_kön\" (\"tävling_id\", \"kön_id\") values (" + tävling_id.ToString() + ", '" + 2 + "')";
-            NpgsqlCommand command_kon_2 = new NpgsqlCommand(in_i_tävling_kön_2, GolfReception.conn);
-
-            if (kvinnor_checkBox.Checked && man_checkBox.Checked)
+            if (kvinnor_checkBox.Checked && man_checkBox.Checked == true)
+            {
+                string in_i_tävling_kön_2 = "insert into \"tävling_kön\" (\"tävling_id\", \"kön_id\") values (" + tävling_id.ToString() + ", '" + 2 + "')";
+                NpgsqlCommand command_kon_2 = new NpgsqlCommand(in_i_tävling_kön_2, GolfReception.conn);
                 command_kon_2.ExecuteNonQuery();
 
+                if (man_checkBox.Checked == true)
+                {
+                    string in_i_tävling_kön_0 = "insert into \"tävling_kön\" (\"tävling_id\", \"kön_id\") values (" + tävling_id.ToString() + ", '" + 0 + "')";
+                    NpgsqlCommand command_kon_0 = new NpgsqlCommand(in_i_tävling_kön_0, GolfReception.conn);
+                    command_kon_0.ExecuteNonQuery();
+
+                    if (kvinnor_checkBox.Checked == true)
+                    {
+                        string in_i_tävling_kön_1 = "insert into \"tävling_kön\" (\"tävling_id\", \"kön_id\") values (" + tävling_id.ToString() + ", '" + 1 + "')";
+                        NpgsqlCommand command_kon_1 = new NpgsqlCommand(in_i_tävling_kön_1, GolfReception.conn);
+                        command_kon_1.ExecuteNonQuery();
+                    }
+                }
+            }
 
             MessageBox.Show("Tävlingen är registrerad!"); 
             this.Close();
-
         }
 
         private void kvinnor_checkBox_CheckedChanged(object sender, EventArgs e)
