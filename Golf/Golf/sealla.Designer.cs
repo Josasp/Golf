@@ -28,37 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.medlem_radioButton = new System.Windows.Forms.RadioButton();
-            this.alla_radioButton = new System.Windows.Forms.RadioButton();
             this.ok_button = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
-            // 
-            // medlem_radioButton
-            // 
-            this.medlem_radioButton.AutoSize = true;
-            this.medlem_radioButton.Location = new System.Drawing.Point(87, 21);
-            this.medlem_radioButton.Name = "medlem_radioButton";
-            this.medlem_radioButton.Size = new System.Drawing.Size(114, 17);
-            this.medlem_radioButton.TabIndex = 52;
-            this.medlem_radioButton.Text = "Endast medlemmar";
-            this.medlem_radioButton.UseVisualStyleBackColor = true;
-            this.medlem_radioButton.CheckedChanged += new System.EventHandler(this.medlem_radioButton_CheckedChanged);
-            // 
-            // alla_radioButton
-            // 
-            this.alla_radioButton.AutoSize = true;
-            this.alla_radioButton.Location = new System.Drawing.Point(23, 21);
-            this.alla_radioButton.Name = "alla_radioButton";
-            this.alla_radioButton.Size = new System.Drawing.Size(42, 17);
-            this.alla_radioButton.TabIndex = 54;
-            this.alla_radioButton.Text = "Alla";
-            this.alla_radioButton.UseVisualStyleBackColor = true;
-            this.alla_radioButton.CheckedChanged += new System.EventHandler(this.alla_radioButton_CheckedChanged);
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(284, 325);
+            this.ok_button.Location = new System.Drawing.Point(678, 325);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(75, 23);
             this.ok_button.TabIndex = 55;
@@ -69,33 +46,38 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(23, 44);
+            this.listBox1.Location = new System.Drawing.Point(23, 31);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(450, 251);
+            this.listBox1.Size = new System.Drawing.Size(384, 264);
             this.listBox1.TabIndex = 56;
             // 
-            // sealla
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(437, 31);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(234, 264);
+            this.listView1.TabIndex = 57;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // SeAlla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 360);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.ok_button);
-            this.Controls.Add(this.alla_radioButton);
-            this.Controls.Add(this.medlem_radioButton);
-            this.Name = "sealla";
+            this.Name = "SeAlla";
             this.Text = "Se alla";
             this.Load += new System.EventHandler(this.sealla_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RadioButton medlem_radioButton;
-        private System.Windows.Forms.RadioButton alla_radioButton;
         private System.Windows.Forms.Button ok_button;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListView listView1;
     }
 }
