@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fornamn_textBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.efternamn_textBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.golfid_textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,51 +54,21 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.resultat_textBox = new System.Windows.Forms.TextBox();
             this.beräkna_button = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tävling_id_textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // fornamn_textBox
-            // 
-            this.fornamn_textBox.Location = new System.Drawing.Point(15, 114);
-            this.fornamn_textBox.Name = "fornamn_textBox";
-            this.fornamn_textBox.Size = new System.Drawing.Size(147, 20);
-            this.fornamn_textBox.TabIndex = 56;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 139);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "Efternamn";
-            // 
-            // efternamn_textBox
-            // 
-            this.efternamn_textBox.Location = new System.Drawing.Point(15, 155);
-            this.efternamn_textBox.Name = "efternamn_textBox";
-            this.efternamn_textBox.Size = new System.Drawing.Size(147, 20);
-            this.efternamn_textBox.TabIndex = 54;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 98);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Förnamn";
             // 
             // golfid_textBox
             // 
-            this.golfid_textBox.Location = new System.Drawing.Point(15, 35);
+            this.golfid_textBox.Location = new System.Drawing.Point(15, 110);
             this.golfid_textBox.Name = "golfid_textBox";
-            this.golfid_textBox.Size = new System.Drawing.Size(147, 20);
+            this.golfid_textBox.Size = new System.Drawing.Size(100, 20);
             this.golfid_textBox.TabIndex = 52;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Location = new System.Drawing.Point(12, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 51;
@@ -289,11 +255,29 @@
             this.beräkna_button.UseVisualStyleBackColor = true;
             this.beräkna_button.Click += new System.EventHandler(this.beräkna_button_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 90;
+            this.label2.Text = "Tävling-ID";
+            // 
+            // tävling_id_textBox
+            // 
+            this.tävling_id_textBox.Location = new System.Drawing.Point(15, 36);
+            this.tävling_id_textBox.Name = "tävling_id_textBox";
+            this.tävling_id_textBox.Size = new System.Drawing.Size(100, 20);
+            this.tävling_id_textBox.TabIndex = 91;
+            // 
             // RegistreraResultat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(522, 566);
+            this.Controls.Add(this.tävling_id_textBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.beräkna_button);
             this.Controls.Add(this.resultat_textBox);
             this.Controls.Add(this.textBox18);
@@ -318,14 +302,11 @@
             this.Controls.Add(this.action_button);
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.fornamn_textBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.efternamn_textBox);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.golfid_textBox);
             this.Controls.Add(this.label1);
             this.Name = "RegistreraResultat";
             this.Text = "Registrera resultat";
+            this.Load += new System.EventHandler(this.RegistreraResultat_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,10 +314,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox fornamn_textBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox efternamn_textBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox golfid_textBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
@@ -363,5 +340,7 @@
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox resultat_textBox;
         private System.Windows.Forms.Button beräkna_button;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tävling_id_textBox;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,12 +18,7 @@ namespace Golf
             InitializeComponent();
         }
 
-        private void cancel_button_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void action_button_Click(object sender, EventArgs e)
+        private void RegistreraResultat_Load(object sender, EventArgs e)
         {
 
         }
@@ -52,6 +48,22 @@ namespace Golf
 
             string resultatet = Convert.ToString(resultat);
             resultat_textBox.Text = resultatet;
+        }
+
+        private void action_button_Click(object sender, EventArgs e)
+        {
+            string in_i_tävling_medlem = "insert into \"tävling_medlem\" (\"tävling_id\", \"golf_id\", \"resultat\") values (" + tävling_id_textBox.Text + ", '" + golfid_textBox.Text + "', " + resultat_textBox.Text + ")";
+            NpgsqlCommand command_tävling_medlem = new NpgsqlCommand(in_i_tävling_medlem, GolfReception.conn);
+            command_tävling_medlem.ExecuteNonQuery();
+
+            MessageBox.Show("Resultatet är registrerat!");
+            this.Close();
+
+        }
+
+        private void cancel_button_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
     }
