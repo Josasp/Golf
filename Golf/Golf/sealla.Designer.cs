@@ -28,34 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ickemedlem_radioButton = new System.Windows.Forms.RadioButton();
             this.medlem_radioButton = new System.Windows.Forms.RadioButton();
             this.alla_radioButton = new System.Windows.Forms.RadioButton();
             this.ok_button = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // ickemedlem_radioButton
-            // 
-            this.ickemedlem_radioButton.AutoSize = true;
-            this.ickemedlem_radioButton.Location = new System.Drawing.Point(166, 21);
-            this.ickemedlem_radioButton.Name = "ickemedlem_radioButton";
-            this.ickemedlem_radioButton.Size = new System.Drawing.Size(85, 17);
-            this.ickemedlem_radioButton.TabIndex = 53;
-            this.ickemedlem_radioButton.TabStop = true;
-            this.ickemedlem_radioButton.Text = "Icke-medlem";
-            this.ickemedlem_radioButton.UseVisualStyleBackColor = true;
-            // 
             // medlem_radioButton
             // 
             this.medlem_radioButton.AutoSize = true;
             this.medlem_radioButton.Location = new System.Drawing.Point(87, 21);
             this.medlem_radioButton.Name = "medlem_radioButton";
-            this.medlem_radioButton.Size = new System.Drawing.Size(62, 17);
+            this.medlem_radioButton.Size = new System.Drawing.Size(114, 17);
             this.medlem_radioButton.TabIndex = 52;
-            this.medlem_radioButton.TabStop = true;
-            this.medlem_radioButton.Text = "Medlem";
+            this.medlem_radioButton.Text = "Endast medlemmar";
             this.medlem_radioButton.UseVisualStyleBackColor = true;
+            this.medlem_radioButton.CheckedChanged += new System.EventHandler(this.medlem_radioButton_CheckedChanged);
             // 
             // alla_radioButton
             // 
@@ -66,10 +54,11 @@
             this.alla_radioButton.TabIndex = 54;
             this.alla_radioButton.Text = "Alla";
             this.alla_radioButton.UseVisualStyleBackColor = true;
+            this.alla_radioButton.CheckedChanged += new System.EventHandler(this.alla_radioButton_CheckedChanged);
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(302, 293);
+            this.ok_button.Location = new System.Drawing.Point(284, 325);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(75, 23);
             this.ok_button.TabIndex = 55;
@@ -80,21 +69,19 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(23, 63);
+            this.listBox1.Location = new System.Drawing.Point(23, 44);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(354, 212);
+            this.listBox1.Size = new System.Drawing.Size(450, 251);
             this.listBox1.TabIndex = 56;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // sealla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 328);
+            this.ClientSize = new System.Drawing.Size(781, 360);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.ok_button);
             this.Controls.Add(this.alla_radioButton);
-            this.Controls.Add(this.ickemedlem_radioButton);
             this.Controls.Add(this.medlem_radioButton);
             this.Name = "sealla";
             this.Text = "Se alla";
@@ -106,7 +93,6 @@
 
         #endregion
 
-        private System.Windows.Forms.RadioButton ickemedlem_radioButton;
         private System.Windows.Forms.RadioButton medlem_radioButton;
         private System.Windows.Forms.RadioButton alla_radioButton;
         private System.Windows.Forms.Button ok_button;

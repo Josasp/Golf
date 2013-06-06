@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label11 = new System.Windows.Forms.Label();
-            this.gender_comboBox = new System.Windows.Forms.ComboBox();
+            this.kon_comboBox = new System.Windows.Forms.ComboBox();
             this.action_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
             this.betalat_checkBox = new System.Windows.Forms.CheckBox();
@@ -68,17 +68,17 @@
             this.label11.TabIndex = 49;
             this.label11.Text = "Kön";
             // 
-            // gender_comboBox
+            // kon_comboBox
             // 
-            this.gender_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gender_comboBox.FormattingEnabled = true;
-            this.gender_comboBox.Items.AddRange(new object[] {
+            this.kon_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kon_comboBox.FormattingEnabled = true;
+            this.kon_comboBox.Items.AddRange(new object[] {
             "Man",
             "Kvinna"});
-            this.gender_comboBox.Location = new System.Drawing.Point(24, 224);
-            this.gender_comboBox.Name = "gender_comboBox";
-            this.gender_comboBox.Size = new System.Drawing.Size(75, 21);
-            this.gender_comboBox.TabIndex = 48;
+            this.kon_comboBox.Location = new System.Drawing.Point(24, 224);
+            this.kon_comboBox.Name = "kon_comboBox";
+            this.kon_comboBox.Size = new System.Drawing.Size(75, 21);
+            this.kon_comboBox.TabIndex = 48;
             // 
             // action_button
             // 
@@ -322,7 +322,7 @@
             this.Controls.Add(this.ickemedlem_radioButton);
             this.Controls.Add(this.medlem_radioButton);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.gender_comboBox);
+            this.Controls.Add(this.kon_comboBox);
             this.Controls.Add(this.action_button);
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.handicap_textBox);
@@ -355,7 +355,7 @@
         #endregion
 
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox gender_comboBox;
+        private System.Windows.Forms.ComboBox kon_comboBox;
         private System.Windows.Forms.Button action_button;
         private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.CheckBox betalat_checkBox;

@@ -34,13 +34,17 @@ namespace Golf
             NpgsqlConnection conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=grp6vt13;User Id=grp6vt13;Password=gOMMObmEP;SSL=true");
             conn.Open();
 
-            // Lägg in information i databasen. 
-            int kontaktid = 2; // Hur kolla vilket som är det största i tabellen och sätta till nästa? 
+            // Kolla största värdet för kontaktid
+            NpgsqlCommand command1 = new NpgsqlCommand("select max(kontaktid) from kontakt;", conn);
+            int kontaktid = 0;
+            kontaktid = (Int32)command1.ExecuteScalar();
+            kontaktid = kontaktid + 1;
+
             string inikontakt = "insert into kontakt (kontaktid, postadress, postnummer, postort, telefonnummer, epost) values (" + kontaktid + ", '" + adress_textBox.Text + "', " + postnummer_textBox.Text + ", '" + postort_textBox.Text + "', '" + telefonnummer_textBox.Text + "', '" + epost_textBox.Text + "')";
             NpgsqlCommand command = new NpgsqlCommand(inikontakt, conn);
             command.ExecuteNonQuery();
 
-            string iniperson = "insert into person (golfid, handicap, fornamn, efternamn, kontaktid) values(" + golfid_textBox.Text + ", " + handicap_textBox.Text + ", '" + fornamn_textBox.Text + "', '" + efternamn_textBox.Text + "', " + kontaktid + ")";
+            string iniperson = "insert into person (golfid, kon, handicap, fornamn, efternamn, kontaktid) values(" + golfid_textBox.Text + ", '" + kon_comboBox.Text + "', " + handicap_textBox.Text + ", '" + fornamn_textBox.Text + "', '" + efternamn_textBox.Text + "', " + kontaktid + ")";
             NpgsqlCommand command2 = new NpgsqlCommand(iniperson, conn);
             command2.ExecuteNonQuery();
 
@@ -56,7 +60,8 @@ namespace Golf
 
             // Stäng anslutning till databasen. 
             conn.Close();
-
+            MessageBox.Show("Spelare tillagd."); 
+            this.Close(); 
         }
 
         private void cancel_button_Click(object sender, EventArgs e)
