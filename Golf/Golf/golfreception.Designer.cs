@@ -120,6 +120,7 @@
             this.tävlingslistaToolStripMenuItem.Name = "tävlingslistaToolStripMenuItem";
             this.tävlingslistaToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.tävlingslistaToolStripMenuItem.Text = "Tävlingslista";
+            this.tävlingslistaToolStripMenuItem.Click += new System.EventHandler(this.tävlingslistaToolStripMenuItem_Click);
             // 
             // GolfReception
             // 

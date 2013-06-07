@@ -67,5 +67,11 @@ namespace Golf
             var bw = new BookingWindow();
             bw.ShowDialog();
         }
+
+        private void tävlingslistaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tävlingslista tl = new Tävlingslista();
+            tl.ShowDialog();
+        }
     }
 }

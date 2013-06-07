@@ -57,14 +57,14 @@
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(542, 359);
+            this.dataGridView.Size = new System.Drawing.Size(761, 359);
             this.dataGridView.TabIndex = 2;
             // 
             // Tävlingslista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 505);
+            this.ClientSize = new System.Drawing.Size(785, 505);
             this.Controls.Add(this.dataGridView);
             this.Name = "Tävlingslista";
             this.Text = "Tävlingslista";
