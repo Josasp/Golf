@@ -56,12 +56,6 @@ namespace Golf
             seresultat.Show();
         }
 
-        private void lottaStarttiderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LottaStarttider lottastarttider = new LottaStarttider();
-            lottastarttider.Show();
-        }
-
         private void seStarttiderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SeStarttider sestarttider = new SeStarttider();

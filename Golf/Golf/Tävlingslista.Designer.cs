@@ -33,6 +33,7 @@
             this.reg_button = new System.Windows.Forms.Button();
             this.anm_button = new System.Windows.Forms.Button();
             this.res_button = new System.Windows.Forms.Button();
+            this.lag_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,15 +90,26 @@
             this.res_button.Name = "res_button";
             this.res_button.Size = new System.Drawing.Size(114, 23);
             this.res_button.TabIndex = 5;
-            this.res_button.Text = "Se resultat";
+            this.res_button.Text = "Resultat";
             this.res_button.UseVisualStyleBackColor = true;
             this.res_button.Click += new System.EventHandler(this.res_button_Click);
+            // 
+            // lag_button
+            // 
+            this.lag_button.Location = new System.Drawing.Point(426, 377);
+            this.lag_button.Name = "lag_button";
+            this.lag_button.Size = new System.Drawing.Size(114, 23);
+            this.lag_button.TabIndex = 6;
+            this.lag_button.Text = "Lag";
+            this.lag_button.UseVisualStyleBackColor = true;
+            this.lag_button.Click += new System.EventHandler(this.lag_button_Click);
             // 
             // Tävlingslista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 407);
+            this.Controls.Add(this.lag_button);
             this.Controls.Add(this.res_button);
             this.Controls.Add(this.anm_button);
             this.Controls.Add(this.reg_button);
@@ -115,5 +127,6 @@
         private System.Windows.Forms.Button reg_button;
         private System.Windows.Forms.Button anm_button;
         private System.Windows.Forms.Button res_button;
+        private System.Windows.Forms.Button lag_button;
     }
 }

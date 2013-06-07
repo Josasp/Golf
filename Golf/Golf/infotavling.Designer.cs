@@ -80,7 +80,6 @@
             this.registreraResultatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seResultatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.starttiderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lottaStarttiderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seStarttiderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -528,23 +527,15 @@
             // starttiderToolStripMenuItem
             // 
             this.starttiderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lottaStarttiderToolStripMenuItem,
             this.seStarttiderToolStripMenuItem});
             this.starttiderToolStripMenuItem.Name = "starttiderToolStripMenuItem";
             this.starttiderToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.starttiderToolStripMenuItem.Text = "Starttider";
             // 
-            // lottaStarttiderToolStripMenuItem
-            // 
-            this.lottaStarttiderToolStripMenuItem.Name = "lottaStarttiderToolStripMenuItem";
-            this.lottaStarttiderToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
-            this.lottaStarttiderToolStripMenuItem.Text = "Lotta starttider";
-            this.lottaStarttiderToolStripMenuItem.Click += new System.EventHandler(this.lottaStarttiderToolStripMenuItem_Click);
-            // 
             // seStarttiderToolStripMenuItem
             // 
             this.seStarttiderToolStripMenuItem.Name = "seStarttiderToolStripMenuItem";
-            this.seStarttiderToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.seStarttiderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.seStarttiderToolStripMenuItem.Text = "Se starttider";
             this.seStarttiderToolStripMenuItem.Click += new System.EventHandler(this.seStarttiderToolStripMenuItem_Click);
             // 
@@ -664,7 +655,6 @@
         private System.Windows.Forms.ToolStripMenuItem registreraResultatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seResultatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem starttiderToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lottaStarttiderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seStarttiderToolStripMenuItem;
     }
 }

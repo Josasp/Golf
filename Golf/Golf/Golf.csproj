@@ -95,11 +95,11 @@
     <Compile Include="InfoTavling.Designer.cs">
       <DependentUpon>InfoTavling.cs</DependentUpon>
     </Compile>
-    <Compile Include="LottaStarttider.cs">
+    <Compile Include="Lag.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LottaStarttider.Designer.cs">
-      <DependentUpon>LottaStarttider.cs</DependentUpon>
+    <Compile Include="Lag.Designer.cs">
+      <DependentUpon>Lag.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistreraResultat.cs">
       <SubType>Form</SubType>
@@ -202,11 +202,11 @@
     <EmbeddedResource Include="InfoTavling.resx">
       <DependentUpon>InfoTavling.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lag.resx">
+      <DependentUpon>Lag.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LaggTillspelare.resx">
       <DependentUpon>LaggTillspelare.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LottaStarttider.resx">
-      <DependentUpon>LottaStarttider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

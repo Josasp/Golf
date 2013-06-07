@@ -88,5 +88,11 @@ namespace Golf
             SeResultat sr = new SeResultat(GetTävling_id());
             sr.ShowDialog();
         }
+
+        private void lag_button_Click(object sender, EventArgs e)
+        {
+            Lag l = new Lag(GetTävling_id());
+            l.ShowDialog();
+        }
     }
 }
