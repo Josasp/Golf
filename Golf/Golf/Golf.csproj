@@ -169,12 +169,6 @@
     <Compile Include="SokSpelare.Designer.cs">
       <DependentUpon>SokSpelare.cs</DependentUpon>
     </Compile>
-    <Compile Include="SokTavling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SokTavling.Designer.cs">
-      <DependentUpon>SokTavling.cs</DependentUpon>
-    </Compile>
     <Compile Include="VisaTavlingMedlem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,9 +237,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SokSpelare.resx">
       <DependentUpon>SokSpelare.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SokTavling.resx">
-      <DependentUpon>SokTavling.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tävlingslista.resx">
       <DependentUpon>Tävlingslista.cs</DependentUpon>

@@ -36,7 +36,6 @@
             this.tidsbokningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tävlingsverksamhetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registreraTävlingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sökTävlingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tävlingslistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -95,7 +94,6 @@
             // 
             this.tävlingsverksamhetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.registreraTävlingToolStripMenuItem,
-            this.sökTävlingToolStripMenuItem,
             this.tävlingslistaToolStripMenuItem});
             this.tävlingsverksamhetToolStripMenuItem.Name = "tävlingsverksamhetToolStripMenuItem";
             this.tävlingsverksamhetToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
@@ -107,13 +105,6 @@
             this.registreraTävlingToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.registreraTävlingToolStripMenuItem.Text = "Registrera tävling";
             this.registreraTävlingToolStripMenuItem.Click += new System.EventHandler(this.registreraTävlingToolStripMenuItem_Click);
-            // 
-            // sökTävlingToolStripMenuItem
-            // 
-            this.sökTävlingToolStripMenuItem.Name = "sökTävlingToolStripMenuItem";
-            this.sökTävlingToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.sökTävlingToolStripMenuItem.Text = "Sök tävling";
-            this.sökTävlingToolStripMenuItem.Click += new System.EventHandler(this.sökTävlingToolStripMenuItem_Click);
             // 
             // tävlingslistaToolStripMenuItem
             // 
@@ -149,7 +140,6 @@
         private System.Windows.Forms.ToolStripMenuItem tidsbokningToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tävlingsverksamhetToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem registreraTävlingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sökTävlingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tävlingslistaToolStripMenuItem;
 
     }

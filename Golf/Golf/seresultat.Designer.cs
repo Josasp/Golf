@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.singel_radioButton = new System.Windows.Forms.RadioButton();
             this.lag_radioButton = new System.Windows.Forms.RadioButton();
             this.action_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.res_textBox = new System.Windows.Forms.TextBox();
+            this.save_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,14 +91,14 @@
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.PaleGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView.Location = new System.Drawing.Point(12, 48);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
@@ -106,12 +108,32 @@
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(385, 330);
             this.dataGridView.TabIndex = 73;
+            this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
+            // 
+            // res_textBox
+            // 
+            this.res_textBox.Location = new System.Drawing.Point(12, 384);
+            this.res_textBox.Name = "res_textBox";
+            this.res_textBox.Size = new System.Drawing.Size(100, 22);
+            this.res_textBox.TabIndex = 74;
+            // 
+            // save_button
+            // 
+            this.save_button.Location = new System.Drawing.Point(118, 384);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(75, 23);
+            this.save_button.TabIndex = 75;
+            this.save_button.Text = "Spara";
+            this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // SeResultat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 419);
+            this.Controls.Add(this.save_button);
+            this.Controls.Add(this.res_textBox);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.action_button);
             this.Controls.Add(this.cancel_button);
@@ -133,5 +155,7 @@
         private System.Windows.Forms.Button action_button;
         private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.TextBox res_textBox;
+        private System.Windows.Forms.Button save_button;
     }
 }

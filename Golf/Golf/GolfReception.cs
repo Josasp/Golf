@@ -51,12 +51,6 @@ namespace Golf
             registreratavling.ShowDialog();
         }
 
-        private void sökTävlingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SokTavling soktavling = new SokTavling();
-            soktavling.ShowDialog();
-        }
-
         private void golfreception_Load(object sender, EventArgs e)
         {
 

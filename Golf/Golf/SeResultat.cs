@@ -34,10 +34,11 @@ namespace Golf
             if (singel_radioButton.Checked)
             {
                 dt.Columns.Add("tävling_id", typeof(string));
+                dt.Columns.Add("golf_id", typeof(string));
                 dt.Columns.Add("namn", typeof(string));
                 dt.Columns.Add("resultat", typeof(string));
 
-                String sql = "SELECT    \"tävling_medlem\".\"tävling_id\",    \"tävling_medlem\".resultat,    (medlem.\"förnamn\" || ' ' || medlem.efternamn) as namn FROM    public.\"tävling_medlem\",    public.medlem WHERE    \"tävling_medlem\".golf_id = medlem.golf_id AND   \"tävling_medlem\".\"tävling_id\" = '" + tävling_id.ToString() + "';";
+                String sql = "SELECT    \"tävling_medlem\".\"tävling_id\", \"tävling_medlem\".\"golf_id\",   \"tävling_medlem\".resultat,    (medlem.\"förnamn\" || ' ' || medlem.efternamn) as namn FROM    public.\"tävling_medlem\",    public.medlem WHERE    \"tävling_medlem\".golf_id = medlem.golf_id AND   \"tävling_medlem\".\"tävling_id\" = '" + tävling_id.ToString() + "';";
                 NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
                 NpgsqlDataReader ndr = command.ExecuteReader();
 
@@ -45,6 +46,7 @@ namespace Golf
                 {
                     DataRow row = dt.NewRow();
                     row["tävling_id"] = ndr["tävling_id"].ToString();
+                    row["golf_id"] = ndr["golf_id"].ToString();
                     row["namn"] = ndr["namn"].ToString();
                     row["resultat"] = ndr["resultat"].ToString();
 
@@ -61,7 +63,7 @@ namespace Golf
                 dt.Columns.Add("spelare_3", typeof(string));
                 dt.Columns.Add("spelare_4", typeof(string));
 
-                String sql = "SELECT    \"lag\".\"tävling_id\",   lag.lag_id,   lag.resultat,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_1) AS spelare_1,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_2) AS spelare_2,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_3) AS spelare_3,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_4) AS spelare_4 FROM    public.lag WHERE    lag.\"tävling_id\" = '1';";
+                String sql = "SELECT    \"lag\".\"tävling_id\",   lag.lag_id,   lag.resultat,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_1) AS spelare_1,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_2) AS spelare_2,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_3) AS spelare_3,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_4) AS spelare_4 FROM    public.lag WHERE    lag.\"tävling_id\" = "+tävling_id+";";
                 NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
                 NpgsqlDataReader ndr = command.ExecuteReader();
 
@@ -96,6 +98,28 @@ namespace Golf
 
         private void singel_radioButton_CheckedChanged(object sender, EventArgs e)
         {
+            UpdateTable();
+        }
+
+        private void dataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            res_textBox.Text = dataGridView["resultat", dataGridView.CurrentRow.Index].Value.ToString();
+        }
+
+        private void save_button_Click(object sender, EventArgs e)
+        {
+            string sql = "";
+            if (singel_radioButton.Checked)
+            {
+                sql = "UPDATE \"tävling_medlem\" SET(resultat) = (" + int.Parse(res_textBox.Text) + ") WHERE \"tävling_medlem\".\"tävling_id\" = " + tävling_id + " AND \"tävling_medlem\".\"golf_id\" = '" + dataGridView["golf_id", dataGridView.CurrentRow.Index].Value.ToString() + "';";
+            }
+            else
+            {
+                sql = "UPDATE \"lag\" SET(resultat) = (" + int.Parse(res_textBox.Text) + ") WHERE lag.lag_id = " + dataGridView["lag_id", dataGridView.CurrentRow.Index].Value.ToString() + ";";
+            }
+            NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+
+            command.ExecuteNonQuery();
             UpdateTable();
         }
     }
