@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,9 +30,18 @@ namespace Golf
 
         private void action_button_Click(object sender, EventArgs e)
         {
+            if (alla_checkBox.Checked == true)
+            {
+                //NpgsqlCommand command_deltagare_alla = new NpgsqlCommand("SELECT \"tävling_medlem\".\"tävling_id\",\"tävling_medlem\".golf_id FROM public.\"tävling_medlem\" WHERE \"tävling_medlem\".\"tävling_id\" = '1'", GolfReception.conn);
+                //NpgsqlDataReader alla = command_deltagare_alla.ExecuteReader();
+                //while (alla.Read())
+                // {
+                //  listBox1.Items.Add(alla);
+                // }
+            }
+
+            this.Close();
+            }
+            }
 
         }
-
-
-    }
-}
