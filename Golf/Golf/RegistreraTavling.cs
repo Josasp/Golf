@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,7 @@ namespace Golf
         {
             // Lägger in information om tävling i databasen, tabell tävling.  
             DateTime sistaAnmälningsdatum = this.dateTimePicker2.Value.Date;
-            string in_i_tävling = "insert into \"tävling\" (\"namn\", \"sistaAnmälan\", \"maxDeltagare\") values ('" + tavlingsnamn_textBox.Text + "', '" + sistaAnmälningsdatum + "', " + maxantaldeltagare_textBox.Text + "); SELECT CURRVAL(pg_get_serial_sequence('\"tävling\"','tävling_id'))";
+            string in_i_tävling = "insert into \"tävling\" (\"namn\", \"sistaAnmälan\", \"maxDeltagare\") values ('" + tavlingsnamn_textBox.Text + "', '" + sistaAnmälningsdatum.ToString(CultureInfo.CreateSpecificCulture("sv-SE")) + "', " + maxantaldeltagare_textBox.Text + "); SELECT CURRVAL(pg_get_serial_sequence('\"tävling\"','tävling_id'))";
             NpgsqlCommand command_tavling = new NpgsqlCommand(in_i_tävling, GolfReception.conn);
             NpgsqlDataReader id_tävling = command_tavling.ExecuteReader();
             id_tävling.Read();
@@ -71,6 +72,30 @@ namespace Golf
                     }
                 }
             }
+
+            do
+            {
+                DateTime datumtid = new DateTime(
+                    dateTimePicker1.Value.Year,
+                    dateTimePicker1.Value.Month,
+                    dateTimePicker1.Value.Day,
+                    int.Parse(from_comboBox.Text.ToString().Substring(0, 2)),
+                    int.Parse(from_comboBox.Text.ToString().Substring(3, 2)),
+                    0);
+
+                //Tidsuppbokning
+                string sql = "INSERT INTO bokning (tävling_id, datumtid) VALUES (:tävling_id, :date);";
+                NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+                command.Parameters.Add(new NpgsqlParameter("tävling_id", DbType.Int32));
+                command.Parameters.Add(new NpgsqlParameter("date", DbType.DateTime));
+
+                command.Prepare();
+                command.Parameters[0].Value = tävling_id;
+                command.Parameters[1].Value = datumtid;
+
+                command.ExecuteNonQuery();
+                from_comboBox.SelectedIndex = from_comboBox.SelectedIndex + 1; 
+            } while (from_comboBox.SelectedIndex != to_comboBox.SelectedIndex);
 
             MessageBox.Show("Tävlingen är registrerad!"); 
             this.Close();

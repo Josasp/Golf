@@ -38,8 +38,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ok_button = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.manuellt_checkBox = new System.Windows.Forms.CheckBox();
-            this.automatiskt_checkBox = new System.Windows.Forms.CheckBox();
             this.avbryt_button = new System.Windows.Forms.Button();
             this.a_fran_textBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,6 +57,10 @@
             this.label15 = new System.Windows.Forms.Label();
             this.maxantaldeltagare_textBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.from_comboBox = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.to_comboBox = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -80,7 +82,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(185, 18);
+            this.label2.Location = new System.Drawing.Point(255, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 2;
@@ -126,14 +128,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(184, 34);
+            this.dateTimePicker1.Location = new System.Drawing.Point(254, 34);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(141, 22);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(291, 397);
+            this.ok_button.Location = new System.Drawing.Point(376, 390);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(75, 23);
             this.ok_button.TabIndex = 15;
@@ -144,35 +146,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 370);
+            this.label5.Location = new System.Drawing.Point(251, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 13);
             this.label5.TabIndex = 58;
             this.label5.Text = "Boka upp starttider";
             // 
-            // manuellt_checkBox
-            // 
-            this.manuellt_checkBox.AutoSize = true;
-            this.manuellt_checkBox.Location = new System.Drawing.Point(101, 396);
-            this.manuellt_checkBox.Name = "manuellt_checkBox";
-            this.manuellt_checkBox.Size = new System.Drawing.Size(72, 17);
-            this.manuellt_checkBox.TabIndex = 14;
-            this.manuellt_checkBox.Text = "Manuellt";
-            this.manuellt_checkBox.UseVisualStyleBackColor = true;
-            // 
-            // automatiskt_checkBox
-            // 
-            this.automatiskt_checkBox.AutoSize = true;
-            this.automatiskt_checkBox.Location = new System.Drawing.Point(14, 396);
-            this.automatiskt_checkBox.Name = "automatiskt_checkBox";
-            this.automatiskt_checkBox.Size = new System.Drawing.Size(88, 17);
-            this.automatiskt_checkBox.TabIndex = 13;
-            this.automatiskt_checkBox.Text = "Automatiskt";
-            this.automatiskt_checkBox.UseVisualStyleBackColor = true;
-            // 
             // avbryt_button
             // 
-            this.avbryt_button.Location = new System.Drawing.Point(372, 397);
+            this.avbryt_button.Location = new System.Drawing.Point(12, 390);
             this.avbryt_button.Name = "avbryt_button";
             this.avbryt_button.Size = new System.Drawing.Size(75, 23);
             this.avbryt_button.TabIndex = 16;
@@ -325,11 +307,341 @@
             this.label16.TabIndex = 88;
             this.label16.Text = "Max antal deltagare";
             // 
+            // from_comboBox
+            // 
+            this.from_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.from_comboBox.FormattingEnabled = true;
+            this.from_comboBox.Items.AddRange(new object[] {
+            "00:00",
+            "00:10",
+            "00:20",
+            "00:30",
+            "00:40",
+            "00:50",
+            "01:00",
+            "01:10",
+            "01:20",
+            "01:30",
+            "01:40",
+            "01:50",
+            "02:00",
+            "02:10",
+            "02:20",
+            "02:30",
+            "02:40",
+            "02:50",
+            "03:00",
+            "03:10",
+            "03:20",
+            "03:30",
+            "03:40",
+            "03:50",
+            "04:00",
+            "04:10",
+            "04:20",
+            "04:30",
+            "04:40",
+            "04:50",
+            "05:00",
+            "05:10",
+            "05:20",
+            "05:30",
+            "05:40",
+            "05:50",
+            "06:00",
+            "06:10",
+            "06:20",
+            "06:30",
+            "06:40",
+            "06:50",
+            "07:00",
+            "07:10",
+            "07:20",
+            "07:30",
+            "07:40",
+            "07:50",
+            "08:00",
+            "08:10",
+            "08:20",
+            "08:30",
+            "08:40",
+            "08:50",
+            "09:00",
+            "09:10",
+            "09:20",
+            "09:30",
+            "09:40",
+            "09:50",
+            "10:00",
+            "10:10",
+            "10:20",
+            "10:30",
+            "10:40",
+            "10:50",
+            "11:00",
+            "11:10",
+            "11:20",
+            "11:30",
+            "11:40",
+            "11:50",
+            "12:00",
+            "12:10",
+            "12:20",
+            "12:30",
+            "12:40",
+            "12:50",
+            "13:00",
+            "13:10",
+            "13:20",
+            "13:30",
+            "13:40",
+            "13:50",
+            "14:00",
+            "14:10",
+            "14:20",
+            "14:30",
+            "14:40",
+            "14:50",
+            "15:00",
+            "15:10",
+            "15:20",
+            "15:30",
+            "15:40",
+            "15:50",
+            "16:00",
+            "16:10",
+            "16:20",
+            "16:30",
+            "16:40",
+            "16:50",
+            "17:00",
+            "17:10",
+            "17:20",
+            "17:30",
+            "17:40",
+            "17:50",
+            "18:00",
+            "18:10",
+            "18:20",
+            "18:30",
+            "18:40",
+            "18:50",
+            "19:00",
+            "19:10",
+            "19:20",
+            "19:30",
+            "19:40",
+            "19:50",
+            "20:00",
+            "20:10",
+            "20:20",
+            "20:30",
+            "20:40",
+            "20:50",
+            "21:00",
+            "21:10",
+            "21:20",
+            "21:30",
+            "21:40",
+            "21:50",
+            "22:00",
+            "22:10",
+            "22:20",
+            "22:30",
+            "22:40",
+            "22:50",
+            "23:00",
+            "23:10",
+            "23:20",
+            "23:30",
+            "23:40",
+            "23:50"});
+            this.from_comboBox.Location = new System.Drawing.Point(254, 110);
+            this.from_comboBox.Name = "from_comboBox";
+            this.from_comboBox.Size = new System.Drawing.Size(62, 21);
+            this.from_comboBox.TabIndex = 90;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(251, 94);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 89;
+            this.label6.Text = "Från";
+            // 
+            // to_comboBox
+            // 
+            this.to_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.to_comboBox.FormattingEnabled = true;
+            this.to_comboBox.Items.AddRange(new object[] {
+            "00:00",
+            "00:10",
+            "00:20",
+            "00:30",
+            "00:40",
+            "00:50",
+            "01:00",
+            "01:10",
+            "01:20",
+            "01:30",
+            "01:40",
+            "01:50",
+            "02:00",
+            "02:10",
+            "02:20",
+            "02:30",
+            "02:40",
+            "02:50",
+            "03:00",
+            "03:10",
+            "03:20",
+            "03:30",
+            "03:40",
+            "03:50",
+            "04:00",
+            "04:10",
+            "04:20",
+            "04:30",
+            "04:40",
+            "04:50",
+            "05:00",
+            "05:10",
+            "05:20",
+            "05:30",
+            "05:40",
+            "05:50",
+            "06:00",
+            "06:10",
+            "06:20",
+            "06:30",
+            "06:40",
+            "06:50",
+            "07:00",
+            "07:10",
+            "07:20",
+            "07:30",
+            "07:40",
+            "07:50",
+            "08:00",
+            "08:10",
+            "08:20",
+            "08:30",
+            "08:40",
+            "08:50",
+            "09:00",
+            "09:10",
+            "09:20",
+            "09:30",
+            "09:40",
+            "09:50",
+            "10:00",
+            "10:10",
+            "10:20",
+            "10:30",
+            "10:40",
+            "10:50",
+            "11:00",
+            "11:10",
+            "11:20",
+            "11:30",
+            "11:40",
+            "11:50",
+            "12:00",
+            "12:10",
+            "12:20",
+            "12:30",
+            "12:40",
+            "12:50",
+            "13:00",
+            "13:10",
+            "13:20",
+            "13:30",
+            "13:40",
+            "13:50",
+            "14:00",
+            "14:10",
+            "14:20",
+            "14:30",
+            "14:40",
+            "14:50",
+            "15:00",
+            "15:10",
+            "15:20",
+            "15:30",
+            "15:40",
+            "15:50",
+            "16:00",
+            "16:10",
+            "16:20",
+            "16:30",
+            "16:40",
+            "16:50",
+            "17:00",
+            "17:10",
+            "17:20",
+            "17:30",
+            "17:40",
+            "17:50",
+            "18:00",
+            "18:10",
+            "18:20",
+            "18:30",
+            "18:40",
+            "18:50",
+            "19:00",
+            "19:10",
+            "19:20",
+            "19:30",
+            "19:40",
+            "19:50",
+            "20:00",
+            "20:10",
+            "20:20",
+            "20:30",
+            "20:40",
+            "20:50",
+            "21:00",
+            "21:10",
+            "21:20",
+            "21:30",
+            "21:40",
+            "21:50",
+            "22:00",
+            "22:10",
+            "22:20",
+            "22:30",
+            "22:40",
+            "22:50",
+            "23:00",
+            "23:10",
+            "23:20",
+            "23:30",
+            "23:40",
+            "23:50"});
+            this.to_comboBox.Location = new System.Drawing.Point(322, 110);
+            this.to_comboBox.Name = "to_comboBox";
+            this.to_comboBox.Size = new System.Drawing.Size(62, 21);
+            this.to_comboBox.TabIndex = 92;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(319, 94);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(21, 13);
+            this.label17.TabIndex = 91;
+            this.label17.Text = "Till";
+            // 
             // RegistreraTavling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 425);
+            this.Controls.Add(this.to_comboBox);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.from_comboBox);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.maxantaldeltagare_textBox);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -350,8 +662,6 @@
             this.Controls.Add(this.a_fran_textBox);
             this.Controls.Add(this.avbryt_button);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.manuellt_checkBox);
-            this.Controls.Add(this.automatiskt_checkBox);
             this.Controls.Add(this.ok_button);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
@@ -381,8 +691,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button ok_button;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox manuellt_checkBox;
-        private System.Windows.Forms.CheckBox automatiskt_checkBox;
         private System.Windows.Forms.Button avbryt_button;
         private System.Windows.Forms.TextBox a_fran_textBox;
         private System.Windows.Forms.Label label7;
@@ -402,5 +710,9 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox maxantaldeltagare_textBox;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox from_comboBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox to_comboBox;
+        private System.Windows.Forms.Label label17;
     }
 }
