@@ -191,7 +191,77 @@ namespace Golf
 
         private void players_comboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            UpdateTable();
+            FilterChanged();
+        }
+
+        private void dataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            FilterChanged();
+        }
+
+        private void FilterChanged()
+        {
+            DateTime datum = new DateTime(
+                monthCalendar.SelectionStart.Year,
+                monthCalendar.SelectionStart.Month,
+                monthCalendar.SelectionStart.Day,
+                int.Parse(dataGridView["tid", dataGridView.CurrentRow.Index].Value.ToString().Substring(0, 2)),
+                int.Parse(dataGridView["tid", dataGridView.CurrentRow.Index].Value.ToString().Substring(3, 2)),
+                0);
+
+            //Clear bolded dates
+            monthCalendar.RemoveAllBoldedDates();
+
+            String sql = "SELECT bokning.bokning_id, bokning.datumtid, bokning.spelare_1, bokning.spelare_2, bokning.spelare_3, bokning.spelare_4, bokning.tävling_id, bokning.notering  FROM public.bokning WHERE datumtid::TEXT LIKE '%" + datum.Hour.ToString().PadLeft(2, '0') + ":" + datum.Minute.ToString().PadLeft(2, '0') + ":00';";
+            NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+            NpgsqlDataReader ndr = command.ExecuteReader();
+            LinkedList<DateTime> upptagnaDatum = new LinkedList<DateTime>();
+            int spelare = players_comboBox.SelectedIndex > 0 ? players_comboBox.SelectedIndex + 1 : 1;
+            while (ndr.Read())
+            {
+                int lediga = 0;
+                if (ndr["tävling_id"].ToString().Length > 0 && ndr["notering"].ToString().Length > 0)
+                {
+                    if (ndr["spelare_1"].ToString().Equals(""))
+                    {
+                        lediga++;
+                    }
+                    if (ndr["spelare_2"].ToString().Equals(""))
+                    {
+                        lediga++;
+                    }
+                    if (ndr["spelare_3"].ToString().Equals(""))
+                    {
+                        lediga++;
+                    }
+                    if (ndr["spelare_4"].ToString().Equals(""))
+                    {
+                        lediga++;
+                    } 
+                }
+                if (lediga < spelare)
+                {
+                    upptagnaDatum.AddLast((DateTime)ndr["datumtid"]);
+                }
+            }
+
+            int ahead = 180;
+            //Set bolded dates
+            DateTime d = datum;
+            for (int i = 0; i < ahead; i++)
+            {
+                monthCalendar.AddBoldedDate(d);
+                d = d.AddDays(1);
+            }
+
+            //Remove not free
+            foreach (DateTime ud in upptagnaDatum)
+            {
+                monthCalendar.RemoveBoldedDate(ud);
+            }
+
+            monthCalendar.UpdateBoldedDates();
+            ndr.Close();
         }
     }
 }
