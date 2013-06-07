@@ -52,7 +52,7 @@ namespace Golf
 
         private void seResultatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SeResultat seresultat = new SeResultat();
+            SeResultat seresultat = new SeResultat(GetTävling_id());
             seresultat.Show();
         }
 
@@ -66,6 +66,11 @@ namespace Golf
         {
             SeStarttider sestarttider = new SeStarttider();
             sestarttider.Show();
+        }
+
+        private int GetTävling_id()
+        {
+            return int.Parse(tävling_id_textBox.Text);
         }
     }
 }

@@ -73,9 +73,20 @@ namespace Golf
 
         private void anm_button_Click(object sender, EventArgs e)
         {
-            AnmälDeltagare ad = new AnmälDeltagare(int.Parse(dataGridView["tävling_id", dataGridView.CurrentRow.Index].Value.ToString()));
+            AnmälDeltagare ad = new AnmälDeltagare(GetTävling_id());
             ad.ShowDialog();
             UpdateTable();
+        }
+
+        private int GetTävling_id()
+        {
+            return int.Parse(dataGridView["tävling_id", dataGridView.CurrentRow.Index].Value.ToString());
+        }
+
+        private void res_button_Click(object sender, EventArgs e)
+        {
+            SeResultat sr = new SeResultat(GetTävling_id());
+            sr.ShowDialog();
         }
     }
 }

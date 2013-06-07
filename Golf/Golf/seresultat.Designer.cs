@@ -28,21 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.singel_radioButton = new System.Windows.Forms.RadioButton();
             this.lag_radioButton = new System.Windows.Forms.RadioButton();
-            this.par_radioButton = new System.Windows.Forms.RadioButton();
-            this.alla_radioButton = new System.Windows.Forms.RadioButton();
-            this.man_radioButton = new System.Windows.Forms.RadioButton();
-            this.kvinnor_radioButton = new System.Windows.Forms.RadioButton();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.action_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // singel_radioButton
             // 
             this.singel_radioButton.AutoSize = true;
-            this.singel_radioButton.Location = new System.Drawing.Point(247, 19);
+            this.singel_radioButton.Location = new System.Drawing.Point(12, 25);
             this.singel_radioButton.Name = "singel_radioButton";
             this.singel_radioButton.Size = new System.Drawing.Size(57, 17);
             this.singel_radioButton.TabIndex = 70;
@@ -52,64 +50,13 @@
             // lag_radioButton
             // 
             this.lag_radioButton.AutoSize = true;
-            this.lag_radioButton.Location = new System.Drawing.Point(354, 19);
+            this.lag_radioButton.Location = new System.Drawing.Point(75, 25);
             this.lag_radioButton.Name = "lag_radioButton";
             this.lag_radioButton.Size = new System.Drawing.Size(43, 17);
             this.lag_radioButton.TabIndex = 69;
             this.lag_radioButton.TabStop = true;
             this.lag_radioButton.Text = "Lag";
             this.lag_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // par_radioButton
-            // 
-            this.par_radioButton.AutoSize = true;
-            this.par_radioButton.Location = new System.Drawing.Point(307, 19);
-            this.par_radioButton.Name = "par_radioButton";
-            this.par_radioButton.Size = new System.Drawing.Size(41, 17);
-            this.par_radioButton.TabIndex = 68;
-            this.par_radioButton.TabStop = true;
-            this.par_radioButton.Text = "Par";
-            this.par_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // alla_radioButton
-            // 
-            this.alla_radioButton.AutoSize = true;
-            this.alla_radioButton.Location = new System.Drawing.Point(12, 19);
-            this.alla_radioButton.Name = "alla_radioButton";
-            this.alla_radioButton.Size = new System.Drawing.Size(44, 17);
-            this.alla_radioButton.TabIndex = 67;
-            this.alla_radioButton.Text = "Alla";
-            this.alla_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // man_radioButton
-            // 
-            this.man_radioButton.AutoSize = true;
-            this.man_radioButton.Location = new System.Drawing.Point(155, 19);
-            this.man_radioButton.Name = "man_radioButton";
-            this.man_radioButton.Size = new System.Drawing.Size(48, 17);
-            this.man_radioButton.TabIndex = 66;
-            this.man_radioButton.TabStop = true;
-            this.man_radioButton.Text = "Män";
-            this.man_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // kvinnor_radioButton
-            // 
-            this.kvinnor_radioButton.AutoSize = true;
-            this.kvinnor_radioButton.Location = new System.Drawing.Point(88, 19);
-            this.kvinnor_radioButton.Name = "kvinnor_radioButton";
-            this.kvinnor_radioButton.Size = new System.Drawing.Size(64, 17);
-            this.kvinnor_radioButton.TabIndex = 65;
-            this.kvinnor_radioButton.TabStop = true;
-            this.kvinnor_radioButton.Text = "Kvinnor";
-            this.kvinnor_radioButton.UseVisualStyleBackColor = true;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 70);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(385, 277);
-            this.listBox1.TabIndex = 64;
             // 
             // action_button
             // 
@@ -130,23 +77,47 @@
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AllowUserToResizeColumns = false;
+            this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView.Location = new System.Drawing.Point(12, 48);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersVisible = false;
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView.Size = new System.Drawing.Size(385, 330);
+            this.dataGridView.TabIndex = 73;
+            // 
             // SeResultat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 419);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.action_button);
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.singel_radioButton);
             this.Controls.Add(this.lag_radioButton);
-            this.Controls.Add(this.par_radioButton);
-            this.Controls.Add(this.alla_radioButton);
-            this.Controls.Add(this.man_radioButton);
-            this.Controls.Add(this.kvinnor_radioButton);
-            this.Controls.Add(this.listBox1);
             this.Name = "SeResultat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Se resultat";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,12 +127,8 @@
 
         private System.Windows.Forms.RadioButton singel_radioButton;
         private System.Windows.Forms.RadioButton lag_radioButton;
-        private System.Windows.Forms.RadioButton par_radioButton;
-        private System.Windows.Forms.RadioButton alla_radioButton;
-        private System.Windows.Forms.RadioButton man_radioButton;
-        private System.Windows.Forms.RadioButton kvinnor_radioButton;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button action_button;
         private System.Windows.Forms.Button cancel_button;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

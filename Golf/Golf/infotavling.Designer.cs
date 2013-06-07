@@ -51,7 +51,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.a_fran_textBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tävling_id_textBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -277,12 +277,12 @@
             this.a_fran_textBox.Size = new System.Drawing.Size(30, 22);
             this.a_fran_textBox.TabIndex = 107;
             // 
-            // textBox1
+            // tävling_id_textBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(51, 22);
-            this.textBox1.TabIndex = 106;
+            this.tävling_id_textBox.Location = new System.Drawing.Point(12, 59);
+            this.tävling_id_textBox.Name = "tävling_id_textBox";
+            this.tävling_id_textBox.Size = new System.Drawing.Size(51, 22);
+            this.tävling_id_textBox.TabIndex = 106;
             // 
             // label6
             // 
@@ -585,7 +585,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.a_fran_textBox);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tävling_id_textBox);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label4);
@@ -635,7 +635,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox a_fran_textBox;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tävling_id_textBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
