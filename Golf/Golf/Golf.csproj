@@ -65,6 +65,12 @@
     <Compile Include="BookingWindow.Designer.cs">
       <DependentUpon>BookingWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="BusyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusyForm.Designer.cs">
+      <DependentUpon>BusyForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindGolfIdDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookingWindow.resx">
       <DependentUpon>BookingWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusyForm.resx">
+      <DependentUpon>BusyForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindGolfIdDialog.resx">
       <DependentUpon>FindGolfIdDialog.cs</DependentUpon>

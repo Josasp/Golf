@@ -263,5 +263,20 @@ namespace Golf
             monthCalendar.UpdateBoldedDates();
             ndr.Close();
         }
+
+        private void busy_button_Click(object sender, EventArgs e)
+        {
+            DateTime datumtid = new DateTime(
+                monthCalendar.SelectionStart.Year,
+                monthCalendar.SelectionStart.Month,
+                monthCalendar.SelectionStart.Day,
+                int.Parse(dataGridView["tid", dataGridView.CurrentRow.Index].Value.ToString().Substring(0, 2)),
+                int.Parse(dataGridView["tid", dataGridView.CurrentRow.Index].Value.ToString().Substring(3, 2)),
+                0);
+
+            BusyForm bf = new BusyForm(datumtid);
+            bf.ShowDialog();
+            UpdateTable();
+        }
     }
 }
