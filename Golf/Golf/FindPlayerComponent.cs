@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Golf
 {
     public partial class FindPlayerComponent : UserControl
     {
-        private Member m;
-
         [Description("Title of the control"), Category("Apperance")]
         public string TitleText
         {
@@ -25,13 +24,7 @@ namespace Golf
         public string GolfId
         {
             get { return golfId_textBox.Text; }
-            set { golfId_textBox.Text = value; findMember(); }
-        }
-
-        public Member Member
-        {
-            get { return m; }
-            set { m = value; update(); }
+            set { golfId_textBox.Text = value; update(); }
         }
 
         /**
@@ -43,33 +36,31 @@ namespace Golf
         }
 
         /**
-         * Find the member object with that golfId
-         */
-        private void findMember()
-        { 
-            //Code for getting a Member object with that golfId
-            //this.m = MemberlistWindow.FindMember(GolfId);
-            update();
-        }
-
-        /**
          * Updates the data fields based on golfId_textBox.text
          */
         private void update()
         {
-            //TODO Fixa det här, ingenting händer
-            //If m is empty, no member set
-            if (m != null)
+            if (golfId_textBox.Text.Length == 10)
             {
-                DateTime dt = DateTime.Now;
-                name_textBox.Text = m.FirstName + " " + m.LastName;
-                gender_textBox.Text = m.Gender;
-                if (m.GolfId.Length > 1)
-                {
-                    int year = System.Threading.Thread.CurrentThread.CurrentCulture.Calendar.ToFourDigitYear(int.Parse(m.GolfId.Substring(0, 2)));
-                    age_textBox.Text = (dt.Year - year).ToString();
-                }
-                handicap_textBox.Text = m.Handicap; 
+                String sql = "SELECT medlem.\"förnamn\", medlem.efternamn, \"kön\".namn AS kön, medlem.golf_id, medlem.handicap FROM public.medlem, public.\"kön\" WHERE medlem.\"kön_id\" = \"kön\".\"kön_id\" AND medlem.golf_id = '" + golfId_textBox.Text + "';";
+                NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+                NpgsqlDataReader ndr = command.ExecuteReader();
+                ndr.Read();
+
+                name_textBox.Text = ndr["förnamn"] + " " + ndr["efternamn"];
+                gender_textBox.Text = (string)ndr["kön"];
+                handicap_textBox.Text = ndr["handicap"].ToString();
+
+                DateTime resultDate;
+                DateTime.TryParse(ndr["golf_id"].ToString().Substring(2, 2) + "/" + ndr["golf_id"].ToString().Substring(2, 2) + "/" + ndr["golf_id"].ToString().Substring(0, 2), out resultDate);
+
+                DateTime today = DateTime.Today;
+                int age = today.Year - resultDate.Year;
+                if (resultDate > today.AddYears(-age)) age--;
+
+                age_textBox.Text = age.ToString();
+
+                ndr.Close(); 
             }
         }
 
@@ -81,12 +72,12 @@ namespace Golf
 
         private void golfId_textBox_TextChanged(object sender, EventArgs e)
         {
-            findMember();
+            update();
         }
 
         private void golfId_textBox_KeyUp(object sender, KeyEventArgs e)
         {
-            findMember();
+            update();
         }
     }
 }

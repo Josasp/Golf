@@ -89,7 +89,6 @@
     <Compile Include="LottaStarttider.Designer.cs">
       <DependentUpon>LottaStarttider.cs</DependentUpon>
     </Compile>
-    <Compile Include="Member.cs" />
     <Compile Include="RegistreraResultat.cs">
       <SubType>Form</SubType>
     </Compile>

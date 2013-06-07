@@ -32,7 +32,6 @@
             this.monthCalendar = new System.Windows.Forms.MonthCalendar();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.book_button = new System.Windows.Forms.Button();
-            this.edit_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,21 +82,11 @@
             this.book_button.UseVisualStyleBackColor = true;
             this.book_button.Click += new System.EventHandler(this.book_button_Click);
             // 
-            // edit_button
-            // 
-            this.edit_button.Location = new System.Drawing.Point(93, 550);
-            this.edit_button.Name = "edit_button";
-            this.edit_button.Size = new System.Drawing.Size(75, 23);
-            this.edit_button.TabIndex = 4;
-            this.edit_button.Text = "Ändra tid";
-            this.edit_button.UseVisualStyleBackColor = true;
-            // 
             // BookingWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 584);
-            this.Controls.Add(this.edit_button);
             this.Controls.Add(this.book_button);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.monthCalendar);
@@ -114,6 +103,5 @@
         private System.Windows.Forms.MonthCalendar monthCalendar;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button book_button;
-        private System.Windows.Forms.Button edit_button;
     }
 }

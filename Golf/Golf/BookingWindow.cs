@@ -36,7 +36,7 @@ namespace Golf
             dt.Columns.Add("spelare_1", typeof(string));
             dt.Columns.Add("spelare_2", typeof(string));
             dt.Columns.Add("spelare_3", typeof(string));
-            dt.Columns.Add("spelare_4", typeof(double));
+            dt.Columns.Add("spelare_4", typeof(string));
             dt.Columns.Add("tävling", typeof(bool));
             dt.Columns.Add("övrigtUpptagen", typeof(bool));
 
@@ -160,6 +160,26 @@ namespace Golf
             var bf = new BookingForm();
             bf.Date = monthCalendar.SelectionStart;
             bf.Time = (String)dataGridView["tid", dataGridView.CurrentRow.Index].Value;
+            var data = dataGridView["spelare_1", dataGridView.CurrentRow.Index].Value;
+            if (!System.DBNull.Value.Equals(data))
+            {
+                bf.Player_1 = (String)data; 
+            }
+            data = dataGridView["spelare_2", dataGridView.CurrentRow.Index].Value;
+            if (!System.DBNull.Value.Equals(data))
+            {
+                bf.Player_2 = (String)data;
+            }
+            data = dataGridView["spelare_3", dataGridView.CurrentRow.Index].Value;
+            if (!System.DBNull.Value.Equals(data))
+            {
+                bf.Player_3 = (String)data;
+            }
+            data = dataGridView["spelare_4", dataGridView.CurrentRow.Index].Value;
+            if (!System.DBNull.Value.Equals(data))
+            {
+                bf.Player_4 = (String)data;
+            }
             bf.ShowDialog();
             UpdateTable();
         }

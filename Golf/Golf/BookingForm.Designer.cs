@@ -238,7 +238,7 @@
             this.action_button.Name = "action_button";
             this.action_button.Size = new System.Drawing.Size(107, 23);
             this.action_button.TabIndex = 24;
-            this.action_button.Text = "Action";
+            this.action_button.Text = "Spara";
             this.action_button.UseVisualStyleBackColor = true;
             this.action_button.Click += new System.EventHandler(this.action_button_Click);
             // 
@@ -256,7 +256,6 @@
             // 
             this.player4_findPlayer.GolfId = "";
             this.player4_findPlayer.Location = new System.Drawing.Point(258, 222);
-            this.player4_findPlayer.Member = null;
             this.player4_findPlayer.Name = "player4_findPlayer";
             this.player4_findPlayer.Size = new System.Drawing.Size(240, 163);
             this.player4_findPlayer.TabIndex = 7;
@@ -267,7 +266,6 @@
             // 
             this.player3_findPlayer.GolfId = "";
             this.player3_findPlayer.Location = new System.Drawing.Point(12, 222);
-            this.player3_findPlayer.Member = null;
             this.player3_findPlayer.Name = "player3_findPlayer";
             this.player3_findPlayer.Size = new System.Drawing.Size(240, 163);
             this.player3_findPlayer.TabIndex = 7;
@@ -278,7 +276,6 @@
             // 
             this.player2_findPlayer.GolfId = "";
             this.player2_findPlayer.Location = new System.Drawing.Point(258, 53);
-            this.player2_findPlayer.Member = null;
             this.player2_findPlayer.Name = "player2_findPlayer";
             this.player2_findPlayer.Size = new System.Drawing.Size(240, 163);
             this.player2_findPlayer.TabIndex = 6;
@@ -288,7 +285,6 @@
             // 
             this.player1_findPlayer.GolfId = "";
             this.player1_findPlayer.Location = new System.Drawing.Point(12, 53);
-            this.player1_findPlayer.Member = null;
             this.player1_findPlayer.Name = "player1_findPlayer";
             this.player1_findPlayer.Size = new System.Drawing.Size(240, 163);
             this.player1_findPlayer.TabIndex = 5;
