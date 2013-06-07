@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.findPlayerComponent1 = new Golf.FindPlayerComponent();
             this.can_button = new System.Windows.Forms.Button();
             this.anm_button = new System.Windows.Forms.Button();
+            this.findPlayerComponent1 = new Golf.FindPlayerComponent();
             this.SuspendLayout();
-            // 
-            // findPlayerComponent1
-            // 
-            this.findPlayerComponent1.GolfId = "";
-            this.findPlayerComponent1.Location = new System.Drawing.Point(12, 12);
-            this.findPlayerComponent1.Name = "findPlayerComponent1";
-            this.findPlayerComponent1.Size = new System.Drawing.Size(240, 163);
-            this.findPlayerComponent1.TabIndex = 0;
-            this.findPlayerComponent1.TitleText = "Deltagare";
             // 
             // can_button
             // 
@@ -62,6 +53,15 @@
             this.anm_button.UseVisualStyleBackColor = true;
             this.anm_button.Click += new System.EventHandler(this.anm_button_Click);
             // 
+            // findPlayerComponent1
+            // 
+            this.findPlayerComponent1.GolfId = "";
+            this.findPlayerComponent1.Location = new System.Drawing.Point(12, 12);
+            this.findPlayerComponent1.Name = "findPlayerComponent1";
+            this.findPlayerComponent1.Size = new System.Drawing.Size(240, 163);
+            this.findPlayerComponent1.TabIndex = 0;
+            this.findPlayerComponent1.TitleText = "Deltagare";
+            // 
             // AnmälDeltagare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -71,6 +71,7 @@
             this.Controls.Add(this.can_button);
             this.Controls.Add(this.findPlayerComponent1);
             this.Name = "AnmälDeltagare";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Anmäl deltagare";
             this.ResumeLayout(false);
 

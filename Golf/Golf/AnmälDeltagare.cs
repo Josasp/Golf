@@ -37,6 +37,7 @@ namespace Golf
             command.Parameters[1].Value = findPlayerComponent1.GolfId;
 
             command.ExecuteNonQuery();
+            this.Close();
         }
     }
 }
