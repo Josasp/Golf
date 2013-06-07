@@ -18,41 +18,48 @@ namespace Golf
             InitializeComponent();
         }
 
-        private void medlem_radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            medlem_groupBox.Visible = true;
-        }
-
-        private void ickemedlem_radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            medlem_groupBox.Visible = false;
-        }
-
         private void action_button_Click(object sender, EventArgs e)
         {
-            // Kolla största värdet för kontaktid
-            NpgsqlCommand command1 = new NpgsqlCommand("select max(kontaktid) from kontakt;", GolfReception.conn);
-            int kontaktid = 0;
-            kontaktid = (Int32)command1.ExecuteScalar();
-            kontaktid = kontaktid + 1;
+            int kon = 0;
 
-            string inikontakt = "insert into kontakt (kontaktid, postadress, postnummer, postort, telefonnummer, epost) values (" + kontaktid + ", '" + adress_textBox.Text + "', " + postnummer_textBox.Text + ", '" + postort_textBox.Text + "', '" + telefonnummer_textBox.Text + "', '" + epost_textBox.Text + "')";
-            NpgsqlCommand command = new NpgsqlCommand(inikontakt, GolfReception.conn);
-            command.ExecuteNonQuery();
-
-            string iniperson = "insert into person (golfid, kon, handicap, fornamn, efternamn, kontaktid) values(" + golfid_textBox.Text + ", '" + kon_comboBox.Text + "', " + handicap_textBox.Text + ", '" + fornamn_textBox.Text + "', '" + efternamn_textBox.Text + "', " + kontaktid + ")";
-            NpgsqlCommand command2 = new NpgsqlCommand(iniperson, GolfReception.conn);
-            command2.ExecuteNonQuery();
-
-            // Lägger in information i medlem om medlem är ikryssad. 
-            if (medlem_radioButton.Checked == true)
+            if (kon_comboBox.Text == "Kvinna")
             {
-                string inimedlem = "insert into medlem (golfid, medlemsstatus, betalt) values(" + golfid_textBox.Text + ", '" + medlemsstatus_comboBox.Text + "', " + betalat_checkBox.Checked + ")";
-                NpgsqlCommand command3 = new NpgsqlCommand(inimedlem, GolfReception.conn);
-                command3.ExecuteNonQuery();
+                kon = 1; 
             }
+            else if (kon_comboBox.Text == "Man")
+            {
+                kon = 0; 
+            }
+
+            int status = 1;
+
+            if (medlemsstatus_comboBox.Text == "Aktiv")
+            {
+                status = 1; 
+            }
+            else if (medlemsstatus_comboBox.Text == "Vilande")
+            {
+                status = 2; 
+            }
+            else if (medlemsstatus_comboBox.Text == "Greenfee")
+            {
+                status = 3;
+            }
+            else if (medlemsstatus_comboBox.Text == "Junior")
+            {
+                status = 4;
+            }
+            else if (medlemsstatus_comboBox.Text == "Ickemedlem")
+            {
+                status = 5;
+            }
+
+            string inimedlem = "insert into medlem (golf_id, \"förnamn\", efternamn, \"kön_id\", adress, postnummer, stad, telefonnummer, epost, handicap, status_id, \"betaltÅr\") values(" + golfid_textBox.Text + ", '" + fornamn_textBox.Text + "', '" + efternamn_textBox.Text + "', " + kon + ", '" + adress_textBox.Text + "', " + postnummer_textBox.Text + ", '" + postort_textBox.Text + "', '" + telefonnummer_textBox.Text + "', '" + epost_textBox.Text + "', " + handicap_textBox.Text + ", " + status + ", " + betalt_textBox.Text + ";)";
+            NpgsqlCommand command_medlem = new NpgsqlCommand(inimedlem, GolfReception.conn);
+            MessageBox.Show(inimedlem); 
+            command_medlem.ExecuteNonQuery();
+
             
-            // Kön ej tillagt i persontabellen i databasen? 
 
             MessageBox.Show("Spelare tillagd."); 
             this.Close(); 
@@ -61,6 +68,11 @@ namespace Golf
         private void cancel_button_Click(object sender, EventArgs e)
         {
             this.Close(); 
+        }
+
+        private void medlemsstatus_comboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
