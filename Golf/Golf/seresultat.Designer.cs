@@ -44,7 +44,7 @@
             this.singel_radioButton.AutoSize = true;
             this.singel_radioButton.Location = new System.Drawing.Point(247, 19);
             this.singel_radioButton.Name = "singel_radioButton";
-            this.singel_radioButton.Size = new System.Drawing.Size(54, 17);
+            this.singel_radioButton.Size = new System.Drawing.Size(57, 17);
             this.singel_radioButton.TabIndex = 70;
             this.singel_radioButton.Text = "Singel";
             this.singel_radioButton.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             this.alla_radioButton.AutoSize = true;
             this.alla_radioButton.Location = new System.Drawing.Point(12, 19);
             this.alla_radioButton.Name = "alla_radioButton";
-            this.alla_radioButton.Size = new System.Drawing.Size(42, 17);
+            this.alla_radioButton.Size = new System.Drawing.Size(44, 17);
             this.alla_radioButton.TabIndex = 67;
             this.alla_radioButton.Text = "Alla";
             this.alla_radioButton.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             this.man_radioButton.AutoSize = true;
             this.man_radioButton.Location = new System.Drawing.Point(155, 19);
             this.man_radioButton.Name = "man_radioButton";
-            this.man_radioButton.Size = new System.Drawing.Size(46, 17);
+            this.man_radioButton.Size = new System.Drawing.Size(48, 17);
             this.man_radioButton.TabIndex = 66;
             this.man_radioButton.TabStop = true;
             this.man_radioButton.Text = "Män";
@@ -97,7 +97,7 @@
             this.kvinnor_radioButton.AutoSize = true;
             this.kvinnor_radioButton.Location = new System.Drawing.Point(88, 19);
             this.kvinnor_radioButton.Name = "kvinnor_radioButton";
-            this.kvinnor_radioButton.Size = new System.Drawing.Size(61, 17);
+            this.kvinnor_radioButton.Size = new System.Drawing.Size(64, 17);
             this.kvinnor_radioButton.TabIndex = 65;
             this.kvinnor_radioButton.TabStop = true;
             this.kvinnor_radioButton.Text = "Kvinnor";
@@ -130,7 +130,7 @@
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
             // 
-            // seresultat
+            // SeResultat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,7 +144,8 @@
             this.Controls.Add(this.man_radioButton);
             this.Controls.Add(this.kvinnor_radioButton);
             this.Controls.Add(this.listBox1);
-            this.Name = "seresultat";
+            this.Name = "SeResultat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Se resultat";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -74,7 +74,7 @@
             this.alla_checkBox.AutoSize = true;
             this.alla_checkBox.Location = new System.Drawing.Point(6, 75);
             this.alla_checkBox.Name = "alla_checkBox";
-            this.alla_checkBox.Size = new System.Drawing.Size(43, 17);
+            this.alla_checkBox.Size = new System.Drawing.Size(45, 17);
             this.alla_checkBox.TabIndex = 66;
             this.alla_checkBox.Text = "Alla";
             this.alla_checkBox.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             this.kvinnor_checkBox.AutoSize = true;
             this.kvinnor_checkBox.Location = new System.Drawing.Point(7, 125);
             this.kvinnor_checkBox.Name = "kvinnor_checkBox";
-            this.kvinnor_checkBox.Size = new System.Drawing.Size(62, 17);
+            this.kvinnor_checkBox.Size = new System.Drawing.Size(65, 17);
             this.kvinnor_checkBox.TabIndex = 67;
             this.kvinnor_checkBox.Text = "Kvinnor";
             this.kvinnor_checkBox.UseVisualStyleBackColor = true;
@@ -94,7 +94,7 @@
             this.man_checkBox.AutoSize = true;
             this.man_checkBox.Location = new System.Drawing.Point(7, 148);
             this.man_checkBox.Name = "man_checkBox";
-            this.man_checkBox.Size = new System.Drawing.Size(47, 17);
+            this.man_checkBox.Size = new System.Drawing.Size(49, 17);
             this.man_checkBox.TabIndex = 68;
             this.man_checkBox.Text = "Män";
             this.man_checkBox.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             this.singel_checkBox.AutoSize = true;
             this.singel_checkBox.Location = new System.Drawing.Point(7, 195);
             this.singel_checkBox.Name = "singel_checkBox";
-            this.singel_checkBox.Size = new System.Drawing.Size(55, 17);
+            this.singel_checkBox.Size = new System.Drawing.Size(58, 17);
             this.singel_checkBox.TabIndex = 69;
             this.singel_checkBox.Text = "Singel";
             this.singel_checkBox.UseVisualStyleBackColor = true;
@@ -134,7 +134,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(4, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 91;
             this.label2.Text = "Tävling-ID";
             // 
@@ -142,7 +142,7 @@
             // 
             this.tävling_id_textBox.Location = new System.Drawing.Point(6, 25);
             this.tävling_id_textBox.Name = "tävling_id_textBox";
-            this.tävling_id_textBox.Size = new System.Drawing.Size(48, 20);
+            this.tävling_id_textBox.Size = new System.Drawing.Size(48, 22);
             this.tävling_id_textBox.TabIndex = 92;
             // 
             // SeAnmaldaSpelare
@@ -162,6 +162,7 @@
             this.Controls.Add(this.cancel_button);
             this.Controls.Add(this.listBox1);
             this.Name = "SeAnmaldaSpelare";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Se anmälda spelare";
             this.Load += new System.EventHandler(this.SeAnmaldaSpelare_Load);
             this.ResumeLayout(false);

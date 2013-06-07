@@ -53,7 +53,7 @@
             // 
             this.fornamn_textBox.Location = new System.Drawing.Point(15, 111);
             this.fornamn_textBox.Name = "fornamn_textBox";
-            this.fornamn_textBox.Size = new System.Drawing.Size(147, 20);
+            this.fornamn_textBox.Size = new System.Drawing.Size(147, 22);
             this.fornamn_textBox.TabIndex = 50;
             // 
             // label3
@@ -61,7 +61,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 136);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 49;
             this.label3.Text = "Efternamn";
             // 
@@ -69,7 +69,7 @@
             // 
             this.efternamn_textBox.Location = new System.Drawing.Point(15, 152);
             this.efternamn_textBox.Name = "efternamn_textBox";
-            this.efternamn_textBox.Size = new System.Drawing.Size(147, 20);
+            this.efternamn_textBox.Size = new System.Drawing.Size(147, 22);
             this.efternamn_textBox.TabIndex = 48;
             // 
             // label2
@@ -77,7 +77,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 47;
             this.label2.Text = "Förnamn";
             // 
@@ -85,7 +85,7 @@
             // 
             this.golfid_textBox.Location = new System.Drawing.Point(15, 34);
             this.golfid_textBox.Name = "golfid_textBox";
-            this.golfid_textBox.Size = new System.Drawing.Size(147, 20);
+            this.golfid_textBox.Size = new System.Drawing.Size(147, 22);
             this.golfid_textBox.TabIndex = 46;
             // 
             // label1
@@ -93,7 +93,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 45;
             this.label1.Text = "Golf-ID";
             // 
@@ -117,7 +117,7 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // sokspelare
+            // SokSpelare
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,7 +131,8 @@
             this.Controls.Add(this.golfid_textBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Name = "sokspelare";
+            this.Name = "SokSpelare";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Sök spelare";
             this.ResumeLayout(false);
             this.PerformLayout();

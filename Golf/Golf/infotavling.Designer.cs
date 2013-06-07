@@ -90,7 +90,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(9, 339);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 13);
+            this.label17.Size = new System.Drawing.Size(64, 13);
             this.label17.TabIndex = 129;
             this.label17.Text = "Tävlingstyp";
             // 
@@ -119,7 +119,7 @@
             this.singel_checkBox.AutoSize = true;
             this.singel_checkBox.Location = new System.Drawing.Point(14, 356);
             this.singel_checkBox.Name = "singel_checkBox";
-            this.singel_checkBox.Size = new System.Drawing.Size(55, 17);
+            this.singel_checkBox.Size = new System.Drawing.Size(58, 17);
             this.singel_checkBox.TabIndex = 126;
             this.singel_checkBox.Text = "Singel";
             this.singel_checkBox.UseVisualStyleBackColor = true;
@@ -128,7 +128,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(12, 304);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(51, 20);
+            this.textBox2.Size = new System.Drawing.Size(51, 22);
             this.textBox2.TabIndex = 125;
             // 
             // label16
@@ -136,7 +136,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(9, 287);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 13);
+            this.label16.Size = new System.Drawing.Size(109, 13);
             this.label16.TabIndex = 124;
             this.label16.Text = "Max antal deltagare";
             // 
@@ -144,7 +144,7 @@
             // 
             this.dateTimePicker3.Location = new System.Drawing.Point(181, 115);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(141, 20);
+            this.dateTimePicker3.Size = new System.Drawing.Size(141, 22);
             this.dateTimePicker3.TabIndex = 123;
             // 
             // label15
@@ -152,7 +152,7 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(178, 99);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(127, 13);
+            this.label15.Size = new System.Drawing.Size(138, 13);
             this.label15.TabIndex = 122;
             this.label15.Text = "Sista avanmälningsdatum";
             // 
@@ -160,7 +160,7 @@
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(12, 115);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(141, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(141, 22);
             this.dateTimePicker2.TabIndex = 121;
             // 
             // label14
@@ -168,7 +168,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(9, 99);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(115, 13);
+            this.label14.Size = new System.Drawing.Size(127, 13);
             this.label14.TabIndex = 120;
             this.label14.Text = "Sista anmälningsdatum";
             // 
@@ -176,21 +176,21 @@
             // 
             this.c_till_textBox.Location = new System.Drawing.Point(81, 246);
             this.c_till_textBox.Name = "c_till_textBox";
-            this.c_till_textBox.Size = new System.Drawing.Size(30, 20);
+            this.c_till_textBox.Size = new System.Drawing.Size(30, 22);
             this.c_till_textBox.TabIndex = 119;
             // 
             // b_till_textBox
             // 
             this.b_till_textBox.Location = new System.Drawing.Point(81, 216);
             this.b_till_textBox.Name = "b_till_textBox";
-            this.b_till_textBox.Size = new System.Drawing.Size(30, 20);
+            this.b_till_textBox.Size = new System.Drawing.Size(30, 22);
             this.b_till_textBox.TabIndex = 118;
             // 
             // a_till_textBox
             // 
             this.a_till_textBox.Location = new System.Drawing.Point(81, 186);
             this.a_till_textBox.Name = "a_till_textBox";
-            this.a_till_textBox.Size = new System.Drawing.Size(30, 20);
+            this.a_till_textBox.Size = new System.Drawing.Size(30, 22);
             this.a_till_textBox.TabIndex = 117;
             // 
             // label13
@@ -198,7 +198,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(65, 220);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(10, 13);
+            this.label13.Size = new System.Drawing.Size(11, 13);
             this.label13.TabIndex = 116;
             this.label13.Text = "-";
             // 
@@ -207,7 +207,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(65, 248);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(10, 13);
+            this.label12.Size = new System.Drawing.Size(11, 13);
             this.label12.TabIndex = 115;
             this.label12.Text = "-";
             // 
@@ -216,7 +216,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(65, 189);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(10, 13);
+            this.label11.Size = new System.Drawing.Size(11, 13);
             this.label11.TabIndex = 114;
             this.label11.Text = "-";
             // 
@@ -224,14 +224,14 @@
             // 
             this.b_fran_textBox.Location = new System.Drawing.Point(29, 216);
             this.b_fran_textBox.Name = "b_fran_textBox";
-            this.b_fran_textBox.Size = new System.Drawing.Size(30, 20);
+            this.b_fran_textBox.Size = new System.Drawing.Size(30, 22);
             this.b_fran_textBox.TabIndex = 113;
             // 
             // c_fran_textBox
             // 
             this.c_fran_textBox.Location = new System.Drawing.Point(29, 246);
             this.c_fran_textBox.Name = "c_fran_textBox";
-            this.c_fran_textBox.Size = new System.Drawing.Size(30, 20);
+            this.c_fran_textBox.Size = new System.Drawing.Size(30, 22);
             this.c_fran_textBox.TabIndex = 112;
             // 
             // label10
@@ -266,7 +266,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(9, 163);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(175, 13);
+            this.label7.Size = new System.Drawing.Size(191, 13);
             this.label7.TabIndex = 108;
             this.label7.Text = "Handicapgränser för tävlingsklasser";
             // 
@@ -274,14 +274,14 @@
             // 
             this.a_fran_textBox.Location = new System.Drawing.Point(29, 186);
             this.a_fran_textBox.Name = "a_fran_textBox";
-            this.a_fran_textBox.Size = new System.Drawing.Size(30, 20);
+            this.a_fran_textBox.Size = new System.Drawing.Size(30, 22);
             this.a_fran_textBox.TabIndex = 107;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(12, 59);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(51, 20);
+            this.textBox1.Size = new System.Drawing.Size(51, 22);
             this.textBox1.TabIndex = 106;
             // 
             // label6
@@ -289,7 +289,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(9, 42);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 13);
+            this.label6.Size = new System.Drawing.Size(58, 13);
             this.label6.TabIndex = 105;
             this.label6.Text = "Tävling-ID";
             // 
@@ -297,7 +297,7 @@
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(232, 59);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(141, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(141, 22);
             this.dateTimePicker1.TabIndex = 104;
             // 
             // label4
@@ -305,7 +305,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(11, 388);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 103;
             this.label4.Text = "Öppen för";
             // 
@@ -314,7 +314,7 @@
             this.man_checkBox.AutoSize = true;
             this.man_checkBox.Location = new System.Drawing.Point(81, 405);
             this.man_checkBox.Name = "man_checkBox";
-            this.man_checkBox.Size = new System.Drawing.Size(47, 17);
+            this.man_checkBox.Size = new System.Drawing.Size(49, 17);
             this.man_checkBox.TabIndex = 102;
             this.man_checkBox.Text = "Män";
             this.man_checkBox.UseVisualStyleBackColor = true;
@@ -324,7 +324,7 @@
             this.kvinnor_checkBox.AutoSize = true;
             this.kvinnor_checkBox.Location = new System.Drawing.Point(13, 405);
             this.kvinnor_checkBox.Name = "kvinnor_checkBox";
-            this.kvinnor_checkBox.Size = new System.Drawing.Size(62, 17);
+            this.kvinnor_checkBox.Size = new System.Drawing.Size(65, 17);
             this.kvinnor_checkBox.TabIndex = 101;
             this.kvinnor_checkBox.Text = "Kvinnor";
             this.kvinnor_checkBox.UseVisualStyleBackColor = true;
@@ -334,7 +334,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(178, 220);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
+            this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 100;
             this.label3.Text = "Tävlingsklasser";
             // 
@@ -373,7 +373,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(229, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 96;
             this.label2.Text = "Tävlingsdatum";
             // 
@@ -382,7 +382,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(80, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.Size = new System.Drawing.Size(77, 13);
             this.label1.TabIndex = 94;
             this.label1.Text = "Tävlingsnamn";
             // 
@@ -408,7 +408,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(141, 304);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(51, 20);
+            this.textBox3.Size = new System.Drawing.Size(51, 22);
             this.textBox3.TabIndex = 140;
             // 
             // label18
@@ -416,7 +416,7 @@
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(138, 287);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 13);
+            this.label18.Size = new System.Drawing.Size(81, 13);
             this.label18.TabIndex = 139;
             this.label18.Text = "Antal anmälda";
             // 
@@ -424,7 +424,7 @@
             // 
             this.tavlingsnamn_textBox.Location = new System.Drawing.Point(83, 59);
             this.tavlingsnamn_textBox.Name = "tavlingsnamn_textBox";
-            this.tavlingsnamn_textBox.Size = new System.Drawing.Size(130, 20);
+            this.tavlingsnamn_textBox.Size = new System.Drawing.Size(130, 22);
             this.tavlingsnamn_textBox.TabIndex = 144;
             // 
             // ok_button
@@ -463,7 +463,7 @@
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(7, 449);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(63, 13);
+            this.label19.Size = new System.Drawing.Size(69, 13);
             this.label19.TabIndex = 148;
             this.label19.Text = "Välj åtgärd: ";
             // 
@@ -537,18 +537,18 @@
             // lottaStarttiderToolStripMenuItem
             // 
             this.lottaStarttiderToolStripMenuItem.Name = "lottaStarttiderToolStripMenuItem";
-            this.lottaStarttiderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lottaStarttiderToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.lottaStarttiderToolStripMenuItem.Text = "Lotta starttider";
             this.lottaStarttiderToolStripMenuItem.Click += new System.EventHandler(this.lottaStarttiderToolStripMenuItem_Click);
             // 
             // seStarttiderToolStripMenuItem
             // 
             this.seStarttiderToolStripMenuItem.Name = "seStarttiderToolStripMenuItem";
-            this.seStarttiderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.seStarttiderToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.seStarttiderToolStripMenuItem.Text = "Se starttider";
             this.seStarttiderToolStripMenuItem.Click += new System.EventHandler(this.seStarttiderToolStripMenuItem_Click);
             // 
-            // infotavling
+            // InfoTavling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -599,7 +599,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "infotavling";
+            this.Name = "InfoTavling";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Information om tävling";
             this.Load += new System.EventHandler(this.infotavling_Load);
             this.menuStrip1.ResumeLayout(false);

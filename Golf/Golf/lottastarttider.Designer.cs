@@ -30,12 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // lottastarttider
+            // LottaStarttider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Name = "lottastarttider";
+            this.Name = "LottaStarttider";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lotta starttider";
             this.ResumeLayout(false);
 

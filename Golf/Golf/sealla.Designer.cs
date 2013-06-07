@@ -68,6 +68,7 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.ok_button);
             this.Name = "SeAlla";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Se alla";
             this.Load += new System.EventHandler(this.sealla_Load);
             this.ResumeLayout(false);

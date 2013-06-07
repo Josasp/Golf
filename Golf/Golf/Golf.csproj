@@ -226,6 +226,9 @@
     <EmbeddedResource Include="VisaSpelare.resx">
       <DependentUpon>VisaSpelare.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VisaTavlingMedlem.resx">
+      <DependentUpon>VisaTavlingMedlem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -54,7 +54,7 @@
             // 
             this.golfid_textBox.Location = new System.Drawing.Point(12, 74);
             this.golfid_textBox.Name = "golfid_textBox";
-            this.golfid_textBox.Size = new System.Drawing.Size(147, 20);
+            this.golfid_textBox.Size = new System.Drawing.Size(147, 22);
             this.golfid_textBox.TabIndex = 75;
             // 
             // label13
@@ -62,7 +62,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(14, 58);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.Size = new System.Drawing.Size(44, 13);
             this.label13.TabIndex = 74;
             this.label13.Text = "Golf-ID";
             // 
@@ -71,7 +71,7 @@
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(14, 143);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 13);
+            this.label17.Size = new System.Drawing.Size(64, 13);
             this.label17.TabIndex = 97;
             this.label17.Text = "Tävlingstyp";
             // 
@@ -100,7 +100,7 @@
             this.singel_checkBox.AutoSize = true;
             this.singel_checkBox.Location = new System.Drawing.Point(15, 173);
             this.singel_checkBox.Name = "singel_checkBox";
-            this.singel_checkBox.Size = new System.Drawing.Size(55, 17);
+            this.singel_checkBox.Size = new System.Drawing.Size(58, 17);
             this.singel_checkBox.TabIndex = 94;
             this.singel_checkBox.Text = "Singel";
             this.singel_checkBox.UseVisualStyleBackColor = true;
@@ -130,7 +130,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 101;
             this.label2.Text = "Tävling-ID";
             // 
@@ -138,7 +138,7 @@
             // 
             this.tävling_id_textBox.Location = new System.Drawing.Point(12, 25);
             this.tävling_id_textBox.Name = "tävling_id_textBox";
-            this.tävling_id_textBox.Size = new System.Drawing.Size(147, 20);
+            this.tävling_id_textBox.Size = new System.Drawing.Size(147, 22);
             this.tävling_id_textBox.TabIndex = 102;
             // 
             // AnmalSpelare
@@ -158,6 +158,7 @@
             this.Controls.Add(this.golfid_textBox);
             this.Controls.Add(this.label13);
             this.Name = "AnmalSpelare";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Anmäl spelare";
             this.ResumeLayout(false);
             this.PerformLayout();
