@@ -53,6 +53,12 @@
     <Compile Include="AnmalSpelare.Designer.cs">
       <DependentUpon>AnmalSpelare.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnmälDeltagare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnmälDeltagare.Designer.cs">
+      <DependentUpon>AnmälDeltagare.cs</DependentUpon>
+    </Compile>
     <Compile Include="BookingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </Compile>
     <EmbeddedResource Include="AnmalSpelare.resx">
       <DependentUpon>AnmalSpelare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnmälDeltagare.resx">
+      <DependentUpon>AnmälDeltagare.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookingForm.resx">
       <DependentUpon>BookingForm.cs</DependentUpon>

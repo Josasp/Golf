@@ -63,5 +63,19 @@ namespace Golf
             //dataGridView.Columns[5].HeaderText = "Tävling";
             //dataGridView.Columns[6].HeaderText = "Upptagen";
         }
+
+        private void reg_button_Click(object sender, EventArgs e)
+        {
+            RegistreraTavling registreratavling = new RegistreraTavling();
+            registreratavling.ShowDialog();
+            UpdateTable();
+        }
+
+        private void anm_button_Click(object sender, EventArgs e)
+        {
+            AnmälDeltagare ad = new AnmälDeltagare(int.Parse(dataGridView["tävling_id", dataGridView.CurrentRow.Index].Value.ToString()));
+            ad.ShowDialog();
+            UpdateTable();
+        }
     }
 }
