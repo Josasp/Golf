@@ -30,36 +30,30 @@ namespace Golf
 
         private void action_button_Click(object sender, EventArgs e)
         {
-            // Ansluter till databasen. 
-            NpgsqlConnection conn = new NpgsqlConnection("Server=webblabb.miun.se;Port=5432;Database=grp6vt13;User Id=grp6vt13;Password=gOMMObmEP;SSL=true");
-            conn.Open();
-
             // Kolla största värdet för kontaktid
-            NpgsqlCommand command1 = new NpgsqlCommand("select max(kontaktid) from kontakt;", conn);
+            NpgsqlCommand command1 = new NpgsqlCommand("select max(kontaktid) from kontakt;", GolfReception.conn);
             int kontaktid = 0;
             kontaktid = (Int32)command1.ExecuteScalar();
             kontaktid = kontaktid + 1;
 
             string inikontakt = "insert into kontakt (kontaktid, postadress, postnummer, postort, telefonnummer, epost) values (" + kontaktid + ", '" + adress_textBox.Text + "', " + postnummer_textBox.Text + ", '" + postort_textBox.Text + "', '" + telefonnummer_textBox.Text + "', '" + epost_textBox.Text + "')";
-            NpgsqlCommand command = new NpgsqlCommand(inikontakt, conn);
+            NpgsqlCommand command = new NpgsqlCommand(inikontakt, GolfReception.conn);
             command.ExecuteNonQuery();
 
             string iniperson = "insert into person (golfid, kon, handicap, fornamn, efternamn, kontaktid) values(" + golfid_textBox.Text + ", '" + kon_comboBox.Text + "', " + handicap_textBox.Text + ", '" + fornamn_textBox.Text + "', '" + efternamn_textBox.Text + "', " + kontaktid + ")";
-            NpgsqlCommand command2 = new NpgsqlCommand(iniperson, conn);
+            NpgsqlCommand command2 = new NpgsqlCommand(iniperson, GolfReception.conn);
             command2.ExecuteNonQuery();
 
             // Lägger in information i medlem om medlem är ikryssad. 
             if (medlem_radioButton.Checked == true)
             {
                 string inimedlem = "insert into medlem (golfid, medlemsstatus, betalt) values(" + golfid_textBox.Text + ", '" + medlemsstatus_comboBox.Text + "', " + betalat_checkBox.Checked + ")";
-                NpgsqlCommand command3 = new NpgsqlCommand(inimedlem, conn);
+                NpgsqlCommand command3 = new NpgsqlCommand(inimedlem, GolfReception.conn);
                 command3.ExecuteNonQuery();
             }
             
             // Kön ej tillagt i persontabellen i databasen? 
 
-            // Stäng anslutning till databasen. 
-            conn.Close();
             MessageBox.Show("Spelare tillagd."); 
             this.Close(); 
         }
