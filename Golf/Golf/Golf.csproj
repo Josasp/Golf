@@ -119,6 +119,12 @@
     <Compile Include="SeStarttider.Designer.cs">
       <DependentUpon>SeStarttider.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tävlingslista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tävlingslista.Designer.cs">
+      <DependentUpon>Tävlingslista.cs</DependentUpon>
+    </Compile>
     <Compile Include="VisaSpelare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SokTavling.resx">
       <DependentUpon>SokTavling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tävlingslista.resx">
+      <DependentUpon>Tävlingslista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisaSpelare.resx">
       <DependentUpon>VisaSpelare.cs</DependentUpon>
