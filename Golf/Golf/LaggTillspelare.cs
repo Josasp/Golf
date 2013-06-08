@@ -54,12 +54,9 @@ namespace Golf
                 status = 5;
             }
 
-            string inimedlem = "insert into medlem (golf_id, \"förnamn\", efternamn, \"kön_id\", adress, postnummer, stad, telefonnummer, epost, handicap, status_id, \"betaltÅr\") values(" + golfid_textBox.Text + ", '" + fornamn_textBox.Text + "', '" + efternamn_textBox.Text + "', " + kon + ", '" + adress_textBox.Text + "', " + postnummer_textBox.Text + ", '" + postort_textBox.Text + "', '" + telefonnummer_textBox.Text + "', '" + epost_textBox.Text + "', " + handicap_textBox.Text + ", " + status + ", " + betalt_textBox.Text + ";)";
+            string inimedlem = "insert into medlem (golf_id, \"förnamn\", efternamn, \"kön_id\", adress, postnummer, stad, telefonnummer, epost, handicap, status_id, \"betaltÅr\") values('" + golfid_textBox.Text + "', '" + fornamn_textBox.Text + "', '" + efternamn_textBox.Text + "', " + kon + ", '" + adress_textBox.Text + "', " + postnummer_textBox.Text + ", '" + postort_textBox.Text + "', '" + telefonnummer_textBox.Text + "', '" + epost_textBox.Text + "', " + handicap_textBox.Text + ", " + status + ", " + betalt_textBox.Text + ");";
             NpgsqlCommand command_medlem = new NpgsqlCommand(inimedlem, GolfReception.conn);
-            MessageBox.Show(inimedlem); 
             command_medlem.ExecuteNonQuery();
-
-            
 
             MessageBox.Show("Spelare tillagd."); 
             this.Close(); 

@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label11 = new System.Windows.Forms.Label();
-            this.kon_comboBox = new System.Windows.Forms.ComboBox();
             this.action_button = new System.Windows.Forms.Button();
             this.cancel_button = new System.Windows.Forms.Button();
             this.handicap_textBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.medlemsstatus_comboBox = new System.Windows.Forms.ComboBox();
             this.postort_textBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.postnummer_textBox = new System.Windows.Forms.TextBox();
@@ -51,31 +48,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.golfid_textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.kon_comboBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.medlemsstatus_comboBox = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.betalt_textBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.betalt_textBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(21, 208);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 13);
-            this.label11.TabIndex = 49;
-            this.label11.Text = "Kön";
-            // 
-            // kon_comboBox
-            // 
-            this.kon_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.kon_comboBox.FormattingEnabled = true;
-            this.kon_comboBox.Items.AddRange(new object[] {
-            "Man",
-            "Kvinna"});
-            this.kon_comboBox.Location = new System.Drawing.Point(24, 224);
-            this.kon_comboBox.Name = "kon_comboBox";
-            this.kon_comboBox.Size = new System.Drawing.Size(75, 21);
-            this.kon_comboBox.TabIndex = 48;
             // 
             // action_button
             // 
@@ -112,22 +91,6 @@
             this.label10.Size = new System.Drawing.Size(53, 13);
             this.label10.TabIndex = 43;
             this.label10.Text = "Handicap";
-            // 
-            // medlemsstatus_comboBox
-            // 
-            this.medlemsstatus_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.medlemsstatus_comboBox.FormattingEnabled = true;
-            this.medlemsstatus_comboBox.Items.AddRange(new object[] {
-            "Aktiv",
-            "Vilande",
-            "Greenfee",
-            "Junior",
-            "Ickemedlem"});
-            this.medlemsstatus_comboBox.Location = new System.Drawing.Point(24, 270);
-            this.medlemsstatus_comboBox.Name = "medlemsstatus_comboBox";
-            this.medlemsstatus_comboBox.Size = new System.Drawing.Size(147, 21);
-            this.medlemsstatus_comboBox.TabIndex = 41;
-            this.medlemsstatus_comboBox.SelectedIndexChanged += new System.EventHandler(this.medlemsstatus_comboBox_SelectedIndexChanged);
             // 
             // postort_textBox
             // 
@@ -257,6 +220,43 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Golf-ID";
             // 
+            // kon_comboBox
+            // 
+            this.kon_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kon_comboBox.FormattingEnabled = true;
+            this.kon_comboBox.Items.AddRange(new object[] {
+            "Man",
+            "Kvinna"});
+            this.kon_comboBox.Location = new System.Drawing.Point(24, 224);
+            this.kon_comboBox.Name = "kon_comboBox";
+            this.kon_comboBox.Size = new System.Drawing.Size(75, 21);
+            this.kon_comboBox.TabIndex = 48;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(21, 208);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(26, 13);
+            this.label11.TabIndex = 49;
+            this.label11.Text = "Kön";
+            // 
+            // medlemsstatus_comboBox
+            // 
+            this.medlemsstatus_comboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.medlemsstatus_comboBox.FormattingEnabled = true;
+            this.medlemsstatus_comboBox.Items.AddRange(new object[] {
+            "Aktiv",
+            "Vilande",
+            "Greenfee",
+            "Junior",
+            "Ickemedlem"});
+            this.medlemsstatus_comboBox.Location = new System.Drawing.Point(24, 270);
+            this.medlemsstatus_comboBox.Name = "medlemsstatus_comboBox";
+            this.medlemsstatus_comboBox.Size = new System.Drawing.Size(147, 21);
+            this.medlemsstatus_comboBox.TabIndex = 41;
+            this.medlemsstatus_comboBox.SelectedIndexChanged += new System.EventHandler(this.medlemsstatus_comboBox_SelectedIndexChanged);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -266,13 +266,6 @@
             this.label12.TabIndex = 53;
             this.label12.Text = "Medlemsstatus";
             // 
-            // betalt_textBox
-            // 
-            this.betalt_textBox.Location = new System.Drawing.Point(209, 270);
-            this.betalt_textBox.Name = "betalt_textBox";
-            this.betalt_textBox.Size = new System.Drawing.Size(147, 20);
-            this.betalt_textBox.TabIndex = 55;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -281,6 +274,13 @@
             this.label9.Size = new System.Drawing.Size(52, 13);
             this.label9.TabIndex = 54;
             this.label9.Text = "Betalt år: ";
+            // 
+            // betalt_textBox
+            // 
+            this.betalt_textBox.Location = new System.Drawing.Point(209, 270);
+            this.betalt_textBox.Name = "betalt_textBox";
+            this.betalt_textBox.Size = new System.Drawing.Size(147, 20);
+            this.betalt_textBox.TabIndex = 55;
             // 
             // LaggTillspelare
             // 
@@ -323,13 +323,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox kon_comboBox;
         private System.Windows.Forms.Button action_button;
         private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.TextBox handicap_textBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox medlemsstatus_comboBox;
         private System.Windows.Forms.TextBox postort_textBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox postnummer_textBox;
@@ -346,9 +343,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox golfid_textBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox kon_comboBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox medlemsstatus_comboBox;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox betalt_textBox;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox betalt_textBox;
 
     }
 }

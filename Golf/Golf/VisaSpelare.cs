@@ -27,16 +27,6 @@ namespace Golf
             this.Close(); 
         }
 
-        private void medlem_radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            medlem_groupBox.Visible = true;
-        }
-
-        private void ickemedlem_radioButton_CheckedChanged(object sender, EventArgs e)
-        {
-            medlem_groupBox.Visible = false;
-        }
-
         private void visaspelare_Load(object sender, EventArgs e)
         {
 

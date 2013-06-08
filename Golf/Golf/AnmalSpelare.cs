@@ -38,5 +38,10 @@ namespace Golf
             MessageBox.Show("Spelare är anmäld till tävling!");
             this.Close();
         }
+
+        private void AnmalSpelare_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
