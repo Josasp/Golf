@@ -117,6 +117,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.lag_dataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.lag_dataGridView.Location = new System.Drawing.Point(6, 21);
+            this.lag_dataGridView.MultiSelect = false;
             this.lag_dataGridView.Name = "lag_dataGridView";
             this.lag_dataGridView.ReadOnly = true;
             this.lag_dataGridView.RowHeadersVisible = false;
@@ -164,6 +165,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tid_dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.tid_dataGridView.Location = new System.Drawing.Point(6, 21);
+            this.tid_dataGridView.MultiSelect = false;
             this.tid_dataGridView.Name = "tid_dataGridView";
             this.tid_dataGridView.ReadOnly = true;
             this.tid_dataGridView.RowHeadersVisible = false;
@@ -201,6 +203,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.inTeam_dataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.inTeam_dataGridView.Location = new System.Drawing.Point(6, 21);
+            this.inTeam_dataGridView.MultiSelect = false;
             this.inTeam_dataGridView.Name = "inTeam_dataGridView";
             this.inTeam_dataGridView.ReadOnly = true;
             this.inTeam_dataGridView.RowHeadersVisible = false;
