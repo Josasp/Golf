@@ -20,10 +20,54 @@ namespace Golf
             this.tävling_id = tävling_id;
             InitializeComponent();
             UpdateTid();
-            //UpdateMembers();
+            UpdateNoTeam();
+            UpdateLag();
+            UpdateInTeam();
         }
 
-        private void UpdateMembers()
+        private void UpdateLag()
+        {
+            //Create the empty table data
+            DataTable dt = new DataTable("Table");
+            dt.Columns.Add("tid", typeof(string));
+            dt.Columns.Add("lag_id", typeof(string));
+            dt.Columns.Add("spelare_1", typeof(string));
+            dt.Columns.Add("spelare_2", typeof(string));
+            dt.Columns.Add("spelare_3", typeof(string));
+            dt.Columns.Add("spelare_4", typeof(string));
+
+            String sql = "SELECT    lag.\"tävling_id\",    lag.lag_id,    lag.spelare_1,    lag.spelare_2,    lag.spelare_3,    lag.spelare_4,    lag.bokning_id,    bokning.datumtid FROM    public.lag,    public.bokning WHERE    lag.bokning_id = bokning.bokning_id AND lag.\"tävling_id\" = '" + tävling_id.ToString() + "' ORDER BY datumtid ASC;";
+            NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+            NpgsqlDataReader ndr = command.ExecuteReader();
+
+            while (ndr.Read())
+            {
+                DataRow row = dt.NewRow();
+                DateTime datumtid = (DateTime) ndr["datumtid"];
+                row["tid"] = datumtid.Hour.ToString().PadLeft(2, '0') + ":" + datumtid.Minute.ToString().PadLeft(2, '0');
+                row["lag_id"] = ndr["lag_id"];
+                row["spelare_1"] = ndr["spelare_1"];
+                row["spelare_2"] = ndr["spelare_2"];
+                row["spelare_3"] = ndr["spelare_3"];
+                row["spelare_4"] = ndr["spelare_4"];
+                dt.Rows.Add(row);
+            }
+            ndr.Close();
+
+            DataView dv = new DataView(dt);
+
+            //Set the component data
+            lag_dataGridView.DataSource = dv;
+
+            lag_dataGridView.Columns[0].HeaderText = "Tid";
+            lag_dataGridView.Columns[1].HeaderText = "Lag";
+            lag_dataGridView.Columns[2].HeaderText = "Spelare 1";
+            lag_dataGridView.Columns[3].HeaderText = "Spelare 2";
+            lag_dataGridView.Columns[4].HeaderText = "Spelare 3";
+            lag_dataGridView.Columns[5].HeaderText = "Spelare 4";
+        }
+
+        private void UpdateNoTeam()
         { 
             //Create the empty table data
             DataTable dt = new DataTable("Table");
@@ -45,14 +89,154 @@ namespace Golf
             }
             ndr.Close();
 
+            //Ta bort de som är med i ett lag
+            for (int i = 0; i < tid_dataGridView.RowCount; i++)
+            {
+                //Lista med de som ska tas bort
+                LinkedList<DataRow> removeList = new LinkedList<DataRow>();
+
+                //För varje lag
+                foreach (DataRow row in dt.Rows)
+                {
+                    String s1 = "";
+                    if (!System.DBNull.Value.Equals(tid_dataGridView["spelare_1", i].Value))
+                    {
+                        s1 = (String)tid_dataGridView["spelare_1", i].Value;
+                    }
+
+                    String s2 = "";
+                    if (!System.DBNull.Value.Equals(tid_dataGridView["spelare_2", i].Value))
+                    {
+                        s1 = (String)tid_dataGridView["spelare_2", i].Value;
+                    }
+
+                    String s3 = "";
+                    if (!System.DBNull.Value.Equals(tid_dataGridView["spelare_3", i].Value))
+                    {
+                        s3 = (String)tid_dataGridView["spelare_3", i].Value;
+                    }
+
+                    String s4 = "";
+                    if (!System.DBNull.Value.Equals(tid_dataGridView["spelare_4", i].Value))
+                    {
+                        s4 = (String)tid_dataGridView["spelare_4", i].Value;
+                    }
+
+                    //Om spelaren finns med i laget
+                    if (
+                        row["golf_id"].ToString().Equals(s1) ||
+                        row["golf_id"].ToString().Equals(s2) ||
+                        row["golf_id"].ToString().Equals(s3) ||
+                        row["golf_id"].ToString().Equals(s4))
+                    {
+                        //Lägg till på borttagningslistan
+                        removeList.AddLast(row);
+                    }
+                }
+
+                //Ta bort alla i borttagninslistan från tabellen
+                foreach (DataRow row in removeList)
+	            {
+		            dt.Rows.Remove(row);
+	            }
+            }
+
             DataView dv = new DataView(dt);
 
             //Set the component data
             noTeam_dataGridView.DataSource = dv;
 
-            tid_dataGridView.Columns[0].HeaderText = "Golf-ID";
-            tid_dataGridView.Columns[1].HeaderText = "Förnamn";
-            tid_dataGridView.Columns[2].HeaderText = "Efternamn";
+            noTeam_dataGridView.Columns[0].HeaderText = "Golf-ID";
+            noTeam_dataGridView.Columns[1].HeaderText = "Förnamn";
+            noTeam_dataGridView.Columns[2].HeaderText = "Efternamn";
+
+
+        }
+
+        private void UpdateInTeam()
+        {
+            //Create the empty table data
+            DataTable dt = new DataTable("Table");
+            dt.Columns.Add("golf_id", typeof(string));
+            dt.Columns.Add("förnamn", typeof(string));
+            dt.Columns.Add("efternamn", typeof(string));
+
+            String sql = "SELECT    \"tävling_medlem\".\"tävling_id\",    medlem.golf_id,    medlem.\"förnamn\",    medlem.efternamn FROM    public.\"tävling_medlem\",    public.medlem WHERE    \"tävling_medlem\".golf_id = medlem.golf_id AND   \"tävling_medlem\".\"tävling_id\" = '" + tävling_id.ToString() + "';";
+            NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+            NpgsqlDataReader ndr = command.ExecuteReader();
+
+            while (ndr.Read())
+            {
+                DataRow row = dt.NewRow();
+                row["golf_id"] = ndr["golf_id"].ToString();
+                row["förnamn"] = ndr["förnamn"].ToString();
+                row["efternamn"] = ndr["efternamn"].ToString();
+                dt.Rows.Add(row);
+            }
+            ndr.Close();
+
+            //Lista med de som ska tas bort
+            LinkedList<DataRow> removeList = new LinkedList<DataRow>();
+            foreach (DataRow row in dt.Rows)
+            {
+                bool hasTeam = false;
+                for (int i = 0; i < tid_dataGridView.RowCount; i++)
+                {
+                    String s1 = "";
+                    if (!System.DBNull.Value.Equals(tid_dataGridView["spelare_1", i].Value))
+                    {
+                        s1 = (String)tid_dataGridView["spelare_1", i].Value;
+                    }
+
+                    String s2 = "";
+                    if (!System.DBNull.Value.Equals(tid_dataGridView["spelare_2", i].Value))
+                    {
+                        s1 = (String)tid_dataGridView["spelare_2", i].Value;
+                    }
+
+                    String s3 = "";
+                    if (!System.DBNull.Value.Equals(tid_dataGridView["spelare_3", i].Value))
+                    {
+                        s3 = (String)tid_dataGridView["spelare_3", i].Value;
+                    }
+
+                    String s4 = "";
+                    if (!System.DBNull.Value.Equals(tid_dataGridView["spelare_4", i].Value))
+                    {
+                        s4 = (String)tid_dataGridView["spelare_4", i].Value;
+                    }
+
+                    if (
+                        s1.Equals(row["golf_id"]) ||
+                        s2.Equals(row["golf_id"]) ||
+                        s3.Equals(row["golf_id"]) ||
+                        s4.Equals(row["golf_id"])
+                        )
+                    {
+                        hasTeam = true;
+                    }
+                }
+
+                if (hasTeam == false)
+                {
+                    removeList.AddLast(row);
+                }
+            }
+
+            //Ta bort alla i borttagninslistan från tabellen
+            foreach (DataRow row in removeList)
+            {
+                dt.Rows.Remove(row);
+            }
+
+            DataView dv = new DataView(dt);
+
+            //Set the component data
+            inTeam_dataGridView.DataSource = dv;
+
+            inTeam_dataGridView.Columns[0].HeaderText = "Golf-ID";
+            inTeam_dataGridView.Columns[1].HeaderText = "Förnamn";
+            inTeam_dataGridView.Columns[2].HeaderText = "Efternamn";
         }
 
         private void UpdateTid()
@@ -67,7 +251,7 @@ namespace Golf
             dt.Columns.Add("spelare_4", typeof(string));
             dt.Columns.Add("använd", typeof(bool));
 
-            String sql = "SELECT \"bokning\".\"bokning_id\", \"bokning\".\"tävling_id\", datumtid, lag_id, \"lag\".spelare_1, \"lag\".spelare_2, \"lag\".spelare_3, \"lag\".spelare_4 FROM \"bokning\" LEFT JOIN \"lag\" ON (\"bokning\".\"bokning_id\" = \"lag\".\"bokning_id\") WHERE \"bokning\".\"tävling_id\" = " + tävling_id + ";";
+            String sql = "SELECT \"bokning\".\"bokning_id\", \"bokning\".\"tävling_id\", datumtid, lag_id, \"lag\".spelare_1, \"lag\".spelare_2, \"lag\".spelare_3, \"lag\".spelare_4 FROM \"bokning\" LEFT JOIN \"lag\" ON (\"bokning\".\"bokning_id\" = \"lag\".\"bokning_id\") WHERE \"bokning\".\"tävling_id\" = " + tävling_id + " ORDER BY datumtid ASC;";
             NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
             NpgsqlDataReader ndr = command.ExecuteReader();
 
@@ -110,18 +294,18 @@ namespace Golf
             //Färglägg rader
             foreach (DataGridViewRow row in tid_dataGridView.Rows)
             {
-                String[] playerLines = new String[4];
-                playerLines[0] = "spelare_1";
-                playerLines[1] = "spelare_2";
-                playerLines[2] = "spelare_3";
-                playerLines[3] = "spelare_4";
-                foreach (String s in playerLines)
-                {
-                    if (row.Cells[s].Value.ToString().Length > 1)
-                    {
-                        row.DefaultCellStyle.BackColor = Color.PowderBlue;
-                    }
-                }
+                //String[] playerLines = new String[4];
+                //playerLines[0] = "spelare_1";
+                //playerLines[1] = "spelare_2";
+                //playerLines[2] = "spelare_3";
+                //playerLines[3] = "spelare_4";
+                //foreach (String s in playerLines)
+                //{
+                //    if (row.Cells[s].Value.ToString().Length > 1)
+                //    {
+                //        row.DefaultCellStyle.BackColor = Color.PowderBlue;
+                //    }
+                //}
 
                 //String[] redlines = new String[2];
                 //redlines[0] = "använd";
@@ -135,7 +319,15 @@ namespace Golf
                 //        }
                 //    }
                 //}
+
+                Boolean använd = (bool) row.Cells["använd"].Value;
+                if (använd == false)
+                {
+                    row.DefaultCellStyle.BackColor = Color.Pink;
+                }
             }
+
+            tid_dataGridView.Refresh();
         }
     }
 }

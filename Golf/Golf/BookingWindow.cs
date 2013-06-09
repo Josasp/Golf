@@ -153,6 +153,8 @@ namespace Golf
                 dataGridView.Rows[0].Selected = false; 
                 dataGridView.Rows[selIndex].Selected = true; 
             }
+            
+
         }
 
         private void book_button_Click(object sender, EventArgs e)
