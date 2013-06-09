@@ -30,12 +30,8 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.medlemsregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seAllaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.läggTillSpelareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tidsbokningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tävlingsverksamhetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registreraTävlingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tävlingslistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,26 +49,10 @@
             // 
             // medlemsregisterToolStripMenuItem
             // 
-            this.medlemsregisterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.seAllaToolStripMenuItem,
-            this.läggTillSpelareToolStripMenuItem});
             this.medlemsregisterToolStripMenuItem.Name = "medlemsregisterToolStripMenuItem";
             this.medlemsregisterToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
             this.medlemsregisterToolStripMenuItem.Text = "Medlemsregister";
-            // 
-            // seAllaToolStripMenuItem
-            // 
-            this.seAllaToolStripMenuItem.Name = "seAllaToolStripMenuItem";
-            this.seAllaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.seAllaToolStripMenuItem.Text = "Se alla";
-            this.seAllaToolStripMenuItem.Click += new System.EventHandler(this.seAllaToolStripMenuItem_Click);
-            // 
-            // läggTillSpelareToolStripMenuItem
-            // 
-            this.läggTillSpelareToolStripMenuItem.Name = "läggTillSpelareToolStripMenuItem";
-            this.läggTillSpelareToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.läggTillSpelareToolStripMenuItem.Text = "Lägg till spelare";
-            this.läggTillSpelareToolStripMenuItem.Click += new System.EventHandler(this.läggTillSpelareToolStripMenuItem_Click);
+            this.medlemsregisterToolStripMenuItem.Click += new System.EventHandler(this.medlemsregisterToolStripMenuItem_Click);
             // 
             // tidsbokningToolStripMenuItem
             // 
@@ -83,26 +63,10 @@
             // 
             // tävlingsverksamhetToolStripMenuItem
             // 
-            this.tävlingsverksamhetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registreraTävlingToolStripMenuItem,
-            this.tävlingslistaToolStripMenuItem});
             this.tävlingsverksamhetToolStripMenuItem.Name = "tävlingsverksamhetToolStripMenuItem";
             this.tävlingsverksamhetToolStripMenuItem.Size = new System.Drawing.Size(124, 20);
             this.tävlingsverksamhetToolStripMenuItem.Text = "Tävlingsverksamhet";
-            // 
-            // registreraTävlingToolStripMenuItem
-            // 
-            this.registreraTävlingToolStripMenuItem.Name = "registreraTävlingToolStripMenuItem";
-            this.registreraTävlingToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.registreraTävlingToolStripMenuItem.Text = "Registrera tävling";
-            this.registreraTävlingToolStripMenuItem.Click += new System.EventHandler(this.registreraTävlingToolStripMenuItem_Click);
-            // 
-            // tävlingslistaToolStripMenuItem
-            // 
-            this.tävlingslistaToolStripMenuItem.Name = "tävlingslistaToolStripMenuItem";
-            this.tävlingslistaToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.tävlingslistaToolStripMenuItem.Text = "Tävlingslista";
-            this.tävlingslistaToolStripMenuItem.Click += new System.EventHandler(this.tävlingslistaToolStripMenuItem_Click);
+            this.tävlingsverksamhetToolStripMenuItem.Click += new System.EventHandler(this.tävlingsverksamhetToolStripMenuItem_Click);
             // 
             // GolfReception
             // 
@@ -125,12 +89,8 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem medlemsregisterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seAllaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem läggTillSpelareToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tidsbokningToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tävlingsverksamhetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registreraTävlingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tävlingslistaToolStripMenuItem;
 
     }
 }

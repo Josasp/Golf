@@ -27,7 +27,6 @@ namespace Golf
         { 
             //Create the empty table data
             DataTable dt = new DataTable("Table");
-            dt.Columns.Add("tävling_id", typeof(string));
             dt.Columns.Add("golf_id", typeof(string));
             dt.Columns.Add("förnamn", typeof(string));
             dt.Columns.Add("efternamn", typeof(string));
@@ -39,7 +38,6 @@ namespace Golf
             while (ndr.Read())
             {
                 DataRow row = dt.NewRow();
-                row["tävling_id"] = ndr["tävling_id"].ToString();
                 row["golf_id"] = ndr["golf_id"].ToString();
                 row["förnamn"] = ndr["förnamn"].ToString();
                 row["efternamn"] = ndr["efternamn"].ToString();
@@ -51,6 +49,10 @@ namespace Golf
 
             //Set the component data
             noTeam_dataGridView.DataSource = dv;
+
+            tid_dataGridView.Columns[0].HeaderText = "Golf-ID";
+            tid_dataGridView.Columns[1].HeaderText = "Förnamn";
+            tid_dataGridView.Columns[2].HeaderText = "Efternamn";
         }
 
         private void UpdateTid()

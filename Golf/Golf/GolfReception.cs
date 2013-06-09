@@ -27,19 +27,6 @@ namespace Golf
             conn.Open();
         }
 
-        private void läggTillSpelareToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            LaggTillspelare laggtillspelare = new LaggTillspelare();
-            laggtillspelare.ShowDialog();
-        }
-
-        private void seAllaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SeAlla sealla = new SeAlla();
-            sealla.ShowDialog();
-        }
-
-
         private void registreraTävlingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RegistreraTavling registreratavling = new RegistreraTavling();
@@ -51,16 +38,22 @@ namespace Golf
 
         }
 
-        private void tidsbokningToolStripMenuItem_Click(object sender, EventArgs e)
+        private void medlemsregisterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var bw = new BookingWindow();
-            bw.ShowDialog();
+            SeAlla sealla = new SeAlla();
+            sealla.ShowDialog();
         }
 
-        private void tävlingslistaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tävlingsverksamhetToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Tävlingslista tl = new Tävlingslista();
             tl.ShowDialog();
+        }
+
+        private void tidsbokningToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BookingWindow bw = new BookingWindow();
+            bw.ShowDialog();
         }
     }
 }
