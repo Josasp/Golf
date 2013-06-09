@@ -95,12 +95,6 @@
     <Compile Include="Lag.Designer.cs">
       <DependentUpon>Lag.cs</DependentUpon>
     </Compile>
-    <Compile Include="RegistreraResultat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RegistreraResultat.Designer.cs">
-      <DependentUpon>RegistreraResultat.cs</DependentUpon>
-    </Compile>
     <Compile Include="SeResultat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,9 +172,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RegistreraResultat.resx">
-      <DependentUpon>RegistreraResultat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="RegistreraTavling.resx">
       <DependentUpon>RegistreraTavling.cs</DependentUpon>
     </EmbeddedResource>

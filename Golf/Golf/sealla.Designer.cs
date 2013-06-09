@@ -79,9 +79,16 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 36);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(729, 316);
             this.dataGridView1.TabIndex = 57;
             // 
@@ -99,7 +106,7 @@
             // 
             this.betalt_textBox.Location = new System.Drawing.Point(63, 281);
             this.betalt_textBox.Name = "betalt_textBox";
-            this.betalt_textBox.Size = new System.Drawing.Size(77, 20);
+            this.betalt_textBox.Size = new System.Drawing.Size(77, 22);
             this.betalt_textBox.TabIndex = 82;
             // 
             // label9
@@ -107,7 +114,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(9, 285);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 81;
             this.label9.Text = "Betalt år: ";
             // 
@@ -116,7 +123,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(24, 133);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 13);
+            this.label12.Size = new System.Drawing.Size(39, 13);
             this.label12.TabIndex = 80;
             this.label12.Text = "Status";
             // 
@@ -140,7 +147,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(35, 109);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(26, 13);
+            this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 79;
             this.label11.Text = "Kön";
             // 
@@ -160,7 +167,7 @@
             // 
             this.handicap_textBox.Location = new System.Drawing.Point(63, 32);
             this.handicap_textBox.Name = "handicap_textBox";
-            this.handicap_textBox.Size = new System.Drawing.Size(57, 20);
+            this.handicap_textBox.Size = new System.Drawing.Size(57, 22);
             this.handicap_textBox.TabIndex = 77;
             // 
             // label10
@@ -168,7 +175,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(8, 36);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 13);
+            this.label10.Size = new System.Drawing.Size(56, 13);
             this.label10.TabIndex = 76;
             this.label10.Text = "Handicap";
             // 
@@ -176,7 +183,7 @@
             // 
             this.postort_textBox.Location = new System.Drawing.Point(63, 206);
             this.postort_textBox.Name = "postort_textBox";
-            this.postort_textBox.Size = new System.Drawing.Size(108, 20);
+            this.postort_textBox.Size = new System.Drawing.Size(108, 22);
             this.postort_textBox.TabIndex = 74;
             // 
             // label8
@@ -184,7 +191,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(32, 210);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 73;
             this.label8.Text = "Stad";
             // 
@@ -192,7 +199,7 @@
             // 
             this.postnummer_textBox.Location = new System.Drawing.Point(63, 180);
             this.postnummer_textBox.Name = "postnummer_textBox";
-            this.postnummer_textBox.Size = new System.Drawing.Size(108, 20);
+            this.postnummer_textBox.Size = new System.Drawing.Size(108, 22);
             this.postnummer_textBox.TabIndex = 72;
             // 
             // label7
@@ -200,7 +207,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(24, 184);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 71;
             this.label7.Text = "Postnr";
             // 
@@ -208,7 +215,7 @@
             // 
             this.adress_textBox.Location = new System.Drawing.Point(63, 155);
             this.adress_textBox.Name = "adress_textBox";
-            this.adress_textBox.Size = new System.Drawing.Size(160, 20);
+            this.adress_textBox.Size = new System.Drawing.Size(160, 22);
             this.adress_textBox.TabIndex = 70;
             // 
             // label6
@@ -216,7 +223,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(16, 159);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(45, 13);
+            this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 69;
             this.label6.Text = "Address";
             // 
@@ -224,7 +231,7 @@
             // 
             this.epost_textBox.Location = new System.Drawing.Point(63, 256);
             this.epost_textBox.Name = "epost_textBox";
-            this.epost_textBox.Size = new System.Drawing.Size(160, 20);
+            this.epost_textBox.Size = new System.Drawing.Size(160, 22);
             this.epost_textBox.TabIndex = 68;
             // 
             // label5
@@ -232,7 +239,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(24, 259);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 13);
+            this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 67;
             this.label5.Text = "E-post";
             // 
@@ -240,7 +247,7 @@
             // 
             this.telefonnummer_textBox.Location = new System.Drawing.Point(63, 231);
             this.telefonnummer_textBox.Name = "telefonnummer_textBox";
-            this.telefonnummer_textBox.Size = new System.Drawing.Size(160, 20);
+            this.telefonnummer_textBox.Size = new System.Drawing.Size(160, 22);
             this.telefonnummer_textBox.TabIndex = 66;
             // 
             // label4
@@ -248,7 +255,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(9, 234);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 65;
             this.label4.Text = "Telefonnr";
             // 
@@ -256,7 +263,7 @@
             // 
             this.fornamn_textBox.Location = new System.Drawing.Point(63, 56);
             this.fornamn_textBox.Name = "fornamn_textBox";
-            this.fornamn_textBox.Size = new System.Drawing.Size(147, 20);
+            this.fornamn_textBox.Size = new System.Drawing.Size(147, 22);
             this.fornamn_textBox.TabIndex = 64;
             // 
             // label3
@@ -264,7 +271,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(8, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 63;
             this.label3.Text = "Efternamn";
             // 
@@ -272,7 +279,7 @@
             // 
             this.efternamn_textBox.Location = new System.Drawing.Point(63, 80);
             this.efternamn_textBox.Name = "efternamn_textBox";
-            this.efternamn_textBox.Size = new System.Drawing.Size(147, 20);
+            this.efternamn_textBox.Size = new System.Drawing.Size(147, 22);
             this.efternamn_textBox.TabIndex = 62;
             // 
             // label2
@@ -280,7 +287,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 61;
             this.label2.Text = "Förnamn";
             // 
@@ -289,7 +296,7 @@
             this.golfid_textBox.Enabled = false;
             this.golfid_textBox.Location = new System.Drawing.Point(63, 9);
             this.golfid_textBox.Name = "golfid_textBox";
-            this.golfid_textBox.Size = new System.Drawing.Size(147, 20);
+            this.golfid_textBox.Size = new System.Drawing.Size(147, 22);
             this.golfid_textBox.TabIndex = 60;
             // 
             // label1
@@ -297,7 +304,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(21, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 59;
             this.label1.Text = "Golf-ID";
             // 
@@ -380,7 +387,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(56, 8);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 87;
             // 
             // label13
@@ -388,7 +395,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(12, 12);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.Size = new System.Drawing.Size(44, 13);
             this.label13.TabIndex = 85;
             this.label13.Text = "Golf-ID";
             // 
