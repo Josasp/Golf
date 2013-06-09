@@ -89,12 +89,6 @@
     <Compile Include="FindPlayerComponent.Designer.cs">
       <DependentUpon>FindPlayerComponent.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoTavling.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InfoTavling.Designer.cs">
-      <DependentUpon>InfoTavling.cs</DependentUpon>
-    </Compile>
     <Compile Include="Lag.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,23 +101,11 @@
     <Compile Include="RegistreraResultat.Designer.cs">
       <DependentUpon>RegistreraResultat.cs</DependentUpon>
     </Compile>
-    <Compile Include="SeAnmaldaSpelare.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SeAnmaldaSpelare.Designer.cs">
-      <DependentUpon>SeAnmaldaSpelare.cs</DependentUpon>
-    </Compile>
     <Compile Include="SeResultat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SeResultat.Designer.cs">
       <DependentUpon>SeResultat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SeStarttider.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SeStarttider.Designer.cs">
-      <DependentUpon>SeStarttider.cs</DependentUpon>
     </Compile>
     <Compile Include="Tävlingslista.cs">
       <SubType>Form</SubType>
@@ -181,9 +163,6 @@
     <EmbeddedResource Include="GolfReception.resx">
       <DependentUpon>GolfReception.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoTavling.resx">
-      <DependentUpon>InfoTavling.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Lag.resx">
       <DependentUpon>Lag.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,14 +187,8 @@
     <EmbeddedResource Include="SeAlla.resx">
       <DependentUpon>SeAlla.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SeAnmaldaSpelare.resx">
-      <DependentUpon>SeAnmaldaSpelare.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SeResultat.resx">
       <DependentUpon>SeResultat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SeStarttider.resx">
-      <DependentUpon>SeStarttider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tävlingslista.resx">
       <DependentUpon>Tävlingslista.cs</DependentUpon>
