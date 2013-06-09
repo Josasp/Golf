@@ -94,5 +94,16 @@ namespace Golf
             Lag l = new Lag(GetTävling_id());
             l.ShowDialog();
         }
+
+        private void rem_button_Click(object sender, EventArgs e)
+        {
+            int tävling_id = GetTävling_id();
+            String sql = "DELETE FROM lag WHERE \"tävling_id\" = " + tävling_id + "; DELETE FROM \"tävling_medlem\" WHERE \"tävling_id\" = " + tävling_id + "; DELETE FROM klass WHERE \"tävling_id\" = " + tävling_id + "; DELETE FROM bokning WHERE \"tävling_id\" = " + tävling_id + "; DELETE FROM \"tävling_kön\" WHERE \"tävling_id\" = " + tävling_id + "; DELETE FROM \"tävling\" WHERE \"tävling_id\" = " + tävling_id + ";";
+            NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+            NpgsqlDataReader ndr = command.ExecuteReader();
+            ndr.Read();
+            ndr.Close();
+            UpdateTable();
+        }
     }
 }
