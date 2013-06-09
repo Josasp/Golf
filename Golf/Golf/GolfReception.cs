@@ -39,11 +39,6 @@ namespace Golf
             sealla.ShowDialog();
         }
 
-        private void sökSpelareToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SokSpelare sokspelare = new SokSpelare();
-            sokspelare.ShowDialog();
-        }
 
         private void registreraTävlingToolStripMenuItem_Click(object sender, EventArgs e)
         {

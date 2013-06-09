@@ -59,13 +59,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ok_button
             // 
-            this.ok_button.Location = new System.Drawing.Point(869, 342);
+            this.ok_button.Location = new System.Drawing.Point(931, 359);
             this.ok_button.Name = "ok_button";
             this.ok_button.Size = new System.Drawing.Size(75, 23);
             this.ok_button.TabIndex = 55;
@@ -76,14 +80,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 36);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(661, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(729, 316);
             this.dataGridView1.TabIndex = 57;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(126, 334);
+            this.button1.Location = new System.Drawing.Point(541, 358);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 23);
             this.button1.TabIndex = 58;
@@ -282,6 +286,7 @@
             // 
             // golfid_textBox
             // 
+            this.golfid_textBox.Enabled = false;
             this.golfid_textBox.Location = new System.Drawing.Point(63, 9);
             this.golfid_textBox.Name = "golfid_textBox";
             this.golfid_textBox.Size = new System.Drawing.Size(147, 20);
@@ -323,7 +328,7 @@
             this.groupBox1.Controls.Add(this.fornamn_textBox);
             this.groupBox1.Controls.Add(this.efternamn_textBox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(696, 12);
+            this.groupBox1.Location = new System.Drawing.Point(758, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(248, 316);
             this.groupBox1.TabIndex = 83;
@@ -339,10 +344,11 @@
             this.button2.TabIndex = 84;
             this.button2.Text = "Spara";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(229, 334);
+            this.button3.Location = new System.Drawing.Point(644, 358);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(97, 23);
             this.button3.TabIndex = 84;
@@ -352,7 +358,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 334);
+            this.button4.Location = new System.Drawing.Point(12, 358);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(107, 23);
             this.button4.TabIndex = 85;
@@ -360,11 +366,51 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(162, 6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 86;
+            this.button5.Text = "Sök spelare";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(56, 8);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 87;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(12, 12);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(40, 13);
+            this.label13.TabIndex = 85;
+            this.label13.Text = "Golf-ID";
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(285, 6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(93, 23);
+            this.button6.TabIndex = 88;
+            this.button6.Text = "Visa alla spelare";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // SeAlla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 377);
+            this.ClientSize = new System.Drawing.Size(1018, 395);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox1);
@@ -374,11 +420,11 @@
             this.Name = "SeAlla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Se alla";
-            this.Load += new System.EventHandler(this.sealla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -415,5 +461,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button button6;
     }
 }
