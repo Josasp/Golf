@@ -62,7 +62,7 @@
             this.action_button.Location = new System.Drawing.Point(259, 327);
             this.action_button.Name = "action_button";
             this.action_button.Size = new System.Drawing.Size(75, 23);
-            this.action_button.TabIndex = 47;
+            this.action_button.TabIndex = 25;
             this.action_button.Text = "OK";
             this.action_button.UseVisualStyleBackColor = true;
             this.action_button.Click += new System.EventHandler(this.action_button_Click);
@@ -72,7 +72,7 @@
             this.cancel_button.Location = new System.Drawing.Point(340, 327);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(75, 23);
-            this.cancel_button.TabIndex = 46;
+            this.cancel_button.TabIndex = 26;
             this.cancel_button.Text = "Avbryt";
             this.cancel_button.UseVisualStyleBackColor = true;
             this.cancel_button.Click += new System.EventHandler(this.cancel_button_Click);
@@ -82,7 +82,7 @@
             this.handicap_textBox.Location = new System.Drawing.Point(24, 78);
             this.handicap_textBox.Name = "handicap_textBox";
             this.handicap_textBox.Size = new System.Drawing.Size(57, 22);
-            this.handicap_textBox.TabIndex = 44;
+            this.handicap_textBox.TabIndex = 4;
             this.handicap_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.handicap_textBox_KeyUp);
             // 
             // label10
@@ -91,7 +91,7 @@
             this.label10.Location = new System.Drawing.Point(21, 62);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 13);
-            this.label10.TabIndex = 43;
+            this.label10.TabIndex = 3;
             this.label10.Text = "Handicap";
             // 
             // postort_textBox
@@ -99,7 +99,7 @@
             this.postort_textBox.Location = new System.Drawing.Point(308, 78);
             this.postort_textBox.Name = "postort_textBox";
             this.postort_textBox.Size = new System.Drawing.Size(108, 22);
-            this.postort_textBox.TabIndex = 40;
+            this.postort_textBox.TabIndex = 14;
             this.postort_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.handicap_textBox_KeyUp);
             // 
             // label8
@@ -108,7 +108,7 @@
             this.label8.Location = new System.Drawing.Point(305, 62);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
-            this.label8.TabIndex = 39;
+            this.label8.TabIndex = 13;
             this.label8.Text = "Stad";
             // 
             // postnummer_textBox
@@ -116,7 +116,7 @@
             this.postnummer_textBox.Location = new System.Drawing.Point(209, 78);
             this.postnummer_textBox.Name = "postnummer_textBox";
             this.postnummer_textBox.Size = new System.Drawing.Size(93, 22);
-            this.postnummer_textBox.TabIndex = 38;
+            this.postnummer_textBox.TabIndex = 12;
             this.postnummer_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.handicap_textBox_KeyUp);
             // 
             // label7
@@ -125,7 +125,7 @@
             this.label7.Location = new System.Drawing.Point(206, 62);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 37;
+            this.label7.TabIndex = 11;
             this.label7.Text = "Postnummer";
             // 
             // adress_textBox
@@ -133,7 +133,7 @@
             this.adress_textBox.Location = new System.Drawing.Point(209, 37);
             this.adress_textBox.Name = "adress_textBox";
             this.adress_textBox.Size = new System.Drawing.Size(207, 22);
-            this.adress_textBox.TabIndex = 36;
+            this.adress_textBox.TabIndex = 10;
             this.adress_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.handicap_textBox_KeyUp);
             // 
             // label6
@@ -142,7 +142,7 @@
             this.label6.Location = new System.Drawing.Point(206, 21);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 13);
-            this.label6.TabIndex = 35;
+            this.label6.TabIndex = 9;
             this.label6.Text = "Address";
             // 
             // epost_textBox
@@ -150,7 +150,7 @@
             this.epost_textBox.Location = new System.Drawing.Point(209, 183);
             this.epost_textBox.Name = "epost_textBox";
             this.epost_textBox.Size = new System.Drawing.Size(207, 22);
-            this.epost_textBox.TabIndex = 34;
+            this.epost_textBox.TabIndex = 18;
             this.epost_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.handicap_textBox_KeyUp);
             // 
             // label5
@@ -159,7 +159,7 @@
             this.label5.Location = new System.Drawing.Point(206, 167);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 33;
+            this.label5.TabIndex = 17;
             this.label5.Text = "E-post";
             // 
             // telefonnummer_textBox
@@ -167,7 +167,7 @@
             this.telefonnummer_textBox.Location = new System.Drawing.Point(209, 142);
             this.telefonnummer_textBox.Name = "telefonnummer_textBox";
             this.telefonnummer_textBox.Size = new System.Drawing.Size(207, 22);
-            this.telefonnummer_textBox.TabIndex = 32;
+            this.telefonnummer_textBox.TabIndex = 16;
             this.telefonnummer_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.handicap_textBox_KeyUp);
             // 
             // label4
@@ -176,7 +176,7 @@
             this.label4.Location = new System.Drawing.Point(206, 126);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 13);
-            this.label4.TabIndex = 31;
+            this.label4.TabIndex = 15;
             this.label4.Text = "Telefonnummer";
             // 
             // fornamn_textBox
@@ -184,7 +184,7 @@
             this.fornamn_textBox.Location = new System.Drawing.Point(24, 142);
             this.fornamn_textBox.Name = "fornamn_textBox";
             this.fornamn_textBox.Size = new System.Drawing.Size(147, 22);
-            this.fornamn_textBox.TabIndex = 30;
+            this.fornamn_textBox.TabIndex = 6;
             this.fornamn_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.handicap_textBox_KeyUp);
             // 
             // label3
@@ -193,7 +193,7 @@
             this.label3.Location = new System.Drawing.Point(21, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 29;
+            this.label3.TabIndex = 7;
             this.label3.Text = "Efternamn";
             // 
             // efternamn_textBox
@@ -201,7 +201,7 @@
             this.efternamn_textBox.Location = new System.Drawing.Point(24, 183);
             this.efternamn_textBox.Name = "efternamn_textBox";
             this.efternamn_textBox.Size = new System.Drawing.Size(147, 22);
-            this.efternamn_textBox.TabIndex = 28;
+            this.efternamn_textBox.TabIndex = 8;
             this.efternamn_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.handicap_textBox_KeyUp);
             // 
             // label2
@@ -210,7 +210,7 @@
             this.label2.Location = new System.Drawing.Point(21, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 27;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Förnamn";
             // 
             // golfid_textBox
@@ -218,7 +218,7 @@
             this.golfid_textBox.Location = new System.Drawing.Point(24, 37);
             this.golfid_textBox.Name = "golfid_textBox";
             this.golfid_textBox.Size = new System.Drawing.Size(90, 22);
-            this.golfid_textBox.TabIndex = 26;
+            this.golfid_textBox.TabIndex = 1;
             this.golfid_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label1
@@ -227,7 +227,7 @@
             this.label1.Location = new System.Drawing.Point(21, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 25;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Golf-ID";
             // 
             // kon_comboBox
@@ -240,7 +240,7 @@
             this.kon_comboBox.Location = new System.Drawing.Point(24, 224);
             this.kon_comboBox.Name = "kon_comboBox";
             this.kon_comboBox.Size = new System.Drawing.Size(75, 21);
-            this.kon_comboBox.TabIndex = 48;
+            this.kon_comboBox.TabIndex = 20;
             // 
             // label11
             // 
@@ -248,7 +248,7 @@
             this.label11.Location = new System.Drawing.Point(21, 208);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(27, 13);
-            this.label11.TabIndex = 49;
+            this.label11.TabIndex = 19;
             this.label11.Text = "Kön";
             // 
             // medlemsstatus_comboBox
@@ -264,7 +264,7 @@
             this.medlemsstatus_comboBox.Location = new System.Drawing.Point(24, 270);
             this.medlemsstatus_comboBox.Name = "medlemsstatus_comboBox";
             this.medlemsstatus_comboBox.Size = new System.Drawing.Size(147, 21);
-            this.medlemsstatus_comboBox.TabIndex = 41;
+            this.medlemsstatus_comboBox.TabIndex = 22;
             this.medlemsstatus_comboBox.SelectedIndexChanged += new System.EventHandler(this.medlemsstatus_comboBox_SelectedIndexChanged);
             // 
             // label12
@@ -273,7 +273,7 @@
             this.label12.Location = new System.Drawing.Point(21, 254);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(84, 13);
-            this.label12.TabIndex = 53;
+            this.label12.TabIndex = 21;
             this.label12.Text = "Medlemsstatus";
             // 
             // label9
@@ -282,7 +282,7 @@
             this.label9.Location = new System.Drawing.Point(206, 254);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
-            this.label9.TabIndex = 54;
+            this.label9.TabIndex = 23;
             this.label9.Text = "Betalt år: ";
             // 
             // betalt_textBox
@@ -290,7 +290,7 @@
             this.betalt_textBox.Location = new System.Drawing.Point(209, 270);
             this.betalt_textBox.Name = "betalt_textBox";
             this.betalt_textBox.Size = new System.Drawing.Size(147, 22);
-            this.betalt_textBox.TabIndex = 55;
+            this.betalt_textBox.TabIndex = 24;
             this.betalt_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.handicap_textBox_KeyUp);
             // 
             // golfid2_textBox
@@ -299,7 +299,7 @@
             this.golfid2_textBox.Location = new System.Drawing.Point(120, 37);
             this.golfid2_textBox.Name = "golfid2_textBox";
             this.golfid2_textBox.Size = new System.Drawing.Size(51, 22);
-            this.golfid2_textBox.TabIndex = 56;
+            this.golfid2_textBox.TabIndex = 2;
             // 
             // LaggTillspelare
             // 
