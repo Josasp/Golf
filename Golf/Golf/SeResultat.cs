@@ -36,9 +36,10 @@ namespace Golf
                 dt.Columns.Add("tävling_id", typeof(string));
                 dt.Columns.Add("golf_id", typeof(string));
                 dt.Columns.Add("namn", typeof(string));
+                dt.Columns.Add("kön", typeof(string));
                 dt.Columns.Add("resultat", typeof(string));
 
-                String sql = "SELECT    \"tävling_medlem\".\"tävling_id\", \"tävling_medlem\".\"golf_id\",   \"tävling_medlem\".resultat,    (medlem.\"förnamn\" || ' ' || medlem.efternamn) as namn FROM    public.\"tävling_medlem\",    public.medlem WHERE    \"tävling_medlem\".golf_id = medlem.golf_id AND   \"tävling_medlem\".\"tävling_id\" = '" + tävling_id.ToString() + "';";
+                String sql = "SELECT    \"tävling_medlem\".\"tävling_id\", \"tävling_medlem\".\"golf_id\",   \"tävling_medlem\".resultat,    (medlem.\"förnamn\" || ' ' || medlem.efternamn) as namn, (SELECT namn FROM \"kön\" WHERE medlem.\"kön_id\" = \"kön\".\"kön_id\") as kön FROM    public.\"tävling_medlem\",    public.medlem WHERE    \"tävling_medlem\".golf_id = medlem.golf_id AND   \"tävling_medlem\".\"tävling_id\" = " + tävling_id + ";";
                 NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
                 NpgsqlDataReader ndr = command.ExecuteReader();
 
@@ -48,6 +49,7 @@ namespace Golf
                     row["tävling_id"] = ndr["tävling_id"].ToString();
                     row["golf_id"] = ndr["golf_id"].ToString();
                     row["namn"] = ndr["namn"].ToString();
+                    row["kön"] = ndr["kön"].ToString();
                     row["resultat"] = ndr["resultat"].ToString();
 
                     dt.Rows.Add(row);
