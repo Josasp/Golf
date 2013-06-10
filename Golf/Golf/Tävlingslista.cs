@@ -28,6 +28,7 @@ namespace Golf
             dt.Columns.Add("kön", typeof(string));
             dt.Columns.Add("maxDeltagare", typeof(string));
             dt.Columns.Add("anmäldadeltagare", typeof(string));
+            dt.Columns.Add("könsfördelning", typeof(string));
             dt.Columns.Add("tävlingsdatum", typeof(string));
             dt.Columns.Add("sistaAnmälan", typeof(string));
 
@@ -38,11 +39,13 @@ namespace Golf
             while (ndr.Read())
             {
                 DataRow row = dt.NewRow();
+                String könsfördelning = "";
                 row["tävling_id"] = ndr["tävling_id"].ToString();
                 row["namn"] = ndr["namn"].ToString();
                 row["kön"] = ndr["kön"].ToString();
                 row["maxDeltagare"] = ndr["maxDeltagare"].ToString();
                 row["anmäldadeltagare"] = ndr["anmäldadeltagare"].ToString();
+                row["könsfördelning"] = könsfördelning;
                 row["tävlingsdatum"] = ndr["tävlingsdatum"].ToString();
                 row["sistaAnmälan"] = ndr["sistaAnmälan"].ToString();
 
