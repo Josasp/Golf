@@ -114,7 +114,12 @@ namespace Golf
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string id = hamtaid(); 
+            ÄndraMarkerad();
+        }
+
+        private void ÄndraMarkerad()
+        {
+            string id = hamtaid();
             String sql3 = "select    medlem.golf_id,     medlem.\"förnamn\",     medlem.efternamn,   medlem.handicap,    status.namn,   medlem.\"betaltÅr\",      medlem.adress,      medlem.stad,    medlem.postnummer,      medlem.telefonnummer,    medlem.epost,   medlem.\"kön_id\"    from    medlem, status     where    medlem.status_id = status.status_id      and     medlem.golf_id ='" + id + "';";
             NpgsqlCommand command5 = new NpgsqlCommand(sql3, GolfReception.conn);
             NpgsqlDataReader drx = command5.ExecuteReader();
@@ -135,18 +140,18 @@ namespace Golf
 
                 if (drx["kön_id"].ToString() == "0")
                 {
-                    kon_comboBox.Text = "Man"; 
+                    kon_comboBox.Text = "Man";
                 }
                 else if (drx["kön_id"].ToString() == "1")
                 {
-                    kon_comboBox.Text = "Kvinna"; 
+                    kon_comboBox.Text = "Kvinna";
                 }
-                    
+
             }
             drx.Close();
 
 
-            groupBox1.Visible = true; 
+            groupBox1.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -349,6 +354,11 @@ namespace Golf
         private void golfid_textBox_KeyUp(object sender, KeyEventArgs e)
         {
             validateAll();
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            ÄndraMarkerad();
         }
 
 
