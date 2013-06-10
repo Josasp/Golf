@@ -108,6 +108,7 @@
             this.betalt_textBox.Name = "betalt_textBox";
             this.betalt_textBox.Size = new System.Drawing.Size(77, 22);
             this.betalt_textBox.TabIndex = 82;
+            this.betalt_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label9
             // 
@@ -169,6 +170,7 @@
             this.handicap_textBox.Name = "handicap_textBox";
             this.handicap_textBox.Size = new System.Drawing.Size(57, 22);
             this.handicap_textBox.TabIndex = 77;
+            this.handicap_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label10
             // 
@@ -185,6 +187,7 @@
             this.postort_textBox.Name = "postort_textBox";
             this.postort_textBox.Size = new System.Drawing.Size(108, 22);
             this.postort_textBox.TabIndex = 74;
+            this.postort_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label8
             // 
@@ -201,6 +204,7 @@
             this.postnummer_textBox.Name = "postnummer_textBox";
             this.postnummer_textBox.Size = new System.Drawing.Size(108, 22);
             this.postnummer_textBox.TabIndex = 72;
+            this.postnummer_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label7
             // 
@@ -217,6 +221,7 @@
             this.adress_textBox.Name = "adress_textBox";
             this.adress_textBox.Size = new System.Drawing.Size(160, 22);
             this.adress_textBox.TabIndex = 70;
+            this.adress_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label6
             // 
@@ -233,6 +238,7 @@
             this.epost_textBox.Name = "epost_textBox";
             this.epost_textBox.Size = new System.Drawing.Size(160, 22);
             this.epost_textBox.TabIndex = 68;
+            this.epost_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label5
             // 
@@ -249,6 +255,7 @@
             this.telefonnummer_textBox.Name = "telefonnummer_textBox";
             this.telefonnummer_textBox.Size = new System.Drawing.Size(160, 22);
             this.telefonnummer_textBox.TabIndex = 66;
+            this.telefonnummer_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label4
             // 
@@ -265,6 +272,7 @@
             this.fornamn_textBox.Name = "fornamn_textBox";
             this.fornamn_textBox.Size = new System.Drawing.Size(147, 22);
             this.fornamn_textBox.TabIndex = 64;
+            this.fornamn_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label3
             // 
@@ -281,6 +289,7 @@
             this.efternamn_textBox.Name = "efternamn_textBox";
             this.efternamn_textBox.Size = new System.Drawing.Size(147, 22);
             this.efternamn_textBox.TabIndex = 62;
+            this.efternamn_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label2
             // 
@@ -298,6 +307,7 @@
             this.golfid_textBox.Name = "golfid_textBox";
             this.golfid_textBox.Size = new System.Drawing.Size(147, 22);
             this.golfid_textBox.TabIndex = 60;
+            this.golfid_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.golfid_textBox_KeyUp);
             // 
             // label1
             // 

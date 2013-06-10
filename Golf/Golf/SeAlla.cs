@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Npgsql; 
+using Npgsql;
+using System.Text.RegularExpressions; 
 
 namespace Golf
 {
@@ -150,45 +151,152 @@ namespace Golf
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int kon = 0;
+            if (validateAll())
+            {
+                int kon = 0;
 
-            if (kon_comboBox.Text == "Kvinna")
+                if (kon_comboBox.Text == "Kvinna")
+                {
+                    kon = 1;
+                }
+                else if (kon_comboBox.Text == "Man")
+                {
+                    kon = 0;
+                }
+
+                int status = 1;
+
+                if (medlemsstatus_comboBox.Text == "Aktiv")
+                {
+                    status = 1;
+                }
+                else if (medlemsstatus_comboBox.Text == "Vilande")
+                {
+                    status = 2;
+                }
+                else if (medlemsstatus_comboBox.Text == "Greenfee")
+                {
+                    status = 3;
+                }
+                else if (medlemsstatus_comboBox.Text == "Junior")
+                {
+                    status = 4;
+                }
+                else if (medlemsstatus_comboBox.Text == "Ickemedlem")
+                {
+                    status = 5;
+                }
+
+                string updateramedlem = "update medlem set   \"förnamn\" ='" + fornamn_textBox.Text + "', efternamn = '" + efternamn_textBox.Text + "', \"kön_id\" = " + kon + ", adress = '" + adress_textBox.Text + "', postnummer = " + postnummer_textBox.Text + ", stad = '" + postort_textBox.Text + "', telefonnummer = '" + telefonnummer_textBox.Text + "', epost = '" + epost_textBox.Text + "', handicap = " + handicap_textBox.Text + ", status_id = " + status + ", betaltÅr = " + betalt_textBox.Text + " where golf_id ='" + golfid_textBox.Text + "';";
+                NpgsqlCommand command_medlem2 = new NpgsqlCommand(updateramedlem, GolfReception.conn);
+                command_medlem2.ExecuteNonQuery();
+
+                MessageBox.Show("Spelare ändrad.");
+                uppdateralista();
+            } 
+        }
+
+        private bool validateAll()
+        {
+            Color invalid = Color.Pink;
+            Color valid = Color.LightGreen;
+
+            bool value = true;
+
+            double d;
+            if ((double.TryParse(handicap_textBox.Text, out d) && handicap_textBox.Text.Length > 0) == false)
             {
-                kon = 1;
+                handicap_textBox.BackColor = invalid;
+                value = false;
             }
-            else if (kon_comboBox.Text == "Man")
+            else
             {
-                kon = 0;
+                handicap_textBox.BackColor = valid;
             }
 
-            int status = 1;
-
-            if (medlemsstatus_comboBox.Text == "Aktiv")
+            if (fornamn_textBox.Text.Length < 2)
             {
-                status = 1;
+                fornamn_textBox.BackColor = invalid;
+                value = false;
             }
-            else if (medlemsstatus_comboBox.Text == "Vilande")
+            else
             {
-                status = 2;
-            }
-            else if (medlemsstatus_comboBox.Text == "Greenfee")
-            {
-                status = 3;
-            }
-            else if (medlemsstatus_comboBox.Text == "Junior")
-            {
-                status = 4;
-            }
-            else if (medlemsstatus_comboBox.Text == "Ickemedlem")
-            {
-                status = 5;
+                fornamn_textBox.BackColor = valid;
             }
 
-            string updateramedlem = "update medlem set   \"förnamn\" ='" + fornamn_textBox.Text + "', efternamn = '" + efternamn_textBox.Text + "', \"kön_id\" = " + kon + ", adress = '" + adress_textBox.Text + "', postnummer = " + postnummer_textBox.Text + ", stad = '" + postort_textBox.Text + "', telefonnummer = '" + telefonnummer_textBox.Text + "', epost = '" + epost_textBox.Text + "', handicap = " + handicap_textBox.Text + ", status_id = " + status + ", betaltÅr = " + betalt_textBox.Text + " where golf_id ='" + golfid_textBox.Text + "';";
-            NpgsqlCommand command_medlem2 = new NpgsqlCommand(updateramedlem, GolfReception.conn);
-            command_medlem2.ExecuteNonQuery();
+            if (efternamn_textBox.Text.Length < 2)
+            {
+                efternamn_textBox.BackColor = invalid;
+                value = false;
+            }
+            else
+            {
+                efternamn_textBox.BackColor = valid;
+            }
 
-            MessageBox.Show("Spelare ändrad."); 
+            if (adress_textBox.Text.Length < 2)
+            {
+                adress_textBox.BackColor = invalid;
+                value = false;
+            }
+            else
+            {
+                adress_textBox.BackColor = valid;
+            }
+
+            Match postnummer = Regex.Match(postnummer_textBox.Text, "^[0-9]+");
+            if (!postnummer.Success)
+            {
+                postnummer_textBox.BackColor = invalid;
+                value = false;
+            }
+            else
+            {
+                postnummer_textBox.BackColor = valid;
+            }
+
+            if (postort_textBox.Text.Length < 2)
+            {
+                postort_textBox.BackColor = invalid;
+                value = false;
+            }
+            else
+            {
+                postort_textBox.BackColor = valid;
+            }
+
+            Match telenr = Regex.Match(telefonnummer_textBox.Text, "^[0-9]{5,}");
+            if (!telenr.Success)
+            {
+                telefonnummer_textBox.BackColor = invalid;
+                value = false;
+            }
+            else
+            {
+                telefonnummer_textBox.BackColor = valid;
+            }
+
+            if (epost_textBox.Text.Length < 4)
+            {
+                epost_textBox.BackColor = invalid;
+                value = false;
+            }
+            else
+            {
+                epost_textBox.BackColor = valid;
+            }
+
+            if (betalt_textBox.Text.Length == 1 || betalt_textBox.Text.Length == 4)
+            {
+                betalt_textBox.BackColor = valid;
+            }
+            else
+            {
+                betalt_textBox.BackColor = invalid;
+                value = false;
+            }
+
+            return value;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -236,6 +344,11 @@ namespace Golf
         private void button6_Click(object sender, EventArgs e)
         {
             uppdateralista(); 
+        }
+
+        private void golfid_textBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            validateAll();
         }
 
 
