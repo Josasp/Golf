@@ -32,7 +32,7 @@ namespace Golf
             dt.Columns.Add("tävlingsdatum", typeof(string));
             dt.Columns.Add("sistaAnmälan", typeof(string));
 
-            String sql = "SELECT    \"tävling\".\"tävling_id\",    \"tävling\".namn,    \"tävling\".\"sistaAnmälan\",    \"tävling\".\"maxDeltagare\",   (SELECT COUNT(\"golf_id\") FROM \"tävling_medlem\" WHERE \"tävling_medlem\".\"tävling_id\" = \"tävling\".\"tävling_id\") AS anmäldaDeltagare,   (SELECT \"namn\" FROM \"tävling_kön\", \"kön\" WHERE \"tävling\".\"tävling_id\" = \"tävling_kön\".\"tävling_id\" AND \"kön\".\"kön_id\" = \"tävling_kön\".\"kön_id\" LIMIT 1) AS kön,   (SELECT \"datumtid\" FROM \"bokning\" WHERE \"tävling\".\"tävling_id\" = \"bokning\".\"tävling_id\" LIMIT 1) AS tävlingsdatum FROM    public.\"tävling\";";
+            String sql = "SELECT    \"tävling\".\"tävling_id\",    \"tävling\".namn,    \"tävling\".\"sistaAnmälan\",    \"tävling\".\"maxDeltagare\",   (SELECT COUNT(\"golf_id\") FROM \"tävling_medlem\" WHERE \"tävling_medlem\".\"tävling_id\" = \"tävling\".\"tävling_id\") AS anmäldaDeltagare, (SELECT COUNT(\"kön_id\") FROM \"tävling_medlem\", \"medlem\" WHERE \"tävling_medlem\".\"tävling_id\" = \"tävling\".\"tävling_id\" AND \"tävling_medlem\".\"golf_id\" = medlem.golf_id AND medlem.kön_id = 0) AS män, (SELECT COUNT(\"kön_id\") FROM \"tävling_medlem\", \"medlem\" WHERE \"tävling_medlem\".\"tävling_id\" = \"tävling\".\"tävling_id\" AND \"tävling_medlem\".\"golf_id\" = medlem.golf_id AND medlem.kön_id = 1) AS kvinnor, (SELECT \"namn\" FROM \"tävling_kön\", \"kön\" WHERE \"tävling\".\"tävling_id\" = \"tävling_kön\".\"tävling_id\" AND \"kön\".\"kön_id\" = \"tävling_kön\".\"kön_id\" LIMIT 1) AS kön,   (SELECT \"datumtid\" FROM \"bokning\" WHERE \"tävling\".\"tävling_id\" = \"bokning\".\"tävling_id\" LIMIT 1) AS tävlingsdatum FROM    public.\"tävling\";";
             NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
             NpgsqlDataReader ndr = command.ExecuteReader();
 
@@ -40,6 +40,20 @@ namespace Golf
             {
                 DataRow row = dt.NewRow();
                 String könsfördelning = "";
+                if (!System.DBNull.Value.Equals(ndr["män"]))
+                {
+                    if (!ndr["män"].ToString().Equals("0"))
+                    {
+                        könsfördelning = könsfördelning + "Män: " + ndr["män"].ToString() + " "; 
+                    }
+                }
+                if (!System.DBNull.Value.Equals(ndr["kvinnor"]))
+                {
+                    if (!ndr["kvinnor"].ToString().Equals("0"))
+                    {
+                        könsfördelning = könsfördelning + "Damer: " + ndr["kvinnor"].ToString();
+                    }
+                }
                 row["tävling_id"] = ndr["tävling_id"].ToString();
                 row["namn"] = ndr["namn"].ToString();
                 row["kön"] = ndr["kön"].ToString();
