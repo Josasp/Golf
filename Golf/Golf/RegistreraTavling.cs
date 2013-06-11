@@ -81,17 +81,25 @@ namespace Golf
                     int.Parse(from_comboBox.Text.ToString().Substring(3, 2)),
                     0);
 
-                //Tidsuppbokning
-                string sql = "INSERT INTO bokning (tävling_id, datumtid) VALUES (:tävling_id, :date);";
+                //Kontrollera om tiden redan finns
+                String sql = "SELECT * FROM bokning WHERE datumtid = '" + datumtid.ToString(CultureInfo.CreateSpecificCulture("sv-SE")) + "' LIMIT 1;";
                 NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
-                command.Parameters.Add(new NpgsqlParameter("tävling_id", DbType.Int32));
-                command.Parameters.Add(new NpgsqlParameter("date", DbType.DateTime));
+                NpgsqlDataReader ndr = command.ExecuteReader();
+                if (ndr.Read())
+                {
+                    sql = "UPDATE bokning SET(tävling_id) = (" + tävling_id + ") WHERE datumtid = '" + datumtid.ToString(CultureInfo.CreateSpecificCulture("sv-SE")) + "';";
+                }
+                else
+                {
+                    sql = "INSERT INTO bokning (tävling_id, datumtid) VALUES (" + tävling_id + ", '" + datumtid.ToString(CultureInfo.CreateSpecificCulture("sv-SE")) + "');";
+                }
+                ndr.Close();
 
-                command.Prepare();
-                command.Parameters[0].Value = tävling_id;
-                command.Parameters[1].Value = datumtid;
 
+                //Tidsuppbokning
+                command = new NpgsqlCommand(sql, GolfReception.conn);
                 command.ExecuteNonQuery();
+
                 from_comboBox.SelectedIndex = from_comboBox.SelectedIndex + 1; 
             } while (from_comboBox.SelectedIndex != to_comboBox.SelectedIndex);
 
