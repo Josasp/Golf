@@ -64,7 +64,7 @@
             // 
             // action_button
             // 
-            this.action_button.Location = new System.Drawing.Point(241, 384);
+            this.action_button.Location = new System.Drawing.Point(438, 384);
             this.action_button.Name = "action_button";
             this.action_button.Size = new System.Drawing.Size(75, 23);
             this.action_button.TabIndex = 72;
@@ -74,7 +74,7 @@
             // 
             // cancel_button
             // 
-            this.cancel_button.Location = new System.Drawing.Point(322, 384);
+            this.cancel_button.Location = new System.Drawing.Point(519, 384);
             this.cancel_button.Name = "cancel_button";
             this.cancel_button.Size = new System.Drawing.Size(75, 23);
             this.cancel_button.TabIndex = 71;
@@ -107,7 +107,7 @@
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(385, 330);
+            this.dataGridView.Size = new System.Drawing.Size(582, 330);
             this.dataGridView.TabIndex = 73;
             this.dataGridView.SelectionChanged += new System.EventHandler(this.dataGridView_SelectionChanged);
             // 
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(413, 419);
+            this.ClientSize = new System.Drawing.Size(606, 419);
             this.Controls.Add(this.save_button);
             this.Controls.Add(this.res_textBox);
             this.Controls.Add(this.dataGridView);

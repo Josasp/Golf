@@ -29,6 +29,30 @@ namespace Golf
 
         private void UpdateTable()
         {
+            //Hämta klasser
+            /*
+             * Object klass
+             * 0: Klassnamn
+             * 1: Startvärde
+             * 2: Slutvärde
+             */
+            List<object[]> klass = new List<object[]>();
+
+            String sql = "SELECT    klass.klassnamn,    klass.\"startvärde\",    klass.\"slutvärde\" FROM    public.klass WHERE    klass.\"tävling_id\" = " + tävling_id + ";";
+            NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
+            NpgsqlDataReader ndr = command.ExecuteReader();
+            while (ndr.Read())
+            {
+                object[] o = new object[3];
+
+                o[0] = (string) ndr["klassnamn"];
+                o[1] = (decimal) ndr["startvärde"];
+                o[2] = (decimal) ndr["slutvärde"];
+
+                klass.Add(o);
+            }
+            ndr.Close();
+
             //Create the empty table data
             DataTable dt = new DataTable("Table");
             if (singel_radioButton.Checked)
@@ -37,11 +61,12 @@ namespace Golf
                 dt.Columns.Add("golf_id", typeof(string));
                 dt.Columns.Add("namn", typeof(string));
                 dt.Columns.Add("kön", typeof(string));
+                dt.Columns.Add("klass", typeof(string));
                 dt.Columns.Add("resultat", typeof(string));
 
-                String sql = "SELECT    \"tävling_medlem\".\"tävling_id\", \"tävling_medlem\".\"golf_id\",   \"tävling_medlem\".resultat,    (medlem.\"förnamn\" || ' ' || medlem.efternamn) as namn, (SELECT namn FROM \"kön\" WHERE medlem.\"kön_id\" = \"kön\".\"kön_id\") as kön FROM    public.\"tävling_medlem\",    public.medlem WHERE    \"tävling_medlem\".golf_id = medlem.golf_id AND   \"tävling_medlem\".\"tävling_id\" = " + tävling_id + ";";
-                NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
-                NpgsqlDataReader ndr = command.ExecuteReader();
+                sql = "SELECT    \"tävling_medlem\".\"tävling_id\", \"tävling_medlem\".\"golf_id\", medlem.handicap,\"tävling_medlem\".resultat,    (medlem.\"förnamn\" || ' ' || medlem.efternamn) as namn, (SELECT namn FROM \"kön\" WHERE medlem.\"kön_id\" = \"kön\".\"kön_id\") as kön FROM    public.\"tävling_medlem\",    public.medlem WHERE    \"tävling_medlem\".golf_id = medlem.golf_id AND   \"tävling_medlem\".\"tävling_id\" = " + tävling_id + ";";
+                command = new NpgsqlCommand(sql, GolfReception.conn);
+                ndr = command.ExecuteReader();
 
                 while (ndr.Read())
                 {
@@ -51,6 +76,19 @@ namespace Golf
                     row["namn"] = ndr["namn"].ToString();
                     row["kön"] = ndr["kön"].ToString();
                     row["resultat"] = ndr["resultat"].ToString();
+                    row["klass"] = "";
+
+                    foreach (object[] o in klass)
+                    {
+                        decimal h = (decimal) ndr["handicap"];
+                        decimal start = (decimal) o[1];
+                        decimal slut = (decimal) o[2];
+                        if (h > start && h <= slut)
+                        {
+                            row["klass"] = o[0].ToString();
+                        }
+                    }
+
 
                     dt.Rows.Add(row);
                 }
@@ -65,9 +103,9 @@ namespace Golf
                 dt.Columns.Add("spelare_3", typeof(string));
                 dt.Columns.Add("spelare_4", typeof(string));
 
-                String sql = "SELECT    \"lag\".\"tävling_id\",   lag.lag_id,   lag.resultat,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_1) AS spelare_1,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_2) AS spelare_2,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_3) AS spelare_3,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_4) AS spelare_4 FROM    public.lag WHERE    lag.\"tävling_id\" = "+tävling_id+";";
-                NpgsqlCommand command = new NpgsqlCommand(sql, GolfReception.conn);
-                NpgsqlDataReader ndr = command.ExecuteReader();
+                sql = "SELECT    \"lag\".\"tävling_id\",   lag.lag_id,   lag.resultat,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_1) AS spelare_1,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_2) AS spelare_2,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_3) AS spelare_3,   (SELECT (förnamn || ' ' || efternamn) FROM medlem WHERE medlem.golf_id = lag.spelare_4) AS spelare_4 FROM    public.lag WHERE    lag.\"tävling_id\" = "+tävling_id+";";
+                command = new NpgsqlCommand(sql, GolfReception.conn);
+                ndr = command.ExecuteReader();
 
                 while (ndr.Read())
                 {
