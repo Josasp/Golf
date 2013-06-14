@@ -61,6 +61,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.to_comboBox = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -78,6 +80,7 @@
             this.tavlingsnamn_textBox.Name = "tavlingsnamn_textBox";
             this.tavlingsnamn_textBox.Size = new System.Drawing.Size(130, 22);
             this.tavlingsnamn_textBox.TabIndex = 1;
+            this.tavlingsnamn_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tavlingsnamn_textBox_KeyUp);
             // 
             // label2
             // 
@@ -114,6 +117,7 @@
             this.man_checkBox.TabIndex = 12;
             this.man_checkBox.Text = "Män";
             this.man_checkBox.UseVisualStyleBackColor = true;
+            this.man_checkBox.CheckedChanged += new System.EventHandler(this.kvinnor_checkBox_CheckedChanged_1);
             // 
             // kvinnor_checkBox
             // 
@@ -124,7 +128,7 @@
             this.kvinnor_checkBox.TabIndex = 11;
             this.kvinnor_checkBox.Text = "Kvinnor";
             this.kvinnor_checkBox.UseVisualStyleBackColor = true;
-            this.kvinnor_checkBox.CheckedChanged += new System.EventHandler(this.kvinnor_checkBox_CheckedChanged);
+            this.kvinnor_checkBox.CheckedChanged += new System.EventHandler(this.kvinnor_checkBox_CheckedChanged_1);
             // 
             // dateTimePicker1
             // 
@@ -168,6 +172,7 @@
             this.a_fran_textBox.Name = "a_fran_textBox";
             this.a_fran_textBox.Size = new System.Drawing.Size(30, 22);
             this.a_fran_textBox.TabIndex = 4;
+            this.a_fran_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tavlingsnamn_textBox_KeyUp);
             // 
             // label7
             // 
@@ -211,6 +216,7 @@
             this.c_fran_textBox.Name = "c_fran_textBox";
             this.c_fran_textBox.Size = new System.Drawing.Size(30, 22);
             this.c_fran_textBox.TabIndex = 8;
+            this.c_fran_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tavlingsnamn_textBox_KeyUp);
             // 
             // b_fran_textBox
             // 
@@ -218,6 +224,7 @@
             this.b_fran_textBox.Name = "b_fran_textBox";
             this.b_fran_textBox.Size = new System.Drawing.Size(30, 22);
             this.b_fran_textBox.TabIndex = 6;
+            this.b_fran_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tavlingsnamn_textBox_KeyUp);
             // 
             // label11
             // 
@@ -252,6 +259,7 @@
             this.a_till_textBox.Name = "a_till_textBox";
             this.a_till_textBox.Size = new System.Drawing.Size(30, 22);
             this.a_till_textBox.TabIndex = 5;
+            this.a_till_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tavlingsnamn_textBox_KeyUp);
             // 
             // b_till_textBox
             // 
@@ -259,6 +267,7 @@
             this.b_till_textBox.Name = "b_till_textBox";
             this.b_till_textBox.Size = new System.Drawing.Size(30, 22);
             this.b_till_textBox.TabIndex = 7;
+            this.b_till_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tavlingsnamn_textBox_KeyUp);
             // 
             // c_till_textBox
             // 
@@ -266,6 +275,7 @@
             this.c_till_textBox.Name = "c_till_textBox";
             this.c_till_textBox.Size = new System.Drawing.Size(30, 22);
             this.c_till_textBox.TabIndex = 9;
+            this.c_till_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tavlingsnamn_textBox_KeyUp);
             // 
             // dateTimePicker2
             // 
@@ -297,6 +307,7 @@
             this.maxantaldeltagare_textBox.Name = "maxantaldeltagare_textBox";
             this.maxantaldeltagare_textBox.Size = new System.Drawing.Size(51, 22);
             this.maxantaldeltagare_textBox.TabIndex = 10;
+            this.maxantaldeltagare_textBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tavlingsnamn_textBox_KeyUp);
             // 
             // label16
             // 
@@ -460,6 +471,7 @@
             this.from_comboBox.Name = "from_comboBox";
             this.from_comboBox.Size = new System.Drawing.Size(62, 21);
             this.from_comboBox.TabIndex = 90;
+            this.from_comboBox.SelectedIndexChanged += new System.EventHandler(this.from_comboBox_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -623,6 +635,7 @@
             this.to_comboBox.Name = "to_comboBox";
             this.to_comboBox.Size = new System.Drawing.Size(62, 21);
             this.to_comboBox.TabIndex = 92;
+            this.to_comboBox.SelectedIndexChanged += new System.EventHandler(this.from_comboBox_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -633,11 +646,31 @@
             this.label17.TabIndex = 91;
             this.label17.Text = "Till";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(255, 134);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(58, 13);
+            this.label18.TabIndex = 93;
+            this.label18.Text = "                 ";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(325, 134);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(58, 13);
+            this.label19.TabIndex = 94;
+            this.label19.Text = "                 ";
+            // 
             // RegistreraTavling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 425);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.to_comboBox);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.from_comboBox);
@@ -714,5 +747,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox to_comboBox;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
     }
 }
